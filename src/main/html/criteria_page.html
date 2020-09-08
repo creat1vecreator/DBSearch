@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Criteria</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .slide_container,
+        .app_choice_container {
+            width: 30%;
+        }
+        .slider {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<form action="com.example.demo.Parser">
+    <h1>Criteria for DBO</h1>
+
+    <div class="slide_container">
+        <input type="range" min="0" max="1000" value="500" class="slider" id="myRange" name="price_of_service">
+        <p>Price: <span id="price"></span></p>
+    </div>
+
+    <div class="app_choice_container">
+        <p>App:
+            <br><input type="checkbox" value="ios" name="app">iOS
+            <br><input type="checkbox" value="android" name="app">Andriod
+        </p>
+    </div>
+
+
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+    let slider = document.getElementById("myRange");
+    let output = document.getElementById("price");
+    output.innerHTML = slider.value;
+
+    slider.oninput = function() {
+        output.innerHTML = this.value;
+    }
+</script>
+
+</body>
+</html>
+
+
+
