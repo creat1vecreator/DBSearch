@@ -1,6 +1,6 @@
-package com.example.demo.Repositories;
+package com.dreamteam.rbsearch.Repositories;
 
-import com.example.demo.Entities.BankEntity;
+import com.dreamteam.rbsearch.Entities.BankEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

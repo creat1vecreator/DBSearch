@@ -1,7 +1,7 @@
-package com.example.demo.Services;
+package com.dreamteam.rbsearch.Services;
 
-import com.example.demo.Entities.BankEntity;
-import com.example.demo.Repositories.EntityRepo;
+import com.dreamteam.rbsearch.Repositories.EntityRepo;
+import com.dreamteam.rbsearch.Entities.BankEntity;
 import lombok.*;
 import org.springframework.stereotype.Service;
 

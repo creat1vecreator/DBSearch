@@ -1,4 +1,4 @@
-package com.example.demo.Entities;
+package com.dreamteam.rbsearch.Entities;
 
 import lombok.*;
 
