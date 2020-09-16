@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <title>Bank list</title>
+</head>
+<body>
+<h1>Bank list</h1>
+<div th:object="bankEntity">
+    <h3>Price entered: <span th:text="*{price}"></span></h3>
+    <h4>App choose: <span th:text="*{app}"></span></h4>
+</div>
+</body>
+</html>

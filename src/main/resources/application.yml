@@ -6,3 +6,9 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create
+  thymeleaf:
+    enabled: true
+    encoding: utf-8
+    cache: false
+    check-template: true
+    check-template-location: true

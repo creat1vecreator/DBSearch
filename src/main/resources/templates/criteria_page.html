@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://thymeleaf.org">
 <head>
     <title>Criteria</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         .slide_container,
         .app_choice_container {
@@ -14,18 +13,18 @@
     </style>
 </head>
 <body>
-<form action="com.example.demo.Parser">
+<form action="/search" th:action="@{/search}" th:object="${bankForm}" method="get">
     <h1>Criteria for DBO</h1>
 
     <div class="slide_container">
-        <input type="range" min="0" max="1000" value="500" class="slider" id="myRange" name="price_of_service">
+        <input th:field="*{price}" type="range" min="0" max="1000" value="500" class="slider" id="myRange" name="price_of_service">
         <p>Price: <span id="price"></span></p>
     </div>
 
     <div class="app_choice_container">
         <p>App:
-            <br><input type="checkbox" value="ios" name="app">iOS
-            <br><input type="checkbox" value="android" name="app">Andriod
+            <br><input th:field="*{app}" type="checkbox" value="ios" name="app">iOS
+            <br><input th:field="*{app}" type="checkbox" value="android" name="app">Android
         </p>
     </div>
 

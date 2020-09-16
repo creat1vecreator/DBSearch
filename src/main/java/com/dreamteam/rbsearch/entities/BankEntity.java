@@ -1,4 +1,4 @@
-package com.dreamteam.rbsearch.Entities;
+package com.dreamteam.rbsearch.entities;
 
 import lombok.*;
 
@@ -19,5 +19,8 @@ public class BankEntity {
 
     @Column
     private int price;
+
+    @Column
+    private String app;
 
 }
