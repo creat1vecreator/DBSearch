@@ -3,9 +3,14 @@ package com.dreamteam.rbsearch.controllers;
 import com.dreamteam.rbsearch.form.BankForm;
 import com.dreamteam.rbsearch.services.BankService;
 import lombok.RequiredArgsConstructor;
+import org.apache.coyote.Response;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.net.http.HttpResponse;
 
 @Controller
 @RequiredArgsConstructor
@@ -15,19 +20,18 @@ public class BankController {
     private final BankService bankService;
 
     @GetMapping("/")
-    public String returnStartPage(Model model) {
-        model.addAttribute("title", "Welcome to us");
+    public String returnStartPage() {
         return "start_page";
     }
 
     @GetMapping("/error")
-    public String returnErrorPage(Model model) {
+    public String returnErrorPage() {
         return "error/404_page";
     }
 
     @GetMapping("/criteria")
-    public String returnSearchPage(Model model) {
-        return "text";
+    public String returnSearchPage() {
+        return "criteria_page";
     }
 
 //    @RequestMapping("/criteria", RequestMethod.GET)
@@ -36,12 +40,11 @@ public class BankController {
 //    }
 
     @RequestMapping(value = "/search", method = RequestMethod.GET)
-    public String returnSearchList(Model model) {
-        BankForm bankForm = new BankForm(model.asMap());
-//        model.addAttribute("bankEntity");
-//        model.addAttribute("price", bankForm.getPrice());
-//        model.addAttribute("app", bankForm.getApp());
-        return "bank_list_page";
+    public @ResponseBody ResponseEntity<String> get(
+            @RequestParam(value = "price", required = true) String price,
+            @RequestParam(value = "app", required = true) String app) {
+        BankForm bankForm = new BankForm(price, app);
+        return new ResponseEntity<>(bankForm.toString(), HttpStatus.OK);
     }
 
 }
