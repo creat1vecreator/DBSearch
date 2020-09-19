@@ -27,7 +27,7 @@ public class BankController {
 
     @GetMapping("/criteria")
     public String returnSearchPage(Model model) {
-        return "criteria_page";
+        return "text";
     }
 
 //    @RequestMapping("/criteria", RequestMethod.GET)
