@@ -1,5 +1,7 @@
 package com.dreamteam.rbsearch.controllers;
 
+import com.dreamteam.rbsearch.BankEntityDTO.BankEntityDTO;
+import com.dreamteam.rbsearch.entities.BankEntity;
 import com.dreamteam.rbsearch.form.BankForm;
 import com.dreamteam.rbsearch.services.BankService;
 import lombok.RequiredArgsConstructor;
@@ -11,6 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.http.HttpResponse;
+import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
@@ -18,6 +21,7 @@ import java.net.http.HttpResponse;
 public class BankController {
 
     private final BankService bankService;
+
 
     @GetMapping("/")
     public String returnStartPage() {
@@ -34,6 +38,12 @@ public class BankController {
         return "criteria_page";
     }
 
+
+    public List<BankEntity> bankEntities(BankEntityDTO bankEntityDTO) {
+        return bankService.findByPriceAndApp(bankEntityDTO);
+    }
+
+
 //    @RequestMapping("/criteria", RequestMethod.GET)
 //    public String returnAnswerPage() {
 //
@@ -44,7 +54,8 @@ public class BankController {
             @RequestParam(value = "price", required = true) String price,
             @RequestParam(value = "app", required = true) String app) {
         BankForm bankForm = new BankForm(price, app);
-        return new ResponseEntity<>(bankForm.toString(), HttpStatus.OK);
+        List banks = bankEntities(new BankEntityDTO(Integer.parseInt(price), app));
+        return new ResponseEntity<>(banks.toString(), HttpStatus.OK);
     }
 
 }

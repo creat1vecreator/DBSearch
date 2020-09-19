@@ -18,7 +18,7 @@ public class BankEntity {
     private String name;
 
     @Column
-    private int price;
+    private Integer price;
 
     @Column
     private String app;
