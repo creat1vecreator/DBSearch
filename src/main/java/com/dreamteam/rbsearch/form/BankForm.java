@@ -31,5 +31,6 @@ public class BankForm {
     public String toString() {
         return "price:" + this.price + "\n" +
                 "app:" + this.app;
+
     }
 }
