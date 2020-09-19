@@ -24,13 +24,8 @@ public class BankService {
     }
 
     public List<BankEntity> findByPriceAndApp(BankEntityDTO bankEntityDTO) {
-
-
         price = bankEntityDTO.getPrice();
-
         app = bankEntityDTO.getApp();
-
-
         return entityRepo.findByPriceAndApp(price, app);
 
     }
