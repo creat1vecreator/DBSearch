@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface EntityRepo extends JpaRepository<BankEntity, Long> {
+public interface BankEntityRepo extends JpaRepository<BankEntity, Long> {
 
     Optional<BankEntity> findById(Long id);
 

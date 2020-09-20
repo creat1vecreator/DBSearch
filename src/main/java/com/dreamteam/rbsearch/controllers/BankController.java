@@ -4,6 +4,7 @@ import com.dreamteam.rbsearch.BankEntitiesDTO.BankEntitiesDTO;
 import com.dreamteam.rbsearch.form.BankForm;
 import com.dreamteam.rbsearch.services.BankService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -39,11 +40,16 @@ public class BankController {
                 price,
                 app
         );
-        BankEntitiesDTO bankEntities = bankService.findByApp(bankForm);
-        return new ResponseEntity<>(bankEntities.getBankEntities().toString(), HttpStatus.OK);
+        try {
+            BankEntitiesDTO bankEntities = bankService.findByApp(bankForm);
+            return new ResponseEntity<>(bankEntities.getBankEntities().toString(), HttpStatus.OK);
+        } catch (NullPointerException nullPointerException) {
+            nullPointerException.printStackTrace();
+            return new ResponseEntity<>(bankForm.toString() + "\n no pages were found", HttpStatus.OK);
+        }
     }
 
-    @GetMapping(value = "/all")
+    @GetMapping("/all")
     public @ResponseBody ResponseEntity<String> getAllBanks() {
         return new ResponseEntity<>(bankService.findAll().toString(), HttpStatus.OK);
     }
