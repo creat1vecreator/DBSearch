@@ -14,4 +14,6 @@ public interface EntityRepo extends JpaRepository<BankEntity, Long> {
 
     List<BankEntity> findByPriceAndApp(Integer price, String app);
 
+    List<BankEntity> findByApp(String app);
+
 }
