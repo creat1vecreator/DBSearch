@@ -1,19 +1,22 @@
 package com.dreamteam.rbsearch.services;
 
 import com.dreamteam.rbsearch.BankEntitiesDTO.BankEntitiesDTO;
+import com.dreamteam.rbsearch.entities.BankEntity;
 import com.dreamteam.rbsearch.form.BankForm;
 import com.dreamteam.rbsearch.repositories.BankEntityRepo;
 import lombok.*;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
 public class BankService {
     private Integer price;
     private String app;
-    private BankEntityRepo bankEntityRepo;
 
-    private BankEntitiesDTO bankEntitiesDTO;
+    BankEntityRepo bankEntityRepo;
+    BankEntitiesDTO bankEntitiesDTO;
 
     public BankEntitiesDTO findById(Long id) {
         bankEntitiesDTO = new BankEntitiesDTO();
@@ -39,8 +42,12 @@ public class BankService {
         return bankEntitiesDTO;
     }
 
-    public BankEntitiesDTO findAll() {
-        bankEntitiesDTO = new BankEntitiesDTO(bankEntityRepo.findAll());
-        return bankEntitiesDTO;
+    public List<BankEntity> findAll() {
+        List<BankEntity> bankEntities = bankEntityRepo.findAll();
+        bankEntities.forEach(System.out::println);
+        bankEntitiesDTO = new BankEntitiesDTO(
+//                bankEntityRepo.findAll()
+        );
+        return bankEntitiesDTO.getBankEntities();
     }
 }

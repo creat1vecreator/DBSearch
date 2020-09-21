@@ -1,17 +1,13 @@
 package com.dreamteam.rbsearch.BankEntitiesDTO;
 
 import com.dreamteam.rbsearch.entities.BankEntity;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
 @Data
-@Getter
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 public class BankEntitiesDTO {
     private List<BankEntity> bankEntities;
 
