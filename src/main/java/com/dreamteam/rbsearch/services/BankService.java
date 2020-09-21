@@ -49,5 +49,6 @@ public class BankService {
 //                bankEntityRepo.findAll()
         );
         return bankEntitiesDTO.getBankEntities();
+
     }
 }
