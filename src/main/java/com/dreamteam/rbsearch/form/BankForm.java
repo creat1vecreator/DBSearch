@@ -1,19 +1,17 @@
 package com.dreamteam.rbsearch.form;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import java.util.Arrays;
 
-@Setter
-@Getter
+@Data
 public class BankForm {
-    private String price;
+    private Integer price;
     private String app;
 
     public BankForm(String price, String app) {
-        this.price = price;
-        this.app = masterApp(app);
+        this.price = Integer.parseInt(price);
+        this.app = app == null ? "" : masterApp(app);
     }
 
     private String masterApp(String app) {
@@ -28,7 +26,7 @@ public class BankForm {
 
     @Override
     public String toString() {
-        return "price: " + this.price +
-               "app: "   + this.app;
+        return "price: " + this.price + "\n" +
+               "app: "   + this.app + "\n";
     }
 }

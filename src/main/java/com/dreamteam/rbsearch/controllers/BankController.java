@@ -31,16 +31,16 @@ public class BankController {
     }
 
     @RequestMapping(value = "/search", method = RequestMethod.GET)
-    public @ResponseBody ResponseEntity<String> get(
+    public @ResponseBody ResponseEntity<String> getSearch(
             @RequestParam(value = "price") String price,
             @RequestParam(value = "app", required = false) String app) {
-//        BankForm bankForm = new BankForm(price, app);
         BankForm bankForm = new BankForm(
                 price,
                 app
         );
         try {
-            BankEntitiesDTO bankEntitiesDTO = bankService.findByApp(bankForm);
+            System.out.println(bankForm);
+            BankEntitiesDTO bankEntitiesDTO = bankService.find(bankForm);
             return new ResponseEntity<>(bankEntitiesDTO.getBankEntities().toString(), HttpStatus.OK);
         } catch (NullPointerException nullPointerException) {
             nullPointerException.printStackTrace();
