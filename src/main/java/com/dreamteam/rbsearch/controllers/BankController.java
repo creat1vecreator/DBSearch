@@ -50,7 +50,7 @@ public class BankController {
 
     @GetMapping("/all")
     public @ResponseBody ResponseEntity<String> getAllBanks() {
-        return new ResponseEntity<>(bankService.findAll().toString(), HttpStatus.OK);
+        return new ResponseEntity<>(bankService.findAll().getBankEntities().toString(), HttpStatus.OK);
     }
 
 }

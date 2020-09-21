@@ -16,6 +16,5 @@ public interface BankEntityRepo extends JpaRepository<BankEntity, Long> {
 
     List<BankEntity> findByApp(String app);
 
-    List<BankEntity> findAll();
-
+    List<BankEntity> findAllByPriceIsLessThan(Integer price); // todo
 }
