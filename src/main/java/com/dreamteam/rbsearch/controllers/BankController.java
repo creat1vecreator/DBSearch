@@ -38,14 +38,9 @@ public class BankController {
                 price,
                 app
         );
-        try {
-            System.out.println(bankForm);
-            BankEntitiesDTO bankEntitiesDTO = bankService.find(bankForm);
-            return new ResponseEntity<>(bankEntitiesDTO.getBankEntities().toString(), HttpStatus.OK);
-        } catch (NullPointerException nullPointerException) {
-            nullPointerException.printStackTrace();
-            return new ResponseEntity<>(bankForm.toString() + "\n no pages were found", HttpStatus.OK);
-        }
+        System.out.println(bankForm);
+        BankEntitiesDTO bankEntitiesDTO = bankService.find(bankForm);
+        return new ResponseEntity<>(bankEntitiesDTO.getBankEntities().toString(), HttpStatus.OK);
     }
 
     @GetMapping("/all")

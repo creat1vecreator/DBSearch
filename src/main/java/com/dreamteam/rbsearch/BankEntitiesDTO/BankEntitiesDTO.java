@@ -14,15 +14,19 @@ public class BankEntitiesDTO {
         this.bankEntities = new ArrayList<>();
     }
 
-    public void addBankEntity(BankEntity bankEntity) {
-        bankEntities.add(bankEntity);
+    public void addBankEntityList(BankEntitiesDTO bankEntitiesDTO, boolean deleteRepeating) {
+        if (deleteRepeating) {
+            addBankEntityListDeleteRepeating(bankEntitiesDTO);
+        } else {
+            addBankEntityListDonNotDeleteRepeating(bankEntitiesDTO);
+        }
     }
 
-    public void addBankEntityList(BankEntitiesDTO bankEntitiesDTO) {
+    private void addBankEntityListDeleteRepeating(BankEntitiesDTO bankEntitiesDTO) {
+        this.bankEntities.removeIf(bankEntity -> !bankEntitiesDTO.getBankEntities().contains(bankEntity));
+    }
+
+    private void addBankEntityListDonNotDeleteRepeating(BankEntitiesDTO bankEntitiesDTO) {
         this.bankEntities.addAll(bankEntitiesDTO.getBankEntities());
-    }
-
-    public void trim() {
-        this.bankEntities = new ArrayList<>(new HashSet<>(this.bankEntities));
     }
 }
