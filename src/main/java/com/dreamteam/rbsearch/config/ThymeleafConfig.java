@@ -8,6 +8,7 @@ import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import org.thymeleaf.templatemode.TemplateMode;
 
+@Deprecated
 public class ThymeleafConfig {
     private ApplicationContext applicationContext;
     private final SpringTemplateEngine templateEngine = templateEngine();

@@ -1,6 +1,7 @@
 package com.dreamteam.rbsearch.services;
 
 import com.dreamteam.rbsearch.BankEntitiesDTO.BankEntitiesDTO;
+import com.dreamteam.rbsearch.entities.BankEntity;
 import com.dreamteam.rbsearch.form.BankForm;
 import com.dreamteam.rbsearch.repositories.BankEntityRepo;
 import lombok.*;
@@ -42,6 +43,9 @@ public class BankService {
         return new BankEntitiesDTO(bankEntityRepo.findAllByPriceLessThan(price));
     }
 
+    public BankEntity findByName(String name) {
+        return bankEntityRepo.findByName(name).orElseThrow(RuntimeException::new);
+    }
     public BankEntitiesDTO findAll() {
         return new BankEntitiesDTO(bankEntityRepo.findAll());
     }

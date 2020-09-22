@@ -43,6 +43,12 @@ public class BankController {
         return new ResponseEntity<>(bankEntitiesDTO.getBankEntities().toString(), HttpStatus.OK);
     }
 
+    @GetMapping("/bank/{name}")
+    public @ResponseBody ResponseEntity<String> findByName(@PathVariable String name) {
+        return new ResponseEntity<>(bankService.findByName(name).toString(), HttpStatus.OK);
+    }
+
+
     @GetMapping("/all")
     public @ResponseBody ResponseEntity<String> getAllBanks() {
         return new ResponseEntity<>(bankService.findAll().getBankEntities().toString(), HttpStatus.OK);
