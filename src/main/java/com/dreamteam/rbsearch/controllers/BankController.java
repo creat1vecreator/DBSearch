@@ -53,5 +53,4 @@ public class BankController {
     public @ResponseBody ResponseEntity<String> getAllBanks() {
         return new ResponseEntity<>(bankService.findAll().getBankEntities().toString(), HttpStatus.OK);
     }
-
 }
