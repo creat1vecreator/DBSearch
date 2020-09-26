@@ -12,3 +12,5 @@ spring:
     cache: false
     check-template: true
     check-template-location: true
+  server:
+    port: $PORT
