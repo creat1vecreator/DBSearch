@@ -1194,9 +1194,9 @@ h6, .h6 {
   outline: none !important;
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   transition: all 0.3s ease;
 }
 
@@ -1986,7 +1986,7 @@ h6, .h6 {
   top: 50%;
   position: relative;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .hero-section__wrap {
@@ -2579,4 +2579,11 @@ xpush
 .button-sm{
   padding: 10px 15px;
   font-size: 8px;
+}
+li {
+  list-style-type: none;
+}
+ul {
+  margin-left: 10px;
+  padding-left: 0;
 }
