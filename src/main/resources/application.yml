@@ -1,12 +1,12 @@
 spring:
-  datasource:
-    url: jdbc:postgresql://localhost:8880/postgres
-    username: postgres
-    password: postgres
 #  datasource:
-#    url: ${BASE_URI}
-#    username: ${BASE_USERNAME}
-#    password: ${BASE_PASSWORD}
+#    url: jdbc:postgresql://localhost:8880/postgres
+#    username: postgres
+#    password: postgres
+  datasource:
+    url: jdbc:postgres://iilsucajcezzpa:7e2beebad39e70fbcf0fa677cd3308ce4c6329ffa1ccd36c39b4c8c2a4b31e55@ec2-34-251-118-151.eu-west-1.compute.amazonaws.com:5432/ddhav9gn3srbon
+    username: iilsucajcezzpa
+    password: 7e2beebad39e70fbcf0fa677cd3308ce4c6329ffa1ccd36c39b4c8c2a4b31e55
   jpa:
     hibernate:
       ddl-auto: none

@@ -7,8 +7,8 @@ import javax.persistence.*;
 // name of data table // bank_list_table abd bank_entity_list
 
 @Data
-//@Entity(name = "bank_list_table")
-@Entity(name = "bank_entity_list")
+@Entity(name = "bank_list_table")
+//@Entity(name = "bank_entity_list")
 @AllArgsConstructor
 @NoArgsConstructor
 public class BankEntity {
