@@ -3,6 +3,10 @@ spring:
     url: jdbc:postgresql://localhost:8880/postgres
     username: postgres
     password: postgres
+#  datasource:
+#    url: ${BASE_URI}
+#    username: ${BASE_USERNAME}
+#    password: ${BASE_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: none
@@ -13,4 +17,5 @@ spring:
     check-template: true
     check-template-location: true
   server:
-    port: $PORT
+    port: ${PORT}
+# exclude from git
