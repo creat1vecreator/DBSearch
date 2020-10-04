@@ -1,12 +1,12 @@
 spring:
+  #  datasource:
+  #    url: jdbc:postgresql://localhost:8880/postgres
+  #    username: postgres
+  #    password: postgres
   datasource:
-    url: jdbc:postgresql://localhost:8880/postgres
-    username: postgres
-    password: postgres
-#  datasource:
-#    url: ${BASE_URI}
-#    username: ${BASE_USERNAME}
-#    password: ${BASE_PASSWORD}
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: none
@@ -16,6 +16,5 @@ spring:
     cache: false
     check-template: true
     check-template-location: true
-  server:
-    port: ${PORT}
+
 # exclude from git
