@@ -1759,10 +1759,7 @@ h6, .h6 {
   display: none;
 }
 
-/* Slider */
-.slick-loading .slick-list {
-  background: #fff url("../images/ajax-loader.gif") center center no-repeat;
-}
+
 
 /* Icons */
 /* Arrows */

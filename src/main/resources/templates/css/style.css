@@ -48,13 +48,7 @@ h1,h2,h3,h4,h5,h6,label,p{
     background-color: #2E2E2E;
 	padding: 0.3em 0;
 }
-.header-social ul li a i{
-	width: 17px;
-    height: 17px;
-    display: block;
-    background: url(../images/img-sprite.png)no-repeat -14px -14px ;
-	margin:0 0.3em;
-}
+
 .header-social ul li a i.ic1{
     background-position:  -55px -12px ;
 }
@@ -67,9 +61,7 @@ h1,h2,h3,h4,h5,h6,label,p{
 .header-social ul li a i.ic4{	
    background-position:-199px -13px ;
 }
-.header-social ul li a i:hover{
-    background:url(../images/img-sprite.png)no-repeat -14px -52px ;
-}
+
 .header-social ul li a i.ic1:hover{
     background-position:  -55px -50px ;
 }
@@ -209,15 +201,7 @@ a.item_add {
 .search-right {
     padding: 0.6em 0 0;
 }
-/*--//header--*/
-/*--banner--*/
-.banner{
-	width: 100%;
-    height: 700px;
-    display: block;
-    background: url(../images/ba11.jpg)no-repeat right top;
-	overflow-x:hidden;
-}
+
 .no-cssanimations .rw-wrapper .rw-sentence span:first-child{
 	opacity: 1;
 }
@@ -567,14 +551,7 @@ a.buy-now:hover{
 .brand {
     padding: 5em 0;
 }
-.banner-top{
-	text-align:center;
-	width: 100%;
-    height: 250px;
-    display: block;
-    background: url(../images/back.jpg)no-repeat ;
-	padding:5em 0;
-}
+
 .banner-top h1{
 	font-size:3em;
 	color:#fff;
@@ -1065,16 +1042,6 @@ nav.nav-sidebar {
 	border: 2px solid #E1DFDF;
 }
 .checkbox1 input + i:after {
-	content: '';
-	background: url("../images/tick1.png") no-repeat 1px 2px;
-	top: -1px;
-	left: -1px;
-	width: 15px;
-	height: 15px;
-	font: normal 12px/16px FontAwesome;
-	text-align: center;
-}
-.checkbox1 input + i:after {
 	position: absolute;
 	opacity: 0;
 	transition: opacity 0.1s;
@@ -1279,21 +1246,7 @@ a.at-in {
 .ring-in{
   position: relative;
 }
-.close1, .close2, .close3 {
-  background: url('../images/close.png') no-repeat 0px 0px ;
-  cursor: pointer;
-  width: 28px;
-  height: 28px;
-  position: absolute;
-  right: 5px;
-  bottom: 10px;
-  -webkit-transition: color 0.2s ease-in-out;
-  -moz-transition: color 0.2s ease-in-out;
-  -o-transition: color 0.2s ease-in-out;
-  transition: color 0.2s ease-in-out;
-}
-/*--//checkout--*/
-/*--wish--*/
+
 .wishlist {
   width: 31%;
   margin: 5em auto 0;
