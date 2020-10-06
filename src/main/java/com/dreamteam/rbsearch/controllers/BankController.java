@@ -22,7 +22,7 @@ public class BankController {
 
     @GetMapping("/error")
     public String returnErrorPage() {
-        return "error/404_page";
+        return "../public/error/404";
     }
 
     @GetMapping("/criteria")
