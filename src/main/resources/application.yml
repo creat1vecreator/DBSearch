@@ -1,8 +1,4 @@
 spring:
-  #  datasource:
-  #    url: jdbc:postgresql://localhost:8880/postgres
-  #    username: postgres
-  #    password: postgres
   datasource:
     url: ${SPRING_DATASOURCE_URL}
     username: ${SPRING_DATASOURCE_USERNAME}
@@ -16,5 +12,3 @@ spring:
     cache: false
     check-template: true
     check-template-location: true
-
-# exclude from git

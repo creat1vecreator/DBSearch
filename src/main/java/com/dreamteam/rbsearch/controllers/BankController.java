@@ -41,6 +41,7 @@ public class BankController {
         System.out.println(bankForm);
         BankEntitiesDTO bankEntitiesDTO = bankService.find(bankForm);
         return new ResponseEntity<>(bankEntitiesDTO.getBankEntities().toString(), HttpStatus.OK);
+        // toString() заменить на toJSON()
     }
 
     @GetMapping("/bank/{name}")
