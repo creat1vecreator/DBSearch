@@ -3,6 +3,7 @@ package com.dreamteam.rbsearch.controllers;
 import com.dreamteam.rbsearch.BankEntitiesDTO.BankEntitiesDTO;
 import com.dreamteam.rbsearch.form.BankForm;
 import com.dreamteam.rbsearch.services.BankService;
+import com.google.gson.Gson;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,8 +31,8 @@ public class BankController {
         return "criteria_page";
     }
 
-    @RequestMapping(value = "/search", method = RequestMethod.GET)
-    public @ResponseBody ResponseEntity<String> getSearch(
+    @RequestMapping(value = "/search", method = RequestMethod.GET, produces = "application/json")
+    public ResponseEntity<String> getSearch(
             @RequestParam(value = "price") String price,
             @RequestParam(value = "app", required = false) String app) {
         BankForm bankForm = new BankForm(
@@ -40,8 +41,9 @@ public class BankController {
         );
         System.out.println(bankForm);
         BankEntitiesDTO bankEntitiesDTO = bankService.find(bankForm);
-        return new ResponseEntity<>(bankEntitiesDTO.getBankEntities().toString(), HttpStatus.OK);
-        // toString() заменить на toJSON()
+        String jsonResponse = new Gson().toJson(bankEntitiesDTO.getBankEntities());
+        System.out.println(jsonResponse);
+        return new ResponseEntity<>(jsonResponse, HttpStatus.OK);
     }
 
     @GetMapping("/bank/{name}")
