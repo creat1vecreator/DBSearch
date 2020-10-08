@@ -28,7 +28,7 @@ public class BankController {
 
     @GetMapping("/criteria")
     public String returnSearchPage() {
-        return "criteria_page";
+        return "sample_ans";
     }
 
     @RequestMapping(value = "/search", method = RequestMethod.GET, produces = "application/json")
