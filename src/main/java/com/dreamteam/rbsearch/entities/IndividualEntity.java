@@ -5,10 +5,10 @@ import lombok.*;
 import javax.persistence.*;
 
 @Data
-@Entity(name = "bank_entity_list")
+@Entity(name = "individual_bank_list")
 @AllArgsConstructor
 @NoArgsConstructor
-public class BankEntity {
+public class IndividualEntity extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,20 +1,20 @@
 package com.dreamteam.rbsearch.BankEntitiesDTO;
 
-import com.dreamteam.rbsearch.entities.BankEntity;
+import com.dreamteam.rbsearch.entities.BaseEntity;
 import lombok.*;
 
 import java.util.*;
 
 @Data
 @AllArgsConstructor
-public class BankEntitiesDTO {
-    private List<BankEntity> bankEntities;
+public class BankEntitiesDTO<T extends BaseEntity> {
+    private List<T> bankEntities;
 
     public BankEntitiesDTO() {
         this.bankEntities = new ArrayList<>();
     }
 
-    public void addBankEntityList(BankEntitiesDTO bankEntitiesDTO, boolean deleteRepeating) {
+    public void addBankEntityList(BankEntitiesDTO<T> bankEntitiesDTO, boolean deleteRepeating) {
         if (deleteRepeating) {
             addBankEntityListDeleteRepeating(bankEntitiesDTO);
         } else {
@@ -22,11 +22,11 @@ public class BankEntitiesDTO {
         }
     }
 
-    private void addBankEntityListDeleteRepeating(BankEntitiesDTO bankEntitiesDTO) {
-        this.bankEntities.removeIf(bankEntity -> !bankEntitiesDTO.getBankEntities().contains(bankEntity));
+    private void addBankEntityListDeleteRepeating(BankEntitiesDTO<T> bankEntitiesDTO) {
+        this.bankEntities.removeIf(individualEntity -> !bankEntitiesDTO.getBankEntities().contains(individualEntity));
     }
 
-    private void addBankEntityListDonNotDeleteRepeating(BankEntitiesDTO bankEntitiesDTO) {
+    private void addBankEntityListDonNotDeleteRepeating(BankEntitiesDTO<T> bankEntitiesDTO) {
         this.bankEntities.addAll(bankEntitiesDTO.getBankEntities());
     }
 }

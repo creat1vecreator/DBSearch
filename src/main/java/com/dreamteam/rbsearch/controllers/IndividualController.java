@@ -1,9 +1,9 @@
 package com.dreamteam.rbsearch.controllers;
 
 import com.dreamteam.rbsearch.BankEntitiesDTO.BankEntitiesDTO;
-import com.dreamteam.rbsearch.entities.BankEntity;
-import com.dreamteam.rbsearch.form.BankForm;
-import com.dreamteam.rbsearch.services.BankService;
+import com.dreamteam.rbsearch.entities.IndividualEntity;
+import com.dreamteam.rbsearch.form.IndividualForm;
+import com.dreamteam.rbsearch.services.IndividualService;
 import com.google.gson.Gson;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -13,35 +13,25 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequiredArgsConstructor
-@RequestMapping()
-public class BankController {
-    private final BankService bankService;
-
-    @GetMapping("/")
-    public String returnStartPage() {
-        return "start_page";
-    }
-
-    @GetMapping("/error")
-    public String returnErrorPage() {
-        return "../public/error/404";
-    }
+@RequestMapping("/individual")
+public class IndividualController {
+    private final IndividualService individualService;
 
     @GetMapping("/criteria")
     public String returnSearchPage() {
-        return "sample_ans";
+        return "criteria/individual";
     }
 
     @RequestMapping(value = "/search", method = RequestMethod.GET, produces = "application/json")
     public ResponseEntity<String> getSearch(
             @RequestParam(value = "price") String price,
             @RequestParam(value = "app", required = false) String app) {
-        BankForm bankForm = new BankForm(
+        IndividualForm individualForm = new IndividualForm(
                 price,
                 app
         );
-        System.out.println(bankForm);
-        BankEntitiesDTO bankEntitiesDTO = bankService.find(bankForm);
+        System.out.println(individualForm);
+        BankEntitiesDTO<IndividualEntity> bankEntitiesDTO = individualService.find(individualForm);
         String jsonResponse = new Gson().toJson(bankEntitiesDTO.getBankEntities());
         System.out.println(jsonResponse);
         return new ResponseEntity<>(jsonResponse, HttpStatus.OK);
@@ -50,8 +40,8 @@ public class BankController {
     @GetMapping("/bank/{name}")
     public @ResponseBody ResponseEntity<String> findByName(@PathVariable String name) {
         try {
-            BankEntity bankEntity = bankService.findByName(name);
-            String jsonResponse = new Gson().toJson(bankEntity);
+            IndividualEntity individualEntity = individualService.findByName(name);
+            String jsonResponse = new Gson().toJson(individualEntity);
             System.out.println(jsonResponse);
             return new ResponseEntity<>(jsonResponse, HttpStatus.OK);
         } catch (RuntimeException runtimeException) {
@@ -59,10 +49,9 @@ public class BankController {
         }
     }
 
-
     @GetMapping("/all")
     public @ResponseBody ResponseEntity<String> getAllBanks() {
-        BankEntitiesDTO bankEntitiesDTO = bankService.findAll();
+        BankEntitiesDTO<IndividualEntity> bankEntitiesDTO = individualService.findAll();
         String jsonResponse = new Gson().toJson(bankEntitiesDTO);
         System.out.println(jsonResponse);
         return new ResponseEntity<>(jsonResponse, HttpStatus.OK);
