@@ -49,10 +49,14 @@ public class BankController {
 
     @GetMapping("/bank/{name}")
     public @ResponseBody ResponseEntity<String> findByName(@PathVariable String name) {
-        BankEntity bankEntity = bankService.findByName(name);
-        String jsonResponse = new Gson().toJson(bankEntity);
-        System.out.println(jsonResponse);
-        return new ResponseEntity<>(jsonResponse, HttpStatus.OK);
+        try {
+            BankEntity bankEntity = bankService.findByName(name);
+            String jsonResponse = new Gson().toJson(bankEntity);
+            System.out.println(jsonResponse);
+            return new ResponseEntity<>(jsonResponse, HttpStatus.OK);
+        } catch (RuntimeException runtimeException) {
+            return new ResponseEntity<>("error 404 - not found", HttpStatus.OK);
+        }
     }
 
 
