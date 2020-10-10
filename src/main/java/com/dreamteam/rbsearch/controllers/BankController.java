@@ -1,6 +1,7 @@
 package com.dreamteam.rbsearch.controllers;
 
 import com.dreamteam.rbsearch.BankEntitiesDTO.BankEntitiesDTO;
+import com.dreamteam.rbsearch.entities.BankEntity;
 import com.dreamteam.rbsearch.form.BankForm;
 import com.dreamteam.rbsearch.services.BankService;
 import com.google.gson.Gson;
@@ -48,12 +49,18 @@ public class BankController {
 
     @GetMapping("/bank/{name}")
     public @ResponseBody ResponseEntity<String> findByName(@PathVariable String name) {
-        return new ResponseEntity<>(bankService.findByName(name).toString(), HttpStatus.OK);
+        BankEntity bankEntity = bankService.findByName(name);
+        String jsonResponse = new Gson().toJson(bankEntity);
+        System.out.println(jsonResponse);
+        return new ResponseEntity<>(jsonResponse, HttpStatus.OK);
     }
 
 
     @GetMapping("/all")
     public @ResponseBody ResponseEntity<String> getAllBanks() {
-        return new ResponseEntity<>(bankService.findAll().getBankEntities().toString(), HttpStatus.OK);
+        BankEntitiesDTO bankEntitiesDTO = bankService.findAll();
+        String jsonResponse = new Gson().toJson(bankEntitiesDTO);
+        System.out.println(jsonResponse);
+        return new ResponseEntity<>(jsonResponse, HttpStatus.OK);
     }
 }
