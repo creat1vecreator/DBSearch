@@ -10,112 +10,60 @@
 
 </head>
 <body>
-<div class="site" id="page">
-    <a class="skip-link sr-only" href="#main"></a>
+<form action="js/response.js" method="get">
+    <div class="site" id="page">
+        <a class="skip-link sr-only" href="#main"></a>
 
-    <section class="hero-section hero-section--image clearfix clip">
-        <div class="hero-section__wrap">
-            <div class="hero-section__option">
-                <img src="images/index-slider1.jpg" alt="Hero section image">
-            </div>
+        <section class="hero-section hero-section--image clearfix clip">
+            <div class="hero-section__wrap">
+                <div class="hero-section__option">
+                    <img src="images/index-slider1.jpg" alt="Hero section image">
+                </div>
 
-            <div class="container">
-                <div class="row">
-                    <div class="offset-lg-2 col-lg-8">
+                <div class="container">
+                    <div class="row">
+                        <div class="offset-lg-2 col-lg-8">
 
-                        <div class="title-01 title-01--11 text-center">
-                            <h2 class="title__heading">
-                                <span>Брокер ДБО</span>
-                            </h2>
-                            <div class="title__description">19-БИ3</div>
+                            <div class="title-01 title-01--11 text-center">
+                                <h2 class="title__heading">
+                                    <span>Брокер ДБО</span>
+                                </h2>
+                                <div class="title__description">19-БИ3</div>
 
-                            <div class="right-sidebar">
-                                <h2>Критерии выбора</h2>
+                                <div class="right-sidebar">
+                                    <h2>Критерии выбора</h2>
 
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#id1" style="padding-right: 15px;">
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                            Физическое лицо
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="id1" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href="">аываы </a></li>
-                                            <li><a href="">выаыва </a></li>
-                                            <li><a href="">ывфаы </a></li>
-                                            <li><a href="">выаы</a></li>
-                                            <li><a href="">выаф </a></li>
-                                        </ul>
+                                    <div>
+                                        <input type="radio" id="individual"
+                                               name="category" value="individual">
+                                        <label for="individual">Физическое лицо</label><Br>
+
+                                        <input type="radio" id="legal_entity"
+                                               name="category" value="legal_entity" style="margin-left: 11px;">
+                                        <label for="legal_entity">Юридическое лицо</label><Br>
+
+                                        <input type="radio" id="corporation"
+                                               name="category" value="corporation">
+                                        <label for="corporation" style="margin-right: 39px;">Корпорация</label><Br>
                                     </div>
+
+
                                 </div>
-
-
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#id2">
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                            Юридическое лицо
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="id2" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href=""></a></li>
-                                            <li><a href="">ывфы</a></li>
-                                            <li><a href="">ыфвфы</a></li>
-                                            <li><a href="">выа</a></li>
-                                            <li><a href="">выа</a></li>
-                                            <li><a href="">выаы</a></li>
-                                            <li><a href="">выаыф</a></li>
-                                            <li><a href=""> ывфаы</a></li>
-                                            <li><a href="">выфа</a></li>
-                                            <li><a href="">ываы</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordian" href="#id3" style="padding-right: 50px;">
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                            Корпорация
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="id3" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href="">выав</a></li>
-                                            <li><a href="">выафыва</a></li>
-                                            <li><a href="">выаыв</a></li>
-                                            <li><a href="">выаыа</a></li>
-                                            <li><a href="">выафаы</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-
+                                <div class="title__action"> <a href="categories.html"  style="margin-top: 25px;"><input type="submit" value="Применить" style="margin-top: 20px; background-color: #5cb85c;"></a></div>
                             </div>
-                            <div class="title__action"><a href="criteria_page.html" class="btn btn-success" style="margin-top: 25px;">Начать поиск</a></div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-</div>
+        </section>
+    </div>
 
-<div class="button-group">
-    <span style="color:white;">Участники</span>
-</div>
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/main.js"></script>
+    <div class="button-group">
+        <span style="color:white;">Участники</span>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</form>
 </body>
 </html>
