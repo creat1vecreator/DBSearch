@@ -5,11 +5,11 @@ import lombok.Data;
 import java.util.Arrays;
 
 @Data
-public class BankForm {
+public class IndividualForm {
     private Integer price;
     private String app;
 
-    public BankForm(String price, String app) {
+    public IndividualForm(String price, String app) {
         this.price = Integer.parseInt(price);
         this.app = app == null ? "" : masterApp(app);
     }
