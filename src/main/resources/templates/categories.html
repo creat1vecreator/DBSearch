@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Выбор ДБО</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/price-range.css" rel="stylesheet">
+	<link href="css/main2.css" rel="stylesheet">
+  
+
+</head>
+
+<body>
+	<form action="js/response.js" method="get">
+	<header id="header">
+		
+		
+	</header>
+	
+	<section id="advertisement">
+		<div class="container">
+		</div>
+	</section>
+	
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="left-sidebar">
+						<h2>Критерии выбора</h2>
+						<div class="panel-group category-products" id="accordian">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#first">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											Переводы
+										</a>
+									</h4>
+								</div>
+								<div id="first" class="panel-collapse collapse">
+									<div class="panel-body">
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="transaction" value="abroad" id="1">
+											<label class="form-check-label" for="1">За рубеж</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="transaction" value="between_cards" id="2">
+											<label class="form-check-label" for="2">С карты на карту</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="transaction" value="between_accounts" id="3">
+											<label class="form-check-label" for="3">Между своими счетами</label>
+										</div>
+									</div>
+									<div class="panel-body">
+									<p style="color: #696763;">Автоматические переводы:</p>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="transaction2"value="autotransaction" id="5">
+											<label class="form-check-label" for="5">автоперевод</label>
+										</div>
+									</div>
+									<div class="panel-body">
+										<p style="color: #696763;"> Валюта:</p>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" name="transaction_currency"value="ruble" id="5">
+												<label class="form-check-label" for="5">Рубль</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" name="transaction_currency" value="euro" id="6">
+												<label class="form-check-label" for="6">Евро</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" name="transaction_currency" value="dollar" id="6">
+												<label class="form-check-label" for="6">Доллар</label>
+											</div>
+										
+									</div>
+									</div>
+							
+														
+		
+								
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#second">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											Платежи
+										</a>
+									</h4>
+								</div>
+								<div id="second" class="panel-collapse collapse">
+									<div class="panel-body">
+										<p style="color: #696763;">Способы осуществления:</p>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="payment" value="browser" id="1">
+											<label class="form-check-label" for="1">Браузер</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="payment" value="app" id="2">
+											<label class="form-check-label" for="2">Приложение</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="payment" value="sms" id="3">
+											<label class="form-check-label" for="3">СМС</label>
+										</div>
+									</div>
+									<div class="panel-body">
+									<p style="color: #696763;">Услуги/цели:</p>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="services"value="mobile_communication" id="5">
+											<label class="form-check-label" for="5">Мобильная связь</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="services" value="utilities" id="6">
+											<label class="form-check-label" for="6">Коммунальные услуги</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="services"value="internet" id="5">
+											<label class="form-check-label" for="5">Интернет</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="services" value="network_marketing" id="6">
+											<label class="form-check-label" for="6">Сетевой маркетинг</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="services"value="home_phone" id="5">
+											<label class="form-check-label" for="5">Домашний телефон</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="services" value="tv" id="6">
+											<label class="form-check-label" for="6">Телевидение</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="services"value="government_services" id="5">
+											<label class="form-check-label" for="5">Гос услуги</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="services" value="transport" id="6">
+											<label class="form-check-label" for="6">Транспорт</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="services"value="online_wallet" id="5">
+											<label class="form-check-label" for="5">Электронные кошельки</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="services" value="repayment_loan" id="6">
+											<label class="form-check-label" for="6">Погашение кредитов</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="services"value="games" id="5">
+											<label class="form-check-label" for="5">Игры</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="services" value="education" id="6">
+											<label class="form-check-label" for="6">Образование</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="services"value="travel" id="5">
+											<label class="form-check-label" for="5">Путешествия</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="services" value="social_networks" id="6">
+											<label class="form-check-label" for="6">Соц-сети</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="services"value="online_store" id="5">
+											<label class="form-check-label" for="5">Интернет-магазины</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="services" value="charity" id="6">
+											<label class="form-check-label" for="6">Благотворительность</label>
+										</div>
+									</div>
+									<div class="panel-body">
+										<p style="color: #696763;">Автоматические платежи:</p>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="autopayment" value="true" id="1">
+											<label class="form-check-label" for="1">Автоплатежи</label>
+										</div>
+									</div>
+									</div>
+							
+														
+		
+								
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#third">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											Вклады
+										</a>
+									</h4>
+								</div>
+								<div id="third" class="panel-collapse collapse">
+									<div class="panel-body">
+										<p style="color: #696763;">Ставка:</p>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="transaction" value="abroad" id="1">
+											<label class="form-check-label" for="1">аваап</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="transaction" value="between_cards" id="2">
+											<label class="form-check-label" for="2">С карты на карту</label>
+										</div>
+									</div>
+									<div class="panel-body">
+									<p style="color: #696763;">Цель вклада:</p>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="aim"value="general_terms" id="5">
+											<label class="form-check-label" for="5">Общие условия</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="aim" value="children_orphans" id="6">
+											<label class="form-check-label" for="6">Дети-сироты</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="aim"value="retiree" id="5">
+											<label class="form-check-label" for="5">Пенсионеры</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="aim" value="veterans" id="6">
+											<label class="form-check-label" for="6">Ветераны и инвалиды ВОВ</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="aim" value="motorists" id="6">
+											<label class="form-check-label" for="6">Автомобилисты</label>
+										</div>
+									
+									</div>
+									<div class="panel-body">
+										<p style="color: #696763;"> Валюта:</p>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" name="deposit_currency"value="ruble" id="5">
+												<label class="form-check-label" for="5">Рубль</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" name="deposit_currency" value="euro" id="6">
+												<label class="form-check-label" for="6">Евро</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" name="deposit_currency" value="dollar" id="6">
+												<label class="form-check-label" for="6">Доллар</label>
+											</div>
+										
+									</div>
+										<div class="panel-body">
+											<p style="color: #696763;">Дополнительные условия вклада:</p>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" name="deposit_terms"value="replenishing" id="5">
+													<label class="form-check-label" for="5">Пополняемый </label>
+												</div>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" name="deposit_terms" value="unreplenishing" id="6">
+													<label class="form-check-label" for="6">Непополняемый</label>
+												</div>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" name="deposit_terms" value="partial_withdrawal" id="6">
+													<label class="form-check-label" for="6">Частичное снятие</label>
+												</div>
+											
+										</div>
+									</div>
+							
+														
+		
+								
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#fourth">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											Консультация 24/7
+										</a>
+									</h4>
+								</div>
+								<div id="fourth" class="panel-collapse collapse">
+									<div class="panel-body">
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="consultation" value="hotline" id="1">
+											<label class="form-check-label" for="1">Горячая линия</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="consultation" value="chat_with_expert" id="2">
+											<label class="form-check-label" for="2">Чат с экспертом</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="consultation" value="chat_bot" id="1">
+											<label class="form-check-label" for="1">Чат-бот</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="consultation" value="mail" id="1">
+											<label class="form-check-label" for="1">Почта</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#fifth">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											Карты
+										</a>
+									</h4>
+								</div>
+								<div id="fifth" class="panel-collapse collapse">
+									<div class="panel-body">
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="card" value="free_service" id="1">
+											<label class="form-check-label" for="1">Бесплатное обслуживание</label>
+										</div>
+									</div>
+									<div class="panel-body">
+									<p style="color: #696763;">Вид карты:</p>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="card"value="debit" id="5">
+											<label class="form-check-label" for="5">Дебетовая</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="card" value="credit" id="6">
+											<label class="form-check-label" for="6">Кредитная</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="card"value="virtual" id="5">
+											<label class="form-check-label" for="5">Виртуальная</label>
+										</div>
+	
+									
+									</div>
+									<div class="panel-body">
+										<p style="color: #696763;"> Категории карт:</p>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" name="card"value="standard" id="5">
+												<label class="form-check-label" for="5">Стандартная</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" name="card" value="travel" id="6">
+												<label class="form-check-label" for="6">Для путешествий</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" name="card" value="child" id="6">
+												<label class="form-check-label" for="6">Детская</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" name="card"value="gamers" id="5">
+												<label class="form-check-label" for="5">Для геймеров</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" name="card" value="motorists" id="6">
+												<label class="form-check-label" for="6">Для автомобилистов</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" name="card" value="moscow_residents" id="6">
+												<label class="form-check-label" for="6">Для жителей Москвы</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" name="card"value="retiree" id="5">
+												<label class="form-check-label" for="5">Для пенсионеров</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" name="card" value="social" id="6">
+												<label class="form-check-label" for="6">Социальная</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" name="card" value="charity" id="6">
+												<label class="form-check-label" for="6">Благотворительные</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" name="card"value="self-employed" id="5">
+												<label class="form-check-label" for="5">Для самозанятых</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" name="card" value="rzd" id="6">
+												<label class="form-check-label" for="6">РЖД</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" name="card" value="wear" id="6">
+												<label class="form-check-label" for="6">Одежда</label>
+											</div>
+										
+									</div>
+									<div class="panel-body">
+										<p><b style="color: #696763;"> Цена обслуживания в год:</b><br>
+											<input type="text" name="card_cost" size="10">
+										   </p>
+									</div>
+									<div class="panel-body">
+										<p><b style="color: #696763;"> Кэшбэк:</b><br>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="card" value="min_cashback" id="1">
+											<label class="form-check-label" for="1">Минимальный</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="card" value="max_cashback" id="1">
+											<label class="form-check-label" for="1">Максимальный</label>
+										</div>
+									</div>
+									<div class="panel-body">
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="card" value="self_design" id="1">
+											<label class="form-check-label" for="1">Дизайн на выбор</label>
+										</div>
+									</div>
+									<div class="panel-body">
+										<p><b style="color: #696763;"> срок действия карты:</b><br>
+										<div class="slidecontainer">
+											<input type="range" min="1" max="20" value="10" class="slider" name = "card_validity"id="myRange">
+											<p>Срок в годах: <span id="demo"></span></p>
+										  </div>
+										  <script>
+											var slider = document.getElementById("myRange");
+											var output = document.getElementById("demo");
+											output.innerHTML = slider.value;
+											
+											slider.oninput = function() {
+											  output.innerHTML = this.value;
+											}
+											</script>
+									</div>
+									</div>
+							
+														
+		
+								
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#sixth">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											Кредит
+										</a>
+									</h4>
+								</div>
+								<div id="sixth" class="panel-collapse collapse">
+									<div class="panel-body">
+									<p style="color: #696763;">Цели:</p>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="credit"value="general_terms" id="5">
+											<label class="form-check-label" for="5">Общие условия</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="credit"value="renovation" id="5">
+											<label class="form-check-label" for="5">Ремонт </label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="credit"value="property" id="5">
+											<label class="form-check-label" for="5">Недвижимость </label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="credit"value="car" id="5">
+											<label class="form-check-label" for="5">Автокредит </label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="credit"value="business_development" id="5">
+											<label class="form-check-label" for="5">Развитие бизнеса</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="credit"value="dept" id="5">
+											<label class="form-check-label" for="5">Погашение долгов</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="credit"value="health" id="5">
+											<label class="form-check-label" for="5">Здоровье</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="credit"value="travel" id="5">
+											<label class="form-check-label" for="5">Путешествия </label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="credit"value="military" id="5">
+											<label class="form-check-label" for="5">Для военнослужащих</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="credit"value="refinancing" id="5">
+											<label class="form-check-label" for="5">Рефинансирование </label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="credit"value="retiree" id="5">
+											<label class="form-check-label" for="5">Пенсионный</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="credit"value="salary" id="5">
+											<label class="form-check-label" for="5">Займ до зарплаты</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="credit"value="education" id="5">
+											<label class="form-check-label" for="5">Образование</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="credit"value="business" id="5">
+											<label class="form-check-label" for="5">Бизнес</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="credit"value="marriage" id="5">
+											<label class="form-check-label" for="5">Свадьба</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="credit"value="far_east" id="5">
+											<label class="form-check-label" for="5">Освоение «Дальневосточного гектара»</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="credit"value="private_household" id="5">
+											<label class="form-check-label" for="5">Личное подсобное хозяйство</label>
+										</div>
+									
+									</div>
+									<div class="panel-body">
+										<p><b style="color: #696763;"> Процентная ставка:</b><br>
+											<div class="slidecontainer">
+												<input type="range" min="1" max="20" value="10" class="slider" name = "credit_interest_rate"id="myRange2">
+												<p>Ставка в процентах: <span id="demo2"></span></p>
+											  </div>
+											  <script>
+												var slider2 = document.getElementById("myRange2");
+												var output2 = document.getElementById("demo2");
+												output2.innerHTML = slider2.value;
+												
+												slider2.oninput = function() {
+												  output2.innerHTML = this.value;
+												}
+												</script>
+									</div>
+									<div class="panel-body">
+										<p><b style="color: #696763;"> Срок кредита:</b><br>
+											<div class="slidecontainer">
+												<input type="range" min="1" max="60" value="10" class="slider" name = "credit_term"id="myRange3">
+												<p>Срок в месяцах: <span id="demo3"></span></p>
+											  </div>
+											  <script>
+												var slider3 = document.getElementById("myRange3");
+												var output3 = document.getElementById("demo3");
+												output3.innerHTML = slider3.value;
+												
+												slider3.oninput = function() {
+												  output3.innerHTML = this.value;
+												}
+												</script>
+									</div>
+									<div class="panel-body">
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="card" value="min_cashback" id="1">
+											<label class="form-check-label" for="1">Досрочное погашение(без процентов)</label>
+										</div>
+									</div>
+									<div class="panel-body">
+										<p><b style="color: #696763;"> Сумма кредита:</b><br>
+											<div class="slidecontainer">
+												<input type="range" min="1" max="10000000" value="10000" class="slider" name = "credit_sum" id="myRange4">
+												<p>Сумма кредита: <span id="demo4"></span></p>
+											  </div>
+											  <script>
+												var slider4 = document.getElementById("myRange4");
+												var output4 = document.getElementById("demo4");
+												output4.innerHTML = slider4.value;
+												
+												slider4.oninput = function() {
+												  output4.innerHTML = this.value;
+												}
+												</script>
+									</div>
+									</div>
+									
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#seventh">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											Страхование
+										</a>
+									</h4>
+								</div>
+								<div id="seventh" class="panel-collapse collapse">
+									<div class="panel-body">
+										<p><b style="color: #696763;"> Цель:</b><br>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="insurance" value="auto" id="1">
+											<label class="form-check-label" for="1">Автострахование </label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="insurance" value="tourists" id="1">
+											<label class="form-check-label" for="1">Для туристов</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="insurance" value="property" id="1">
+											<label class="form-check-label" for="1">Недвижимость </label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="insurance" value="accidents" id="1">
+											<label class="form-check-label" for="1">От несчастных случаев</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="insurance" value="health" id="1">
+											<label class="form-check-label" for="1">Здоровье</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="insurance" value="legal_services" id="1">
+											<label class="form-check-label" for="1">Юридические услуги</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="insurance" value="life" id="1">
+											<label class="form-check-label" for="1">Жизнь </label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="insurance" value="covid" id="1">
+											<label class="form-check-label" for="1">Коронавирус</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="insurance" value="job_loss" id="1">
+											<label class="form-check-label" for="1">Потеря работы</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="insurance" value="osago" id="1">
+											<label class="form-check-label" for="1">Электронный полис ОСАГО</label>
+										</div>
+									</div>
+									<div class="panel-body">
+										<p><b style="color: #696763;"> Сумма страховой защиты:</b><br>
+											<div class="slidecontainer">
+												<input type="range" min="1" max="10000000" value="10000" class="slider" name = "credit_sum" id="myRange5">
+												<p>Сумма в рублях: <span id="demo5"></span></p>
+											  </div>
+											  <script>
+												var slider5 = document.getElementById("myRange5");
+												var output5 = document.getElementById("demo5");
+												output5.innerHTML = slider5.value;
+												
+												slider5.oninput = function() {
+												  output5.innerHTML = this.value;
+												}
+												</script>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordian" href="#eighth">
+											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+											Уникальные услуги
+										</a>
+									</h4>
+								</div>
+								<div id="eighth" class="panel-collapse collapse">
+									<div class="panel-body">
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="unique" value="legal_consultation" id="5">
+											<label class="form-check-label" for="5">Консультация юриста</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="unique"value="tax_assistant" id="5">
+											<label class="form-check-label" for="5">Налоговый помощник</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="unique"value="upgrade_creditstory" id="5">
+											<label class="form-check-label" for="5">Улучшение кредитной истории</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="unique"value="property" id="5">
+											<label class="form-check-label" for="5">Витрина недвижимости</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="unique"value="special_account" id="5">
+											<label class="form-check-label" for="5">Специальный счёт физического лица для участия в закупках</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="unique"value="safes" id="5">
+											<label class="form-check-label" for="5">Аренда сейфов</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="unique"value="biometrics" id="5">
+											<label class="form-check-label" for="5">Биометрия</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="unique"value="investments" id="5">
+											<label class="form-check-label" for="5">Инвестиции </label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="unique"value="self-employed" id="5">
+											<label class="form-check-label" for="5">Регистрация самозанятых</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="unique"value="analisys" id="5">
+											<label class="form-check-label" for="5">Аналитика</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="unique"value="reporting" id="5">
+											<label class="form-check-label" for="5">Ведение отчётности</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="unique"value="far_east" id="5">
+											<label class="form-check-label" for="5">Кредит на освоение «Дальневосточного гектара»</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="unique"value="marriage" id="5">
+											<label class="form-check-label" for="5">Кредит на свадьбу</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="unique"value="family" id="5">
+											<label class="form-check-label" for="5">Банк для всей семьи</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" name="unique"value="broker" id="5">
+											<label class="form-check-label" for="5">Брокерское обслуживание</label>
+										</div>
+									</div>
+								</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<h4 class="panel-title">
+												<a data-toggle="collapse" data-parent="#accordian" href="#ninth">
+													<span class="badge pull-right"><i class="fa fa-plus"></i></span>
+													Сортировка
+												</a>
+											</h4>
+										</div>
+										<div id="ninth" class="panel-collapse collapse">
+											<div class="panel-body">
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" name="sort" value="rating" id="5">
+													<label class="form-check-label" for="5">Рейтинг(AppStore,Play Market)</label>
+												</div>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" name="sort"value="popularity" id="5">
+													<label class="form-check-label" for="5">популярность(скачивания)</label>
+												</div>
+												
+												
+											</div>
+										</div>
+											</div>
+						</div>
+					
+						
+						<div class="price-range">
+							<h2>Price Range</h2>
+							<div class="well text-center">
+								 <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[0,450]" id="sl2" ><br />
+								 <b class="pull-left">$ 0</b> <b class="pull-right">$ 600</b>
+							</div>
+						</div>
+						
+						<div class="title__action"><a href="single.html" class="btn btn-success" style="margin-top: 25px;"><input type="submit" value="Применить"></a></div>
+					</div>
+				</div>
+				
+				<div class="col-sm-9 padding-right">
+					<div class="features_items">
+						<h2 class="title text-center">Выбранные банки</h2>
+						
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<footer id="footer">
+		
+	
+		
+	</footer>
+	
+
+  
+    <script src="js/jquery.js"></script>
+	<script src="js/price-range.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/response.js"></script>
+
+	</form>
+</body>
+</html>
