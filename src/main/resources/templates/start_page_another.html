@@ -4,118 +4,66 @@
     <title>Брокер Дбо - 19БИ-3</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <base href="/" />
-    <link type="text/css" href="static/css/main.css" rel="stylesheet">
-    <link type="text/css" href="static/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="static/css/main.css" rel="stylesheet">
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 <body>
-<div class="site" id="page">
-    <a class="skip-link sr-only" href="#main"></a>
+<form action="static/js/response.js" method="get">
+    <div class="site" id="page">
+        <a class="skip-link sr-only" href="#main"></a>
 
-    <section class="hero-section hero-section--image clearfix clip">
-        <div class="hero-section__wrap">
-            <div class="hero-section__option">
-                <img src="../static/images/index-slider1.jpg" alt="Hero section image">
-            </div>
+        <section class="hero-section hero-section--image clearfix clip">
+            <div class="hero-section__wrap">
+                <div class="hero-section__option">
+                    <img src="static/images/index-slider1.jpg" alt="Hero section image">
+                </div>
 
-            <div class="container">
-                <div class="row">
-                    <div class="offset-lg-2 col-lg-8">
+                <div class="container">
+                    <div class="row">
+                        <div class="offset-lg-2 col-lg-8">
 
-                        <div class="title-01 title-01--11 text-center">
-                            <h2 class="title__heading">
-                                <span>Брокер ДБО</span>
-                            </h2>
-                            <div class="title__description">19-БИ3</div>
+                            <div class="title-01 title-01--11 text-center">
+                                <h2 class="title__heading">
+                                    <span>Брокер ДБО</span>
+                                </h2>
+                                <div class="title__description">19-БИ3</div>
 
-                            <div class="right-sidebar">
-                                <h2>Критерии выбора</h2>
+                                <div class="right-sidebar">
+                                    <h2>Критерии выбора</h2>
 
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a href="/individual/criteria" style="padding-right: 15px;">
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                            Физическое лицо
-                                        </a>
-                                    </h4>
+                                    <div>
+                                        <input type="radio" id="individual"
+                                               name="category" value="individual">
+                                        <label for="individual">Физическое лицо</label><Br>
+
+                                        <input type="radio" id="legal_entity"
+                                               name="category" value="legal_entity" style="margin-left: 11px;">
+                                        <label for="legal_entity">Юридическое лицо</label><Br>
+
+                                        <input type="radio" id="corporation"
+                                               name="category" value="corporation">
+                                        <label for="corporation" style="margin-right: 39px;">Корпорация</label><Br>
+                                    </div>
+
+
                                 </div>
-<!--                                <div id="id1" class="panel-collapse collapse">-->
-<!--                                    <div class="panel-body">-->
-<!--                                        <ul>-->
-<!--                                            <li><a href="">аываы </a></li>-->
-<!--                                            <li><a href="">выаыва </a></li>-->
-<!--                                            <li><a href="">ывфаы </a></li>-->
-<!--                                            <li><a href="">выаы</a></li>-->
-<!--                                            <li><a href="">выаф </a></li>-->
-<!--                                        </ul>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-
-
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a href="/legal_entity/criteria">
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                            Юридическое лицо
-                                        </a>
-                                    </h4>
-                                </div>
-<!--                                <div id="id2" class="panel-collapse collapse">-->
-<!--                                    <div class="panel-body">-->
-<!--                                        <ul>-->
-<!--                                            <li><a href=""></a></li>-->
-<!--                                            <li><a href="">ывфы</a></li>-->
-<!--                                            <li><a href="">ыфвфы</a></li>-->
-<!--                                            <li><a href="">выа</a></li>-->
-<!--                                            <li><a href="">выа</a></li>-->
-<!--                                            <li><a href="">выаы</a></li>-->
-<!--                                            <li><a href="">выаыф</a></li>-->
-<!--                                            <li><a href=""> ывфаы</a></li>-->
-<!--                                            <li><a href="">выфа</a></li>-->
-<!--                                            <li><a href="">ываы</a></li>-->
-<!--                                        </ul>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-
-
-
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a href="/corporation/criteria" style="padding-right: 50px;">
-                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                            Корпорация
-                                        </a>
-                                    </h4>
-                                </div>
-<!--                                <div id="id3" class="panel-collapse collapse">-->
-<!--                                    <div class="panel-body">-->
-<!--                                        <ul>-->
-<!--                                            <li><a href="">выав</a></li>-->
-<!--                                            <li><a href="">выафыва</a></li>-->
-<!--                                            <li><a href="">выаыв</a></li>-->
-<!--                                            <li><a href="">выаыа</a></li>-->
-<!--                                            <li><a href="">выафаы</a></li>-->
-<!--                                        </ul>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-
-
+                                <div class="title__action"> <a href="criteria/criteria_page.html"  style="margin-top: 25px;"><input type="submit" value="Применить" style="margin-top: 20px; background-color: #5cb85c;"></a></div>
                             </div>
-<!--                            <div class="title__action"><a href="/criteria" class="btn btn-success" style="margin-top: 25px;">Начать поиск</a></div>-->
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-</div>
+        </section>
+    </div>
 
-<div class="button-group">
-    <span style="color:white;">Участники</span>
-</div>
-<script src="static/js/jquery.js"></script>
-<script src="static/js/bootstrap.min.js"></script>
-<!--<script src="static/js/main.js"></script>-->
+    <div class="button-group">
+        <span style="color:white;">Участники</span>
+    </div>
+    <script src="static/js/jquery.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/main.js"></script>
+</form>
 </body>
 </html>
