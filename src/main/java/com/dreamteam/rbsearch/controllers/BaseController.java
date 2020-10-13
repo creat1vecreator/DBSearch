@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class BaseController {
     @GetMapping("/")
     public String returnStartPage() {
-        return "start_page_another";
+        return "start_page";
     }
 
     @GetMapping("/error")
@@ -20,7 +20,7 @@ public class BaseController {
         return "../public/error/404";
     }
 
-    @GetMapping("/search?category={category}")
+    @GetMapping("/{category}")
     public String returnCriteriaPage(@PathVariable String category) {
         switch (category) {
             case "individual":

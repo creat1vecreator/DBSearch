@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.*;
 public class LegalEntityController {
     private final LegalEntityService legalEntityService;
 
-    @GetMapping("/criteria")
-    public String returnSearchPage() {
-        return "criteria/legal_entity";
-    }
+//    @GetMapping("/criteria")
+//    public String returnSearchPage() {
+//        return "criteria/legal_entity";
+//    }
 
     @RequestMapping(value = "/search", method = RequestMethod.GET, produces = "application/json")
     public ResponseEntity<String> getSearch(
