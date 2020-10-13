@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.*;
 public class IndividualController {
     private final IndividualService individualService;
 
-    @GetMapping("/criteria")
-    public String returnSearchPage() {
-        return "criteria/individual";
-    }
+//    @GetMapping("/criteria")
+//    public String returnSearchPage() {
+//        return "criteria/individual";
+//    }
 
     @RequestMapping(value = "/search", method = RequestMethod.GET, produces = "application/json")
     public ResponseEntity<String> getSearch(

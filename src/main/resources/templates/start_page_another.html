@@ -10,7 +10,6 @@
 
 </head>
 <body>
-<form action="static/js/response.js" method="get">
     <div class="site" id="page">
         <a class="skip-link sr-only" href="#main"></a>
 
@@ -34,22 +33,13 @@
                                     <h2>Критерии выбора</h2>
 
                                     <div>
-                                        <input type="radio" id="individual"
-                                               name="category" value="individual">
-                                        <label for="individual">Физическое лицо</label><Br>
-
-                                        <input type="radio" id="legal_entity"
-                                               name="category" value="legal_entity" style="margin-left: 11px;">
-                                        <label for="legal_entity">Юридическое лицо</label><Br>
-
-                                        <input type="radio" id="corporation"
-                                               name="category" value="corporation">
-                                        <label for="corporation" style="margin-right: 39px;">Корпорация</label><Br>
+                                        <ul>
+                                            <li><a href="individual">Физическое лицо</a></li>
+                                            <li><a href="legal_entity">Юридическое лицо</a></li>
+                                            <li><a href="corporation">Корпорация</a></li>
+                                        </ul>
                                     </div>
-
-
                                 </div>
-                                <div class="title__action"> <a href="criteria/criteria_page.html"  style="margin-top: 25px;"><input type="submit" value="Применить" style="margin-top: 20px; background-color: #5cb85c;"></a></div>
                             </div>
                         </div>
                     </div>
@@ -64,6 +54,5 @@
     <script src="static/js/jquery.js"></script>
     <script src="static/js/bootstrap.min.js"></script>
     <script src="static/js/main.js"></script>
-</form>
 </body>
 </html>

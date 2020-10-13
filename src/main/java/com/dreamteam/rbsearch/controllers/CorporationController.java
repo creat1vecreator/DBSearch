@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.*;
 public class CorporationController {
     private final CorporationService corporationService;
 
-    @GetMapping("/criteria")
-    public String returnSearchPage() {
-        return "criteria/corporation";
-    }
+//    @GetMapping("/criteria")
+//    public String returnSearchPage() {
+//        return "criteria/corporation";
+//    }
 
     @RequestMapping(value = "/search", method = RequestMethod.GET, produces = "application/json")
     public ResponseEntity<String> getSearch(
