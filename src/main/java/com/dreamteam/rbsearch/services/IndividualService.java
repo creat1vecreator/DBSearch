@@ -255,7 +255,7 @@ public class IndividualService {
     }
 
     private BankEntitiesDTO<IndividualEntity> findByTransferType(List<String> transfer_type) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByTransferTypesContaining(transfer_type));
+        return new BankEntitiesDTO<>(individualRepository.findAllByTransferTypesContains(transfer_type));
     }
 
     private BankEntitiesDTO<IndividualEntity> findByTransferAuto(Boolean transfer_auto) {
@@ -263,15 +263,15 @@ public class IndividualService {
     }
 
     private BankEntitiesDTO<IndividualEntity> findByTransferCurrency(List<String> transfer_currency) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByTransferCurrencyContaining(transfer_currency));
+        return new BankEntitiesDTO<>(individualRepository.findAllByTransferCurrencyContains(transfer_currency));
     }
 
     private BankEntitiesDTO<IndividualEntity> findByPaymentMethod(List<String> payment_method) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByPaymentMethodContaining(payment_method));
+        return new BankEntitiesDTO<>(individualRepository.findAllByPaymentMethodContains(payment_method));
     }
 
     private BankEntitiesDTO<IndividualEntity> findByPaymentAims(List<String> payment_aims) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByPaymentAimsServicesContaining(payment_aims));
+        return new BankEntitiesDTO<>(individualRepository.findAllByPaymentAimsServicesContains(payment_aims));
     }
 
     private BankEntitiesDTO<IndividualEntity> findByPaymentAuto(Boolean payment_auto) {
@@ -283,15 +283,15 @@ public class IndividualService {
     }
 
     private BankEntitiesDTO<IndividualEntity> findByDepositCurrency(List<String> deposit_currency) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByDepositCurrencyContaining(deposit_currency));
+        return new BankEntitiesDTO<>(individualRepository.findAllByDepositCurrencyContains(deposit_currency));
     }
 
     private BankEntitiesDTO<IndividualEntity> findByDepositAddition(List<String> deposit_additions) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByDepositAdditionalConditionsContaining(deposit_additions));
+        return new BankEntitiesDTO<>(individualRepository.findAllByDepositAdditionalConditionsContains(deposit_additions));
     }
 
     private BankEntitiesDTO<IndividualEntity> findByConsultation(List<String> consultation) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByConsultationContaining(consultation));
+        return new BankEntitiesDTO<>(individualRepository.findAllByConsultationContains(consultation));
     }
 
     private BankEntitiesDTO<IndividualEntity> findByCardFreeService(Boolean card_free_service) {
@@ -299,11 +299,11 @@ public class IndividualService {
     }
 
     private BankEntitiesDTO<IndividualEntity> findByCardTypes(List<String> card_types) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByCardTypesContaining(card_types));
+        return new BankEntitiesDTO<>(individualRepository.findAllByCardTypesContains(card_types));
     }
 
     private BankEntitiesDTO<IndividualEntity> findByCardCategories(List<String> card_categories) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByCardCategoriesContaining(card_categories));
+        return new BankEntitiesDTO<>(individualRepository.findAllByCardCategoriesContains(card_categories));
     }
 
     private BankEntitiesDTO<IndividualEntity> findByCardAnnualServicePrice(Integer card_annual_service_price_start, Integer card_annual_service_price_finish) {
@@ -323,7 +323,7 @@ public class IndividualService {
     }
 
     private BankEntitiesDTO<IndividualEntity> findByCreditAim(List<String> credit_aim) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByCreditAimContaining(credit_aim));
+        return new BankEntitiesDTO<>(individualRepository.findAllByCreditAimContains(credit_aim));
     }
 
     private BankEntitiesDTO<IndividualEntity> findByCreditInterestRate(Float credit_interest_rate_start, Float credit_interest_rate_finish) {
@@ -343,7 +343,7 @@ public class IndividualService {
     }
 
     private BankEntitiesDTO<IndividualEntity> findByInsuranceAim(List<String> insurance_aim) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByInsuranceAimContaining(insurance_aim));
+        return new BankEntitiesDTO<>(individualRepository.findAllByInsuranceAimContains(insurance_aim));
     }
 
     private BankEntitiesDTO<IndividualEntity> findByInsuranceAmount(Integer insurance_amount_start, Integer insurance_amount_finish) {
@@ -351,7 +351,7 @@ public class IndividualService {
     }
 
     private BankEntitiesDTO<IndividualEntity> findByUniqueServices(List<String> unique_services) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByUniqueServicesContaining(unique_services));
+        return new BankEntitiesDTO<>(individualRepository.findAllByUniqueServicesContains(unique_services));
     }
 
     public IndividualEntity findByName(String name) {

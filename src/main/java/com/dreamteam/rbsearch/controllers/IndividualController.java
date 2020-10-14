@@ -18,6 +18,9 @@ import org.springframework.web.bind.annotation.*;
 public class IndividualController {
     private final IndividualService individualService;
 
+
+    // todo change Containing and Contains or something else
+
 //    @GetMapping("/criteria")
 //    public String returnSearchPage() {
 //        return "criteria/individual";
