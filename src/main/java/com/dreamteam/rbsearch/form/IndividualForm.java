@@ -40,8 +40,7 @@ public class IndividualForm {
     private List<String> insurance_aim;
     private Integer insurance_amount_start;
     private Integer insurance_amount_finish;
-    private Float rating;
-    private Integer popularity;
+    private String sorting;
     private List<String> unique_services;
 
     public IndividualForm(
@@ -51,34 +50,25 @@ public class IndividualForm {
             String paymentMethod,
             String paymentAimsServices,
             String paymentAuto,
-            String depositRateStart,
-            String depositRateFinish,
+            String depositRate,
             String depositCurrency,
             String depositAdditionalConditions,
             String consultation,
             String cardFreeService,
             String cardTypes,
             String cardCategories,
-            String cardAnnualServicePriceStart,
-            String cardAnnualServicePriceFinish,
-            String cardCashbackStart,
-            String cardCashbackFinish,
+            String cardAnnualServicePrice,
+            String cardCashback,
             String cardDesignToChoose,
-            String cardValidityStart,
-            String cardValidityFinish,
+            String cardValidity,
             String creditAim,
-            String creditInterestRateStart,
-            String creditInterestRateFinish,
-            String creditTermStart,
-            String creditTermFinish,
+            String creditInterestRate,
+            String creditTerm,
             String creditEarlyPayment,
-            String creditAmountStart,
-            String creditAmountFinish,
+            String creditAmount,
             String insuranceAim,
-            String insuranceAmountStart,
-            String insuranceAmountFinish,
-            String rating,
-            String popularity,
+            String insuranceAmount,
+            String sorting,
             String uniqueServices
     ) {
         this.transfer_types = transferTypes == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(transferTypes.split(", ")));
@@ -87,34 +77,41 @@ public class IndividualForm {
         this.payment_method = paymentMethod == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(paymentMethod.split(", ")));
         this.payment_aims_services = paymentAimsServices == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(paymentAimsServices.split(", ")));
         this.payment_auto = Boolean.parseBoolean(paymentAuto);
-        this.deposit_rate_start = Float.parseFloat(depositRateStart);
-        this.deposit_rate_finish = Float.parseFloat(depositRateFinish);
+        String[] depositRateRange = depositRate.replace('[', ' ').replace(']', ' ').strip().split(", ");
+        this.deposit_rate_start = Float.parseFloat(depositRateRange[0]);
+        this.deposit_rate_finish = Float.parseFloat(depositRateRange[1]);
         this.deposit_currency = depositCurrency == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(depositCurrency.split(", ")));
         this.deposit_additional_conditions = depositAdditionalConditions == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(depositAdditionalConditions.split(", ")));
         this.consultation = consultation == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(consultation.split(", ")));
         this.card_free_service = Boolean.parseBoolean(cardFreeService);
         this.card_types = cardTypes == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(cardTypes.split(", ")));
         this.card_categories = cardCategories == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(cardCategories.split(", ")));
-        this.card_annual_service_price_start = Integer.parseInt(cardAnnualServicePriceStart);
-        this.card_annual_service_price_finish = Integer.parseInt(cardAnnualServicePriceFinish);
-        this.card_cashback_start = Float.parseFloat(cardCashbackStart);
-        this.card_cashback_finish = Float.parseFloat(cardCashbackFinish);
+        String[] cardAnnualServicePriceRange = cardAnnualServicePrice.replace('[', ' ').replace(']', ' ').strip().split(", ");
+        this.card_annual_service_price_start = Integer.parseInt(cardAnnualServicePriceRange[0]);
+        this.card_annual_service_price_finish = Integer.parseInt(cardAnnualServicePriceRange[1]);
+        String[] cardCashbackRange = cardCashback.replace('[', ' ').replace(']', ' ').strip().split(", ");
+        this.card_cashback_start = Float.parseFloat(cardCashbackRange[0]);
+        this.card_cashback_finish = Float.parseFloat(cardCashbackRange[1]);
         this.card_design_to_choose = Boolean.parseBoolean(cardDesignToChoose);
-        this.card_validity_start = Integer.parseInt(cardValidityStart);
-        this.card_validity_finish = Integer.parseInt(cardValidityFinish);
+        String[] cardValidityRange = cardValidity.replace('[', ' ').replace(']', ' ').strip().split(", ");
+        this.card_validity_start = Integer.parseInt(cardValidityRange[0]);
+        this.card_validity_finish = Integer.parseInt(cardValidityRange[1]);
         this.credit_aim = creditAim == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(creditAim.split(", ")));
-        this.credit_interest_rate_start = Float.parseFloat(creditInterestRateStart);
-        this.credit_interest_rate_finish = Float.parseFloat(creditInterestRateFinish);
-        this.credit_term_start = Integer.parseInt(creditTermStart);
-        this.credit_term_finish = Integer.parseInt(creditTermFinish);
+        String[] creditInterestRateRange = creditInterestRate.replace('[', ' ').replace(']', ' ').strip().split(", ");
+        this.credit_interest_rate_start = Float.parseFloat(creditInterestRateRange[0]);
+        this.credit_interest_rate_finish = Float.parseFloat(creditInterestRateRange[1]);
+        String[] creditTermRange = creditTerm.replace('[', ' ').replace(']', ' ').strip().split(", ");
+        this.credit_term_start = Integer.parseInt(creditTermRange[0]);
+        this.credit_term_finish = Integer.parseInt(creditTermRange[1]);
         this.credit_early_payment = Boolean.parseBoolean(creditEarlyPayment);
-        this.credit_amount_start = Integer.parseInt(creditAmountStart);
-        this.credit_amount_finish = Integer.parseInt(creditAmountFinish);
+        String[] creditAmountRange = creditAmount.replace('[', ' ').replace(']', ' ').strip().split(", ");
+        this.credit_amount_start = Integer.parseInt(creditAmountRange[0]);
+        this.credit_amount_finish = Integer.parseInt(creditAmountRange[1]);
         this.insurance_aim = insuranceAim == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(insuranceAim.split(", ")));
-        this.insurance_amount_start = Integer.parseInt(insuranceAmountStart);
-        this.insurance_amount_finish = Integer.parseInt(insuranceAmountFinish);
-        this.rating = Float.parseFloat(rating);
-        this.popularity = Integer.parseInt(popularity);
+        String[] insuranceAmountRange = insuranceAmount.replace('[', ' ').replace(']', ' ').strip().split(", ");
+        this.insurance_amount_start = Integer.parseInt(insuranceAmountRange[0]);
+        this.insurance_amount_finish = Integer.parseInt(insuranceAmountRange[1]);
+        this.sorting = sorting == null ? "" : sorting;
         this.unique_services = insuranceAim == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(uniqueServices.split(", ")));
     }
 }

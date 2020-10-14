@@ -62,9 +62,9 @@ public interface IndividualRepository extends JpaRepository<IndividualEntity, Lo
 
     List<IndividualEntity> findAllByInsuranceAmountStartGreaterThanAndInsuranceAmountFinishLessThan(Integer insurance_amount_start, Integer insurance_amount_finish);
 
-    List<IndividualEntity> findAllOrderedByRatingGreaterThan(Float rating); // not-ordered
+    List<IndividualEntity> findByOrderByRating(); // not-ordered
 
-    List<IndividualEntity> findAllByPopularityGreaterThan(Integer popularity); // not-ordered
+    List<IndividualEntity> findByOrderByPopularity(); // not-ordered
 
     List<IndividualEntity> findAllByUniqueServicesIn(List<String> unique_services);
 }
