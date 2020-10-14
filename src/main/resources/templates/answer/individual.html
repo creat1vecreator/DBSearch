@@ -767,22 +767,23 @@
                 <h4 class="panel-title">
                     <a data-toggle="collapse" data-parent="#accordian" href="#ninth">
                         <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                        Сортировка
+                        Сортировка:
                     </a>
                 </h4>
             </div>
             <div id="ninth" class="panel-collapse collapse">
                 <div class="panel-body">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="sort" value="rating" id="5">
-                        <label class="form-check-label" for="5">Рейтинг(AppStore,Play Market)</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="sort"value="popularity" id="5">
-                        <label class="form-check-label" for="5">популярность(скачивания)</label>
-                    </div>
+                    <p style="color: #696763;"> Сортировка:</p>
+                    <div>
+                        <input type="radio" id="min_cost"
+                               name="sort" value="Popularity" checked>
+                        <label for="min_cost">Популярность</label>
 
+                        <input type="radio" id="max_cost"
+                               name="sort" value="Rating">
+                        <label for="max_cost">Максимальная</label>
 
+                    </div>
                 </div>
             </div>
         </div>
