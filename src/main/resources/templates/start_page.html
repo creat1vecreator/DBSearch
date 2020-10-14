@@ -48,7 +48,18 @@
 
 
                             </div>
-                            <div class="title__action" > <a href="criteria/criteria_page.html"  style="margin-top: 25px;"><input type="submit" value="Click here"  style="margin-top: 20px; margin-right: -10px; background-color:#4B0082;color: white;"></a></div>
+                            <div class="title__action">
+                                <script>
+                                    function go() {
+                                        var radios=document.getElementById("radios").getElementsByTagName("INPUT"),
+                                            radio
+                                        for (var i=0, L=radios.length; i<L; i++) {
+                                            radio=radios[i]
+                                            if (radio.checked) {location.href=radio.value; break}
+                                        }
+                                    }
+                                </script>
+                                <a style="margin-top: 25px;"><input type="button" value="Выбрать" onclick="go()" style="margin-top: 20px; background-color: #5cb85c;"></a></div>
                         </div>
                     </div>
                 </div>
