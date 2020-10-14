@@ -1,16 +1,608 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Answer</title>
-</head>
-<body>
-<form action="/legal_entity/search" target="_self">
-    <input type="number" required name="price"/>
-    <input type="submit"/>
-</form>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Выбор ДБО</title>
+    <link href="../../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../static/css/price-range.css" rel="stylesheet">
+    <link href="../../static/css/main2.css" rel="stylesheet">
 
-<script>
-</script>
+
+</head>
+
+<body>
+<form action="../../static/js/response.js" method="get">
+    <header id="header">
+
+
+    </header>
+
+    <section id="advertisement">
+        <div class="container">
+        </div>
+    </section>
+
+    <section>
+        <img src="../../static/images/d_DKQdR6i5o.jpg"  height="75" width="75">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="left-sidebar">
+                        <h2>Критерии выбора</h2>
+                        <div class="panel-group category-products" id="accordian">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordian" href="#first">
+                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                                            Платежи
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="first" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p style="color: #696763;"> Валюта:</p>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="payment"value="ruble" id="5">
+                                            <label class="form-check-label" for="5">Рубль</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="payment" value="euro" id="6">
+                                            <label class="form-check-label" for="6">Евро</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="payment" value="dollar" id="6">
+                                            <label class="form-check-label" for="6">Доллар</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="panel-body">
+                                        <p style="color: #696763;"> Цели:</p>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="payment" value="budget_payment" id="5">
+                                            <label class="form-check-label" for="5">Платеж в бюджет</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="payment" value="counterparty_payment" id="5">
+                                            <label class="form-check-label" for="5">Платеж контрагенту</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="payment" value="housing_payment" id="5">
+                                            <label class="form-check-label" for="5">Оплата ЖКУ</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="payment" value="salary_payment" id="5">
+                                            <label class="form-check-label" for="5">Выплата зарплаты</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="panel-body">
+                                        <p style="color: #696763;"> Способы погашения платежей:</p>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="payment"value="app" id="5">
+                                            <label class="form-check-label" for="5">Приложение</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="payment" value="browser" id="6">
+                                            <label class="form-check-label" for="6">Браузер</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="payment" value="sms" id="6">
+                                            <label class="form-check-label" for="6">СМС</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="payment" value="auto" id="1">
+                                            <label class="form-check-label" for="1">Автоплатежи</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordian" href="#second">
+                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                                            Сервисы
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="second" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p style="color: #696763;"> Финансы:</p>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="services" value="bookkeeping" id="1">
+                                            <label class="form-check-label" for="1">Бухгалтерия</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="services" value="tax_assistant" id="2">
+                                            <label class="form-check-label" for="2">Налоговый помощник</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="services" value="financial_analisys" id="1">
+                                            <label class="form-check-label" for="1">Финансовая аналитика</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <p style="color: #696763;"> Продажи:</p>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="services" value="web_development" id="1">
+                                            <label class="form-check-label" for="1">Создание сайтов</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="services" value="customers_relations" id="2">
+                                            <label class="form-check-label" for="2">Управление отношениями с клиентами</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="services" value="business_evaluation" id="1">
+                                            <label class="form-check-label" for="1">Оценка бизнес идеи</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <p style="color: #696763;"> Документооборот:</p>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="services" value="document_constructor" id="1">
+                                            <label class="form-check-label" for="1">Конструктор документов</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="services" value="electronic_documents" id="2">
+                                            <label class="form-check-label" for="2">Электронный документооборот</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="services" value="electronic_reporting" id="1">
+                                            <label class="form-check-label" for="1">Электронная отчётность в государственные органы</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="services" value="invoicing" id="2">
+                                            <label class="form-check-label" for="2">Выставление счетов на оплату</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="services" value="business_registration" id="1">
+                                            <label class="form-check-label" for="1">Регистрация бизнеса</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <p style="color: #696763;"> Аналитика:</p>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="services" value="counterparty_checking" id="1">
+                                            <label class="form-check-label" for="1">Проверка контрагентов</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="services" value="business_analisys" id="2">
+                                            <label class="form-check-label" for="2">Бизнес-аналитика</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordian" href="#third">
+                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                                            Открытие счёта
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="third" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p style="color: #696763;"> Стоимость обслуживания:</p>
+                                        <div>
+                                            <input type="radio" id="min_cost"
+                                                   name="account" value="min">
+                                            <label for="min_cost">Минимальная</label>
+
+                                            <input type="radio" id="max_cost"
+                                                   name="account" value="max">
+                                            <label for="max_cost">Максимальная</label>
+
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="account"value="free" id="5">
+                                            <label class="form-check-label" for="5">Бесплатный период</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="panel-body">
+                                        <p style="color: #696763;"> Валюта:</p>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="account"value="ruble" id="5">
+                                            <label class="form-check-label" for="5">Рубль</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="account" value="euro" id="6">
+                                            <label class="form-check-label" for="6">Евро</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="account" value="dollar" id="6">
+                                            <label class="form-check-label" for="6">Доллар</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="panel-body">
+                                        <p style="color: #696763;"> Виды счетов:</p>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="account" value="checking" id="5">
+                                            <label class="form-check-label" for="5">Расчётный счёт</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="account" value="special" id="5">
+                                            <label class="form-check-label" for="5">Специальный счёт</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordian" href="#fourth">
+                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                                            Эквайринг для бизнеса
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="fourth" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p style="color: #696763;">Вид эквайринга:</p>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="acquiring"value="trade" id="5">
+                                            <label class="form-check-label" for="5">Торговый-эквайринг</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="acquiring" value="web" id="6">
+                                            <label class="form-check-label" for="6">Интернет-эквайринг</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="acquiring"value="mobile" id="5">
+                                            <label class="form-check-label" for="5">Мобильный-эквайринг</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="acquiring"value="qr" id="5">
+                                            <label class="form-check-label" for="5">Оплата по QR-коду</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <p><b style="color: #696763;">Минимальная ставка комиссии от оборота:</b><br>
+                                            <div class="slidecontainer">
+                                                <input type="range" min="1" max="20" value="10" class="slider" name = "card_validity" id="myRange">
+                                        <p>Ставка в процентах: <span id="demo"></span></p>
+                                    </div>
+                                    <script>
+                                        var slider = document.getElementById("myRange");
+                                        var output = document.getElementById("demo");
+                                        output.innerHTML = slider.value;
+                                        slider.oninput = function() {
+                                            output.innerHTML = this.value;
+                                        }
+                                    </script>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordian" href="#fifth">
+                                        <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                                        Кредит
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="fifth" class="panel-collapse collapse">
+                                >
+                                <div class="panel-body">
+                                    <p><b style="color: #696763;"> Процентная ставка:</b><br>
+                                        <div class="slidecontainer">
+                                            <input type="range" min="1" max="20" value="10" class="slider" name = "credit_interest_rate" id="myRange2">
+                                    <p>Ставка в процентах: <span id="demo2"></span></p>
+                                </div>
+                                <script>
+                                    var slider2 = document.getElementById("myRange2");
+                                    var output2 = document.getElementById("demo2");
+                                    output2.innerHTML = slider2.value;
+
+                                    slider2.oninput = function() {
+                                        output2.innerHTML = this.value;
+                                    }
+                                </script>
+                            </div>
+                            <div class="panel-body">
+                                <p><b style="color: #696763;"> Срок кредита:</b><br>
+                                    <div class="slidecontainer">
+                                        <input type="range" min="1" max="60" value="10" class="slider" name = "credit_term" id="myRange3">
+                                <p>Срок в месяцах: <span id="demo3"></span></p>
+                            </div>
+                            <script>
+                                var slider3 = document.getElementById("myRange3");
+                                var output3 = document.getElementById("demo3");
+                                output3.innerHTML = slider3.value;
+
+                                slider3.oninput = function() {
+                                    output3.innerHTML = this.value;
+                                }
+                            </script>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="card" value="min_cashback" id="1">
+                                <label class="form-check-label" for="1">Досрочное погашение(без процентов)</label>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <p><b style="color: #696763;"> Сумма кредита:</b><br>
+                                <div class="slidecontainer">
+                                    <input type="range" min="1" max="10000000" value="10000" class="slider" name = "credit_sum" id="myRange4">
+                            <p>Сумма кредита: <span id="demo4"></span></p>
+                        </div>
+                        <script>
+                            var slider4 = document.getElementById("myRange4");
+                            var output4 = document.getElementById("demo4");
+                            output4.innerHTML = slider4.value;
+
+                            slider4.oninput = function() {
+                                output4.innerHTML = this.value;
+                            }
+                        </script>
+                    </div>
+                </div>
+
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordian" href="#sixth">
+                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                            Депозиты
+                        </a>
+                    </h4>
+                </div>
+                <div id="sixth" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p style="color: #696763;"> Ставка по вкладу:</p>
+                        <div>
+                            <input type="radio" id="min_deposit"
+                                   name="deposit" value="min">
+                            <label for="min_deposit">Минимальная</label>
+
+                            <input type="radio" id="max_deposit"
+                                   name="deposit" value="max">
+                            <label for="max_deposit">Максимальная</label>
+
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <p style="color: #696763;"> Валюта:</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="deposit"value="ruble" id="5">
+                            <label class="form-check-label" for="5">Рубль</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="deposit" value="euro" id="6">
+                            <label class="form-check-label" for="6">Евро</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="deposit" value="dollar" id="6">
+                            <label class="form-check-label" for="6">Доллар</label>
+                        </div>
+
+                    </div>
+                    <div class="panel-body">
+                        <p><b style="color: #696763;"> Виды средств:</b><br>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="deposit" value="stocks" id="1">
+                            <label class="form-check-label" for="1">Акции </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="deposit" value="promissory_notes" id="1">
+                            <label class="form-check-label" for="1">Вексели</label>
+                        </div>
+
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="deposit" value="bivalent" id="1">
+                            <label class="form-check-label" for="1">Бивалютные депозиты</label>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <p style="color: #696763;">Дополнительные условия вклада:</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="deposit_terms"value="replenishing" id="5">
+                            <label class="form-check-label" for="5">Пополняемый </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="deposit_terms" value="unreplenishing" id="6">
+                            <label class="form-check-label" for="6">Непополняемый</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="deposit_terms" value="partial_withdrawal" id="6">
+                            <label class="form-check-label" for="6">Частичное снятие</label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordian" href="#seventh">
+                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                            Консультация 24/7
+                        </a>
+                    </h4>
+                </div>
+                <div id="seventh" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="consultation" value="hotline" id="1">
+                            <label class="form-check-label" for="1">Горячая линия</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="consultation" value="chat_with_expert" id="2">
+                            <label class="form-check-label" for="2">Чат с экспертом</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="consultation" value="chat_bot" id="1">
+                            <label class="form-check-label" for="1">Чат-бот</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="consultation" value="mail" id="1">
+                            <label class="form-check-label" for="1">Почта</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordian" href="#eighth">
+                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                            Карты
+                        </a>
+                    </h4>
+                </div>
+                <div id="eighth" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p style="color: #696763;">Вид карты:</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="card"value="debit" id="5">
+                            <label class="form-check-label" for="5">Дебетовая</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="card" value="credit" id="6">
+                            <label class="form-check-label" for="6">Кредитная</label>
+                        </div>
+
+
+                    </div>
+                    <div class="panel-body">
+                        <p style="color: #696763;"> Категории карт:</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="card"value="standard" id="5">
+                            <label class="form-check-label" for="5">Стандартная???</label>
+                        </div>
+
+
+                    </div>
+                    <div class="panel-body">
+                        <p><b style="color: #696763;"> Цена обслуживания в год:</b><br>
+                            <input type="text" name="card_cost" size="10">
+                        </p>
+                    </div>
+                    <div class="panel-body">
+                        <p><b style="color: #696763;"> Срок действия карты:</b><br>
+                            <div class="slidecontainer">
+                                <input type="range" min="1" max="20" value="10" class="slider" name = "card_validity"id="myRange5">
+                        <p>Срок в годах: <span id="demo5"></span></p>
+                    </div>
+                    <script>
+                        var slider5 = document.getElementById("myRange5");
+                        var output5 = document.getElementById("demo5");
+                        output5.innerHTML = slider.value;
+
+                        slider5.oninput = function() {
+                            output5.innerHTML = this.value;
+                        }
+                    </script>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordian" href="#ninth">
+                        <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                        Страхование
+                    </a>
+                </h4>
+            </div>
+            <div id="ninth" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p><b style="color: #696763;"> Цель:</b><br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="insurance" value="auto" id="1">
+                        <label class="form-check-label" for="1">Автострахование </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="insurance" value="property" id="1">
+                        <label class="form-check-label" for="1">Недвижимость??</label>
+                    </div>
+
+                </div>
+                <div class="panel-body">
+                    <p><b style="color: #696763;"> Сумма страховой защиты:</b><br>
+                        <div class="slidecontainer">
+                            <input type="range" min="1" max="10000000" value="10000" class="slider" name = "insurance_sum" id="myRange6">
+                    <p>Сумма в рублях: <span id="demo6"></span></p>
+                </div>
+                <script>
+                    var slider6 = document.getElementById("myRange6");
+                    var output6 = document.getElementById("demo6");
+                    output6.innerHTML = slider6.value;
+
+                    slider6.oninput = function() {
+                        output6.innerHTML = this.value;
+                    }
+                </script>
+            </div>
+        </div>
+        </div>
+
+        </div>
+
+
+        <div class="title__action"><a href="../single.html" class="btn btn-success" style="margin-top: 25px;"><input type="submit" value="Применить"></a></div>
+        </div>
+        </div>
+
+        <div class="col-sm-9 padding-right">
+            <div class="features_items">
+                <h2 class="title text-center">Выбранные банки</h2>
+
+
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+
+
+
+    </footer>
+
+
+
+    <script src="../../static/js/jquery.js"></script>
+    <script src="../../static/js/price-range.js"></script>
+    <script src="../../static/js/bootstrap.min.js"></script>
+    <script src="../../static/js/main.js"></script>
+    <script src="../../static/js/response.js"></script>
+
+</form>
 </body>
 </html>

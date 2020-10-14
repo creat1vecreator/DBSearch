@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
@@ -17,33 +18,27 @@ import org.springframework.web.bind.annotation.*;
 public class CorporationController {
     private final CorporationService corporationService;
 
-    @GetMapping("/criteria")
-    public String returnSearchPage() {
-        return "criteria/corporation";
-    }
-
     @RequestMapping(value = "/search", method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<String> getSearch(
+    public String getSearch(
+            Model model,
             @RequestParam(value = "price") String price) {
         CorporationForm corporationForm = new CorporationForm(
                 price
         );
         System.out.println(corporationForm);
         BankEntitiesDTO<CorporationEntity> bankEntitiesDTO = corporationService.find(corporationForm);
-        String jsonResponse = new Gson().toJson(bankEntitiesDTO.getBankEntities());
-        System.out.println(jsonResponse);
-        return new ResponseEntity<>(jsonResponse, HttpStatus.OK);
+        model.addAttribute("banks", bankEntitiesDTO.getBankEntities());
+        return "answer/corporation";
     }
 
     @GetMapping("/bank/{name}")
-    public @ResponseBody ResponseEntity<String> findByName(@PathVariable String name) {
+    public String findByName(@PathVariable String name, Model model) {
         try {
             CorporationEntity corporationEntity = corporationService.findByName(name);
-            String jsonResponse = new Gson().toJson(corporationEntity);
-            System.out.println(jsonResponse);
-            return new ResponseEntity<>(jsonResponse, HttpStatus.OK);
+            model.addAttribute("bank", corporationEntity);
+            return "single/corporation";
         } catch (RuntimeException runtimeException) {
-            return new ResponseEntity<>("error 404 - not found", HttpStatus.OK);
+            return "error";
         }
     }
 

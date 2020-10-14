@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
@@ -17,33 +18,27 @@ import org.springframework.web.bind.annotation.*;
 public class LegalEntityController {
     private final LegalEntityService legalEntityService;
 
-    @GetMapping("/criteria")
-    public String returnSearchPage() {
-        return "criteria/legal_entity";
-    }
-
     @RequestMapping(value = "/search", method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<String> getSearch(
+    public String getSearch(
+            Model model,
             @RequestParam(value = "price") String price) {
         LegalEntityForm legalEntityForm = new LegalEntityForm(
                 price
         );
         System.out.println(legalEntityForm);
         BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO = legalEntityService.find(legalEntityForm);
-        String jsonResponse = new Gson().toJson(bankEntitiesDTO.getBankEntities());
-        System.out.println(jsonResponse);
-        return new ResponseEntity<>(jsonResponse, HttpStatus.OK);
+        model.addAttribute("banks", bankEntitiesDTO.getBankEntities());
+        return "answer/legal_entity";
     }
 
     @GetMapping("/bank/{name}")
-    public @ResponseBody ResponseEntity<String> findByName(@PathVariable String name) {
+    public String findByName(@PathVariable String name, Model model) {
         try {
             LegalEntityEntity legalEntityEntity = legalEntityService.findByName(name);
-            String jsonResponse = new Gson().toJson(legalEntityEntity);
-            System.out.println(jsonResponse);
-            return new ResponseEntity<>(jsonResponse, HttpStatus.OK);
+            model.addAttribute("bank", legalEntityEntity);
+            return "single/legal_entity";
         } catch (RuntimeException runtimeException) {
-            return new ResponseEntity<>("error 404 - not found", HttpStatus.OK);
+            return "error";
         }
     }
 
