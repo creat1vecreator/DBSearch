@@ -7,6 +7,8 @@ import com.dreamteam.rbsearch.repositories.IndividualRepository;
 import lombok.*;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class IndividualService {
@@ -96,7 +98,7 @@ public class IndividualService {
         }
 
 
-        if (!individualForm.getTransfer_types().isBlank()) {
+        if (!individualForm.getTransfer_types().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
                     findByTransferType(
                             individualForm.getTransfer_types()
@@ -114,7 +116,7 @@ public class IndividualService {
             );
         }
 
-        if (!individualForm.getTransfer_currency().isBlank()) {
+        if (!individualForm.getTransfer_currency().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
                     findByTransferCurrency(
                             individualForm.getTransfer_currency()
@@ -123,7 +125,7 @@ public class IndividualService {
             );
         }
 
-        if (!individualForm.getPayment_method().isBlank()) {
+        if (!individualForm.getPayment_method().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
                     findByPaymentMethod(
                             individualForm.getPayment_method()
@@ -132,7 +134,7 @@ public class IndividualService {
             );
         }
 
-        if (!individualForm.getPayment_aims_services().isBlank()) {
+        if (!individualForm.getPayment_aims_services().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
                     findByPaymentAims(
                             individualForm.getPayment_aims_services()
@@ -150,7 +152,7 @@ public class IndividualService {
             );
         }
 
-        if (!individualForm.getDeposit_currency().isBlank()) {
+        if (!individualForm.getDeposit_currency().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
                     findByDepositCurrency(
                             individualForm.getDeposit_currency()
@@ -159,7 +161,7 @@ public class IndividualService {
             );
         }
 
-        if (!individualForm.getDeposit_additional_conditions().isBlank()) {
+        if (!individualForm.getDeposit_additional_conditions().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
                     findByDepositAddition(
                             individualForm.getDeposit_additional_conditions()
@@ -168,7 +170,7 @@ public class IndividualService {
             );
         }
 
-        if (!individualForm.getConsultation().isBlank()) {
+        if (!individualForm.getConsultation().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
                     findByConsultation(
                             individualForm.getConsultation()
@@ -186,7 +188,7 @@ public class IndividualService {
             );
         }
 
-        if (!individualForm.getCard_types().isBlank()) {
+        if (!individualForm.getCard_types().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
                     findByCardTypes(
                             individualForm.getCard_types()
@@ -195,7 +197,7 @@ public class IndividualService {
             );
         }
 
-        if (!individualForm.getCard_categories().isBlank()) {
+        if (!individualForm.getCard_categories().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
                     findByCardCategories(
                             individualForm.getCard_categories()
@@ -213,7 +215,7 @@ public class IndividualService {
             );
         }
 
-        if (!individualForm.getCredit_aim().isBlank()) {
+        if (!individualForm.getCredit_aim().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
                     findByCreditAim(
                             individualForm.getCredit_aim()
@@ -231,7 +233,7 @@ public class IndividualService {
             );
         }
 
-        if (!individualForm.getInsurance_aim().isBlank()) {
+        if (!individualForm.getInsurance_aim().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
                     findByInsuranceAim(
                             individualForm.getInsurance_aim()
@@ -240,7 +242,7 @@ public class IndividualService {
             );
         }
 
-        if (!individualForm.getUnique_services().isBlank()) {
+        if (!individualForm.getUnique_services().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
                     findByUniqueServices(
                             individualForm.getUnique_services()
@@ -252,7 +254,7 @@ public class IndividualService {
         return bankEntitiesDTO;
     }
 
-    private BankEntitiesDTO<IndividualEntity> findByTransferType(String transfer_type) {
+    private BankEntitiesDTO<IndividualEntity> findByTransferType(List<String> transfer_type) {
         return new BankEntitiesDTO<>(individualRepository.findAllByTransferTypesContaining(transfer_type));
     }
 
@@ -260,15 +262,15 @@ public class IndividualService {
         return new BankEntitiesDTO<>(individualRepository.findAllByTransferAutoEquals(transfer_auto));
     }
 
-    private BankEntitiesDTO<IndividualEntity> findByTransferCurrency(String transfer_currency) {
+    private BankEntitiesDTO<IndividualEntity> findByTransferCurrency(List<String> transfer_currency) {
         return new BankEntitiesDTO<>(individualRepository.findAllByTransferCurrencyContaining(transfer_currency));
     }
 
-    private BankEntitiesDTO<IndividualEntity> findByPaymentMethod(String payment_method) {
+    private BankEntitiesDTO<IndividualEntity> findByPaymentMethod(List<String> payment_method) {
         return new BankEntitiesDTO<>(individualRepository.findAllByPaymentMethodContaining(payment_method));
     }
 
-    private BankEntitiesDTO<IndividualEntity> findByPaymentAims(String payment_aims) {
+    private BankEntitiesDTO<IndividualEntity> findByPaymentAims(List<String> payment_aims) {
         return new BankEntitiesDTO<>(individualRepository.findAllByPaymentAimsServicesContaining(payment_aims));
     }
 
@@ -280,15 +282,15 @@ public class IndividualService {
         return new BankEntitiesDTO<>(individualRepository.findAllByDepositRateStartGreaterThanAndDepositRateFinishLessThan(deposit_rate_start, deposit_rate_finish));
     }
 
-    private BankEntitiesDTO<IndividualEntity> findByDepositCurrency(String deposit_currency) {
+    private BankEntitiesDTO<IndividualEntity> findByDepositCurrency(List<String> deposit_currency) {
         return new BankEntitiesDTO<>(individualRepository.findAllByDepositCurrencyContaining(deposit_currency));
     }
 
-    private BankEntitiesDTO<IndividualEntity> findByDepositAddition(String deposit_additions) {
+    private BankEntitiesDTO<IndividualEntity> findByDepositAddition(List<String> deposit_additions) {
         return new BankEntitiesDTO<>(individualRepository.findAllByDepositAdditionalConditionsContaining(deposit_additions));
     }
 
-    private BankEntitiesDTO<IndividualEntity> findByConsultation(String consultation) {
+    private BankEntitiesDTO<IndividualEntity> findByConsultation(List<String> consultation) {
         return new BankEntitiesDTO<>(individualRepository.findAllByConsultationContaining(consultation));
     }
 
@@ -296,11 +298,11 @@ public class IndividualService {
         return new BankEntitiesDTO<>(individualRepository.findAllByCardFreeServiceEquals(card_free_service));
     }
 
-    private BankEntitiesDTO<IndividualEntity> findByCardTypes(String card_types) {
+    private BankEntitiesDTO<IndividualEntity> findByCardTypes(List<String> card_types) {
         return new BankEntitiesDTO<>(individualRepository.findAllByCardTypesContaining(card_types));
     }
 
-    private BankEntitiesDTO<IndividualEntity> findByCardCategories(String card_categories) {
+    private BankEntitiesDTO<IndividualEntity> findByCardCategories(List<String> card_categories) {
         return new BankEntitiesDTO<>(individualRepository.findAllByCardCategoriesContaining(card_categories));
     }
 
@@ -320,7 +322,7 @@ public class IndividualService {
         return new BankEntitiesDTO<>(individualRepository.findAllByCardValidityStartGreaterThanAndCardValidityFinishLessThan(card_validity_start, card_validity_finish));
     }
 
-    private BankEntitiesDTO<IndividualEntity> findByCreditAim(String credit_aim) {
+    private BankEntitiesDTO<IndividualEntity> findByCreditAim(List<String> credit_aim) {
         return new BankEntitiesDTO<>(individualRepository.findAllByCreditAimContaining(credit_aim));
     }
 
@@ -340,7 +342,7 @@ public class IndividualService {
         return new BankEntitiesDTO<>(individualRepository.findAllByCreditAmountStartGreaterThanAndCreditAmountFinishLessThan(credit_amount_start, credit_amount_finish));
     }
 
-    private BankEntitiesDTO<IndividualEntity> findByInsuranceAim(String insurance_aim) {
+    private BankEntitiesDTO<IndividualEntity> findByInsuranceAim(List<String> insurance_aim) {
         return new BankEntitiesDTO<>(individualRepository.findAllByInsuranceAimContaining(insurance_aim));
     }
 
@@ -348,7 +350,7 @@ public class IndividualService {
         return new BankEntitiesDTO<>(individualRepository.findAllByInsuranceAmountStartGreaterThanAndInsuranceAmountFinishLessThan(insurance_amount_start, insurance_amount_finish));
     }
 
-    private BankEntitiesDTO<IndividualEntity> findByUniqueServices(String unique_services) {
+    private BankEntitiesDTO<IndividualEntity> findByUniqueServices(List<String> unique_services) {
         return new BankEntitiesDTO<>(individualRepository.findAllByUniqueServicesContaining(unique_services));
     }
 

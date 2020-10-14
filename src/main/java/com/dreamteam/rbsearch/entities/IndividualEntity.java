@@ -3,9 +3,10 @@ package com.dreamteam.rbsearch.entities;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
-@Entity(name = "individual_bank_list_release")
+@Entity(name = "individual_bank_list_release_2")
 @AllArgsConstructor
 @NoArgsConstructor
 public class IndividualEntity extends BaseEntity {
@@ -18,19 +19,23 @@ public class IndividualEntity extends BaseEntity {
     private String name;
 
     @Column(name = "transfer_types")
-    private String transferTypes;
+    @ElementCollection
+    private List<String> transferTypes;
 
     @Column(name = "transfer_auto")
     private Boolean transferAuto;
 
     @Column(name = "transfer_currency")
-    private String transferCurrency;
+    @ElementCollection
+    private List<String> transferCurrency;
 
     @Column(name = "payment_method")
-    private String paymentMethod;
+    @ElementCollection
+    private List<String> paymentMethod;
 
     @Column(name = "payment_aims_services")
-    private String paymentAimsServices;
+    @ElementCollection
+    private List<String> paymentAimsServices;
 
     @Column(name = "payment_auto")
     private Boolean paymentAuto;
@@ -42,22 +47,27 @@ public class IndividualEntity extends BaseEntity {
     private Float depositRateFinish;
 
     @Column(name = "deposit_currency")
-    private String depositCurrency;
+    @ElementCollection
+    private List<String> depositCurrency;
 
     @Column(name = "deposit_additional_conditions")
-    private String depositAdditionalConditions;
+    @ElementCollection
+    private List<String> depositAdditionalConditions;
 
     @Column
-    private String consultation;
+    @ElementCollection
+    private List<String> consultation;
 
     @Column(name = "card_free_service")
     private Boolean cardFreeService;
 
     @Column(name = "card_types")
-    private String cardTypes;
+    @ElementCollection
+    private List<String> cardTypes;
 
     @Column(name = "card_categories")
-    private String cardCategories;
+    @ElementCollection
+    private List<String> cardCategories;
 
     @Column(name = "card_annual_service_price_start")
     private Integer cardAnnualServicePriceStart;
@@ -81,7 +91,8 @@ public class IndividualEntity extends BaseEntity {
     private Integer cardValidityFinish;
 
     @Column(name = "credit_aim")
-    private String creditAim;
+    @ElementCollection
+    private List<String> creditAim;
 
     @Column(name = "credit_interest_rate_start")
     private Float creditInterestRateStart;
@@ -105,7 +116,8 @@ public class IndividualEntity extends BaseEntity {
     private Integer creditAmountFinish;
 
     @Column(name = "insurance_aim")
-    private String insuranceAim;
+    @ElementCollection
+    private List<String> insuranceAim;
 
     @Column(name = "insurance_amount_start")
     private Integer insuranceAmountStart;
@@ -120,11 +132,14 @@ public class IndividualEntity extends BaseEntity {
     private Integer popularity;
 
     @Column(name = "unique_services")
-    private String uniqueServices;
+    @ElementCollection
+    private List<String> uniqueServices;
 
     @Column
-    private String advantages;
+    @ElementCollection
+    private List<String> advantages;
 
     @Column
-    private String disadvantages;
+    @ElementCollection
+    private List<String> disadvantages;
 }
