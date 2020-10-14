@@ -97,11 +97,11 @@ div#bs-megadropdown-tabs {
     margin-left: 13.6%;
 }
 .nav > li > a:hover, .nav > li > a:focus {
-    background-color: #f67777;
+    background-color: #4B0082;
     color: #fff;
 }
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-  background-color: #f67777;
+  background-color: #4B0082;
     color: #fff;
 }
 .col1 {
