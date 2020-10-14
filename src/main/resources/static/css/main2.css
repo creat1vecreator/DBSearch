@@ -2573,3 +2573,119 @@ h2.title {
   background: #4CAF50;
   cursor: pointer;
 }
+.sidebar_section
+{
+  width: 100%;
+  border: solid 1px #e0e3e4;
+  margin-bottom: 44px;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+.sidebar_section:last-child
+{
+  margin-bottom: 0;
+}
+.sidebar_title
+{
+  height: 52px;
+  background: #e0e3e4;
+  line-height: 52px;
+  font-family: 'Lucida', serif;
+  font-size: 16px;
+  color: #232323;
+  padding-left: 22px;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+.sidebar_section:hover
+{
+  border: solid 1px #937c6f;
+}
+.sidebar_section:hover .sidebar_title
+{
+  background: #937c6f;
+  color: #FFFFFF;
+}
+.sidebar_section:hover .sidebar_section_content ul li
+{
+  border-bottom: solid 1px #937c6f;
+}
+.sidebar_section_content
+{
+  width: 100%;
+}
+.sidebar_section_content ul li
+{
+  height: 47px;
+  padding-left: 16px;
+  border-bottom: solid 1px #e0e3e4;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+.sidebar_section_content ul li:last-child
+{
+  border-bottom: none !important;
+}
+.sidebar_section_content ul li a
+{
+  font-size: 14px;
+  color: #232323;
+  line-height: 47px;
+}
+.sidebar_color_content
+{
+  width: 100%;
+  height: 187px;
+}
+.sidebar_section_content ul li a span
+{
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  margin-right: 15px;
+}
+.sidebar_option
+{
+  height: 119px;
+  width: 100%;
+  padding-left: 30px;
+  border-bottom: solid 1px #e0e3e4;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+.sidebar_option:last-child
+{
+  border: none !important;
+}
+.sidebar_options:hover .sidebar_option
+{
+  border-bottom: solid 1px #937c6f;
+}
+.option_content
+{
+  margin-left: 19px;
+}
+.option_title
+{
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #232323;
+}
+.option_subtitle
+{
+  font-size: 14px;
+  color: #8a8a8a;
+}
