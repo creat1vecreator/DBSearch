@@ -222,15 +222,13 @@
                                 <div id="third" class="panel-collapse collapse">
                                     <div class="panel-body">
                                         <p style="color: #696763;">Ставка:</p>
-                                        <div>
-                                            <input type="radio" id="min_cost"
-                                                   name="deposit_rate_start" value="0">
-                                            <label for="min_cost">Минимальная</label>
-
-                                            <input type="radio" id="max_cost"
-                                                   name="deposit_rate_finish" value="1">
-                                            <label for="max_cost">Максимальная</label>
-
+                                        <div class="price-range">
+                                            <div class="well text-center">
+                                                <div class="slider slider-horizontal" style="width: 150px;">
+                                                    <input type="text" name="deposit_rate" value="" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="[0,7]" id="sl2" style="width: 150px;">
+                                                    <b class="pull-left">0</b> <b class="pull-right" style="margin-left: 100px">20%</b>
+                                                </div>
+                                        </div>
                                         </div>
                                     </div>
                                     <div class="panel-body">
@@ -790,13 +788,7 @@
         </div>
 
 
-        <div class="price-range">
-            <h2>Price Range</h2>
-            <div class="well text-center">
-                <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[0,450]" id="sl2" ><br />
-                <b class="pull-left">$ 0</b> <b class="pull-right">$ 600</b>
-            </div>
-        </div>
+
 
         <div class="title__action"><a href="../single.html" class="btn btn-success" style="margin-top: 25px;"><input type="submit" value="Применить"></a></div>
         </div>
