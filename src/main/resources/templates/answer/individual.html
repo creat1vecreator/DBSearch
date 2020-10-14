@@ -54,40 +54,47 @@
                                 <div id="first" class="panel-collapse collapse">
                                     <div class="panel-body">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="transaction" value="abroad" id="1">
+                                            <input class="form-check-input" type="checkbox" name="transfer_types" value="Abroad" id="1">
                                             <label class="form-check-label" for="1">За рубеж</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="transaction" value="between_cards" id="2">
+                                            <input class="form-check-input" type="checkbox" name="transfer_types" value="Card_to_card" id="2">
                                             <label class="form-check-label" for="2">С карты на карту</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="transaction" value="between_accounts" id="3">
+                                            <input class="form-check-input" type="checkbox" name="transfer_types" value="Between_your_accounts" id="3">
                                             <label class="form-check-label" for="3">Между своими счетами</label>
                                         </div>
                                     </div>
                                     <div class="panel-body">
                                         <p style="color: #696763;">Автоматические переводы:</p>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="transaction2"value="autotransaction" id="5">
+                                            <input class="form-check-input" type="checkbox" name="tranfer_auto" value="True" id="5">
                                             <label class="form-check-label" for="5">автоперевод</label>
                                         </div>
                                     </div>
                                     <div class="panel-body">
                                         <p style="color: #696763;"> Валюта:</p>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="transaction_currency"value="ruble" id="5">
+                                            <input class="form-check-input" type="checkbox" name="transfer_currency"value="Ruble" id="5">
                                             <label class="form-check-label" for="5">Рубль</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="transaction_currency" value="euro" id="6">
+                                            <input class="form-check-input" type="checkbox" name="transfer_currency" value="Euro" id="6">
                                             <label class="form-check-label" for="6">Евро</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="transaction_currency" value="dollar" id="6">
+                                            <input class="form-check-input" type="checkbox" name="transfer_currency" value="Dollar" id="6">
                                             <label class="form-check-label" for="6">Доллар</label>
                                         </div>
-
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="transfer_currency" value="Swiss_frank" id="6">
+                                            <label class="form-check-label" for="6">Швейцарский франк</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="transfer_currency" value="Pound_sterling" id="6">
+                                            <label class="form-check-label" for="6">Фунт-стерлинг</label>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -108,89 +115,93 @@
                                     <div class="panel-body">
                                         <p style="color: #696763;">Способы осуществления:</p>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="payment" value="browser" id="1">
+                                            <input class="form-check-input" type="checkbox" name="payment_method" value="Browser" id="1">
                                             <label class="form-check-label" for="1">Браузер</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="payment" value="app" id="2">
+                                            <input class="form-check-input" type="checkbox" name="payment_method" value="App" id="2">
                                             <label class="form-check-label" for="2">Приложение</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="payment" value="sms" id="3">
+                                            <input class="form-check-input" type="checkbox" name="payment_method" value="SMS" id="3">
                                             <label class="form-check-label" for="3">СМС</label>
                                         </div>
                                     </div>
                                     <div class="panel-body">
                                         <p style="color: #696763;">Услуги/цели:</p>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="services" value="mobile_communication" id="5">
+                                            <input class="form-check-input" type="checkbox" name="payment_aims_services" value="-Mobile_connection" id="5">
                                             <label class="form-check-label" for="5">Мобильная связь</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="services" value="utilities" id="6">
+                                            <input class="form-check-input" type="checkbox" name="payment_aims_services" value="Utilities" id="6">
                                             <label class="form-check-label" for="6">Коммунальные услуги</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="services" value="internet" id="5">
+                                            <input class="form-check-input" type="checkbox" name="payment_aims_services" value="Internet" id="5">
                                             <label class="form-check-label" for="5">Интернет</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="services" value="network_marketing" id="6">
+                                            <input class="form-check-input" type="checkbox" name="payment_aims_services" value="Network_marketing" id="6">
                                             <label class="form-check-label" for="6">Сетевой маркетинг</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="services" value="home_phone" id="5">
+                                            <input class="form-check-input" type="checkbox" name="payment_aims_services" value="Home_phone" id="5">
                                             <label class="form-check-label" for="5">Домашний телефон</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="services" value="tv" id="6">
+                                            <input class="form-check-input" type="checkbox" name="payment_aims_services" value="Television" id="6">
                                             <label class="form-check-label" for="6">Телевидение</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="services" value="government_services" id="5">
+                                            <input class="form-check-input" type="checkbox" name="payment_aims_services" value="Public_services" id="5">
                                             <label class="form-check-label" for="5">Гос услуги</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="services" value="transport" id="6">
+                                            <input class="form-check-input" type="checkbox" name="payment_aims_services" value="Transport" id="6">
                                             <label class="form-check-label" for="6">Транспорт</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="services" value="online_wallet" id="5">
+                                            <input class="form-check-input" type="checkbox" name="payment_aims_services" value="Electronic_wallets" id="5">
                                             <label class="form-check-label" for="5">Электронные кошельки</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="services" value="repayment_loan" id="6">
+                                            <input class="form-check-input" type="checkbox" name="payment_aims_services" value="Repayment_of_loans" id="6">
                                             <label class="form-check-label" for="6">Погашение кредитов</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="services"value="games" id="5">
+                                            <input class="form-check-input" type="checkbox" name="payment_aims_services"value="Games" id="5">
                                             <label class="form-check-label" for="5">Игры</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="services" value="education" id="6">
+                                            <input class="form-check-input" type="checkbox" name="payment_aims_services" value="Education" id="6">
                                             <label class="form-check-label" for="6">Образование</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="services"value="travel" id="5">
+                                            <input class="form-check-input" type="checkbox" name="payment_aims_services"value="Travel" id="5">
                                             <label class="form-check-label" for="5">Путешествия</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="services" value="social_networks" id="6">
+                                            <input class="form-check-input" type="checkbox" name="payment_aims_services" value="Social_networks" id="6">
                                             <label class="form-check-label" for="6">Соц-сети</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="services"value="online_store" id="5">
+                                            <input class="form-check-input" type="checkbox" name="payment_aims_services"value="Online_stores" id="5">
                                             <label class="form-check-label" for="5">Интернет-магазины</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="services" value="charity" id="6">
+                                            <input class="form-check-input" type="checkbox" name="payment_aims_services"value="Guard_systems" id="5">
+                                            <label class="form-check-label" for="5">Охранные системы</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="payment_aims_services" value="Charity" id="6">
                                             <label class="form-check-label" for="6">Благотворительность</label>
                                         </div>
                                     </div>
                                     <div class="panel-body">
                                         <p style="color: #696763;">Автоматические платежи:</p>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="autopayment" value="true" id="1">
+                                            <input class="form-check-input" type="checkbox" name="payment_auto" value="true" id="1">
                                             <label class="form-check-label" for="1">Автоплатежи</label>
                                         </div>
                                     </div>
@@ -212,35 +223,37 @@
                                 <div id="third" class="panel-collapse collapse">
                                     <div class="panel-body">
                                         <p style="color: #696763;">Ставка:</p>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="transaction" value="abroad" id="1">
-                                            <label class="form-check-label" for="1">аваап</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="transaction" value="between_cards" id="2">
-                                            <label class="form-check-label" for="2">С карты на карту</label>
+                                        <div>
+                                            <input type="radio" id="min_cost"
+                                                   name="deposit_rate_start" value="0">
+                                            <label for="min_cost">Минимальная</label>
+
+                                            <input type="radio" id="max_cost"
+                                                   name="deposit_rate_finish" value="1">
+                                            <label for="max_cost">Максимальная</label>
+
                                         </div>
                                     </div>
                                     <div class="panel-body">
                                         <p style="color: #696763;">Цель вклада:</p>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="aim"value="general_terms" id="5">
+                                            <input class="form-check-input" type="checkbox" name="deposit_aim" value="General" id="5">
                                             <label class="form-check-label" for="5">Общие условия</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="aim" value="children_orphans" id="6">
+                                            <input class="form-check-input" type="checkbox" name="aideposit_aim" value="Orphans" id="6">
                                             <label class="form-check-label" for="6">Дети-сироты</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="aim"value="retiree" id="5">
+                                            <input class="form-check-input" type="checkbox" name="deposit_aim"value="Pension" id="5">
                                             <label class="form-check-label" for="5">Пенсионеры</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="aim" value="veterans" id="6">
+                                            <input class="form-check-input" type="checkbox" name="deposit_aim" value="Veterans" id="6">
                                             <label class="form-check-label" for="6">Ветераны и инвалиды ВОВ</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="aim" value="motorists" id="6">
+                                            <input class="form-check-input" type="checkbox" name="deposit_aim" value="Motorists" id="6">
                                             <label class="form-check-label" for="6">Автомобилисты</label>
                                         </div>
 
@@ -248,31 +261,39 @@
                                     <div class="panel-body">
                                         <p style="color: #696763;"> Валюта:</p>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="deposit_currency"value="ruble" id="5">
+                                            <input class="form-check-input" type="checkbox" name="deposit_currency"value="Ruble" id="5">
                                             <label class="form-check-label" for="5">Рубль</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="deposit_currency" value="euro" id="6">
+                                            <input class="form-check-input" type="checkbox" name="deposit_currency" value="Ruro" id="6">
                                             <label class="form-check-label" for="6">Евро</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="deposit_currency" value="dollar" id="6">
+                                            <input class="form-check-input" type="checkbox" name="deposit_currency" value="Dollar" id="6">
                                             <label class="form-check-label" for="6">Доллар</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="deposit_currency" value="Swiss_frank" id="6">
+                                            <label class="form-check-label" for="6">Швейцарский франк</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="deposit_currency" value="Pound_sterling" id="6">
+                                            <label class="form-check-label" for="6">Фунт-стерлинг</label>
                                         </div>
 
                                     </div>
                                     <div class="panel-body">
                                         <p style="color: #696763;">Дополнительные условия вклада:</p>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="deposit_terms"value="replenishing" id="5">
+                                            <input class="form-check-input" type="checkbox" name="deposit_additional_conditions"value="Replenished " id="5">
                                             <label class="form-check-label" for="5">Пополняемый </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="deposit_terms" value="unreplenishing" id="6">
+                                            <input class="form-check-input" type="checkbox" name="deposit_additional_conditions" value="Non-refillable" id="6">
                                             <label class="form-check-label" for="6">Непополняемый</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="deposit_terms" value="partial_withdrawal" id="6">
+                                            <input class="form-check-input" type="checkbox" name="deposit_additional_conditions" value="Partial_withdrawal" id="6">
                                             <label class="form-check-label" for="6">Частичное снятие</label>
                                         </div>
 
@@ -295,19 +316,19 @@
                                 <div id="fourth" class="panel-collapse collapse">
                                     <div class="panel-body">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="consultation" value="hotline" id="1">
+                                            <input class="form-check-input" type="checkbox" name="consultation" value="Hotline" id="1">
                                             <label class="form-check-label" for="1">Горячая линия</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="consultation" value="chat_with_expert" id="2">
+                                            <input class="form-check-input" type="checkbox" name="consultation" value="Chat_with_expert" id="2">
                                             <label class="form-check-label" for="2">Чат с экспертом</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="consultation" value="chat_bot" id="1">
+                                            <input class="form-check-input" type="checkbox" name="consultation" value="Chat-bot" id="1">
                                             <label class="form-check-label" for="1">Чат-бот</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="consultation" value="mail" id="1">
+                                            <input class="form-check-input" type="checkbox" name="consultation" value="Mail" id="1">
                                             <label class="form-check-label" for="1">Почта</label>
                                         </div>
                                     </div>
@@ -325,22 +346,22 @@
                                 <div id="fifth" class="panel-collapse collapse">
                                     <div class="panel-body">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="card" value="free_service" id="1">
+                                            <input class="form-check-input" type="checkbox" name="card_free_service" value="true" id="1">
                                             <label class="form-check-label" for="1">Бесплатное обслуживание</label>
                                         </div>
                                     </div>
                                     <div class="panel-body">
                                         <p style="color: #696763;">Вид карты:</p>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="card"value="debit" id="5">
+                                            <input class="form-check-input" type="checkbox" name="card_types"value="Debit" id="5">
                                             <label class="form-check-label" for="5">Дебетовая</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="card" value="credit" id="6">
+                                            <input class="form-check-input" type="checkbox" name="card_types" value="Credit" id="6">
                                             <label class="form-check-label" for="6">Кредитная</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="card"value="virtual" id="5">
+                                            <input class="form-check-input" type="checkbox" name="card_types"value="Virtual" id="5">
                                             <label class="form-check-label" for="5">Виртуальная</label>
                                         </div>
 
@@ -349,81 +370,85 @@
                                     <div class="panel-body">
                                         <p style="color: #696763;"> Категории карт:</p>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="card"value="standard" id="5">
+                                            <input class="form-check-input" type="checkbox" name="card_categories"value="Standard" id="5">
                                             <label class="form-check-label" for="5">Стандартная</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="card" value="travel" id="6">
+                                            <input class="form-check-input" type="checkbox" name="card_categories" value="For_travelling" id="6">
                                             <label class="form-check-label" for="6">Для путешествий</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="card" value="child" id="6">
+                                            <input class="form-check-input" type="checkbox" name="card_categories" value="Children" id="6">
                                             <label class="form-check-label" for="6">Детская</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="card"value="gamers" id="5">
+                                            <input class="form-check-input" type="checkbox" name="card_categories"value="For_gamers" id="5">
                                             <label class="form-check-label" for="5">Для геймеров</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="card" value="motorists" id="6">
+                                            <input class="form-check-input" type="checkbox" name="card_categories" value="For_drivers" id="6">
                                             <label class="form-check-label" for="6">Для автомобилистов</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="card" value="moscow_residents" id="6">
+                                            <input class="form-check-input" type="checkbox" name="card_categories" value="For_moscow_residents" id="6">
                                             <label class="form-check-label" for="6">Для жителей Москвы</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="card"value="retiree" id="5">
+                                            <input class="form-check-input" type="checkbox" name="card_categories"value="For_pensioners" id="5">
                                             <label class="form-check-label" for="5">Для пенсионеров</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="card" value="social" id="6">
+                                            <input class="form-check-input" type="checkbox" name="card_categories" value="Social" id="6">
                                             <label class="form-check-label" for="6">Социальная</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="card" value="charity" id="6">
+                                            <input class="form-check-input" type="checkbox" name="card_categories" value="Charitable" id="6">
                                             <label class="form-check-label" for="6">Благотворительные</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="card"value="self-employed" id="5">
+                                            <input class="form-check-input" type="checkbox" name="card_categories"value="For_self-employed" id="5">
                                             <label class="form-check-label" for="5">Для самозанятых</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="card" value="rzd" id="6">
+                                            <input class="form-check-input" type="checkbox" name="card_categories" value="Russian_Railways" id="6">
                                             <label class="form-check-label" for="6">РЖД</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="card" value="wear" id="6">
+                                            <input class="form-check-input" type="checkbox" name="card_categories" value="Clothes" id="6">
                                             <label class="form-check-label" for="6">Одежда</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="card_categories" value="For_sportsmen" id="6">
+                                            <label class="form-check-label" for="6">Для спорсменов</label>
                                         </div>
 
                                     </div>
                                     <div class="panel-body">
                                         <p><b style="color: #696763;"> Цена обслуживания в год:</b><br>
-                                            <input type="text" name="card_cost" size="10">
+                                            <input type="text" name="card_annual_service_price_start" size="10">
                                         </p>
                                     </div>
                                     <div class="panel-body">
                                         <p><b style="color: #696763;"> Кэшбэк:</b><br>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="card" value="min_cashback" id="1">
+                                            <input class="form-check-input" type="checkbox" name="card_cashback_start" value="0" id="134">
                                             <label class="form-check-label" for="1">Минимальный</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="card" value="max_cashback" id="1">
+                                            <input class="form-check-input" type="checkbox" name="card" value="1" id="24">
                                             <label class="form-check-label" for="1">Максимальный</label>
                                         </div>
                                     </div>
                                     <div class="panel-body">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="card" value="self_design" id="1">
+                                            <input class="form-check-input" type="checkbox" name="card_design_to_choose" value="True" id="1">
                                             <label class="form-check-label" for="1">Дизайн на выбор</label>
                                         </div>
                                     </div>
                                     <div class="panel-body">
                                         <p><b style="color: #696763;"> срок действия карты:</b><br>
                                             <div class="slidecontainer">
-                                                <input type="range" min="1" max="20" value="10" class="slider" name = "card_validity"id="myRange">
+                                                <input type="range" min="1" max="20" value="10" class="slider" name = "card_validity" id="myRange">
                                         <p>Срок в годах: <span id="demo"></span></p>
                                     </div>
                                     <script>
@@ -455,71 +480,67 @@
                                 <div class="panel-body">
                                     <p style="color: #696763;">Цели:</p>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="credit"value="general_terms" id="5">
+                                        <input class="form-check-input" type="checkbox" name="credit_aim"value="General_terms" id="5">
                                         <label class="form-check-label" for="5">Общие условия</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="credit"value="renovation" id="5">
+                                        <input class="form-check-input" type="checkbox" name="credit_aim"value="Renovation " id="5">
                                         <label class="form-check-label" for="5">Ремонт </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="credit"value="property" id="5">
+                                        <input class="form-check-input" type="checkbox" name="credit_aim"value="Real_property " id="5">
                                         <label class="form-check-label" for="5">Недвижимость </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="credit"value="car" id="5">
+                                        <input class="form-check-input" type="checkbox" name="credit_aim"value="Car-loan" id="5">
                                         <label class="form-check-label" for="5">Автокредит </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="credit"value="business_development" id="5">
+                                        <input class="form-check-input" type="checkbox" name="credit_aim"value="Business_development " id="5">
                                         <label class="form-check-label" for="5">Развитие бизнеса</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="credit"value="dept" id="5">
-                                        <label class="form-check-label" for="5">Погашение долгов</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="credit"value="health" id="5">
+                                        <input class="form-check-input" type="checkbox" name="credit_aim"value="Health" id="5">
                                         <label class="form-check-label" for="5">Здоровье</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="credit"value="travel" id="5">
+                                        <input class="form-check-input" type="checkbox" name="credit_aim"value="Travelling" id="5">
                                         <label class="form-check-label" for="5">Путешествия </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="credit"value="military" id="5">
+                                        <input class="form-check-input" type="checkbox" name="credit_aim"value="For_soldiers" id="5">
                                         <label class="form-check-label" for="5">Для военнослужащих</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="credit"value="refinancing" id="5">
+                                        <input class="form-check-input" type="checkbox" name="credit_aim"value="Refinancing" id="5">
                                         <label class="form-check-label" for="5">Рефинансирование </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="credit"value="retiree" id="5">
+                                        <input class="form-check-input" type="checkbox" name="credit_aim"value="Pension" id="5">
                                         <label class="form-check-label" for="5">Пенсионный</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="credit"value="salary" id="5">
+                                        <input class="form-check-input" type="checkbox" name="credit_aim"value="Payday_loan" id="5">
                                         <label class="form-check-label" for="5">Займ до зарплаты</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="credit"value="education" id="5">
+                                        <input class="form-check-input" type="checkbox" name="credit_aim"value="Education" id="5">
                                         <label class="form-check-label" for="5">Образование</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="credit"value="business" id="5">
+                                        <input class="form-check-input" type="checkbox" name="credit_aim"value="Business" id="5">
                                         <label class="form-check-label" for="5">Бизнес</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="credit"value="marriage" id="5">
+                                        <input class="form-check-input" type="checkbox" name="credit_aim"value="Wedding" id="5">
                                         <label class="form-check-label" for="5">Свадьба</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="credit"value="far_east" id="5">
+                                        <input class="form-check-input" type="checkbox" name="credit_aim"value="Development_of_the_Far_Eastern_hectare" id="5">
                                         <label class="form-check-label" for="5">Освоение «Дальневосточного гектара»</label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="credit"value="private_household" id="5">
+                                        <input class="form-check-input" type="checkbox" name="credit_aim"value="Personal_subsidiary_farm " id="5">
                                         <label class="form-check-label" for="5">Личное подсобное хозяйство</label>
                                     </div>
 
@@ -543,7 +564,7 @@
                             <div class="panel-body">
                                 <p><b style="color: #696763;"> Срок кредита:</b><br>
                                     <div class="slidecontainer">
-                                        <input type="range" min="1" max="60" value="10" class="slider" name = "credit_term"id="myRange3">
+                                        <input type="range" min="1" max="60" value="10" class="slider" name = "credit_validity"id="myRange3">
                                 <p>Срок в месяцах: <span id="demo3"></span></p>
                             </div>
                             <script>
@@ -558,14 +579,14 @@
                         </div>
                         <div class="panel-body">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="card" value="min_cashback" id="1">
+                                <input class="form-check-input" type="checkbox" name="credit_early_payment" value="true" id="1">
                                 <label class="form-check-label" for="1">Досрочное погашение(без процентов)</label>
                             </div>
                         </div>
                         <div class="panel-body">
                             <p><b style="color: #696763;"> Сумма кредита:</b><br>
                                 <div class="slidecontainer">
-                                    <input type="range" min="1" max="10000000" value="10000" class="slider" name = "credit_sum" id="myRange4">
+                                    <input type="range" min="1" max="10000000" value="10000" class="slider" name = "credit_amount" id="myRange4">
                             <p>Сумма кредита: <span id="demo4"></span></p>
                         </div>
                         <script>
@@ -594,50 +615,50 @@
                     <div class="panel-body">
                         <p><b style="color: #696763;"> Цель:</b><br>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="insurance" value="auto" id="1">
+                            <input class="form-check-input" type="checkbox" name="insurance_aim" value="Auto_insurance" id="1">
                             <label class="form-check-label" for="1">Автострахование </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="insurance" value="tourists" id="1">
+                            <input class="form-check-input" type="checkbox" name="insurance_aim" value="For_tourists " id="1">
                             <label class="form-check-label" for="1">Для туристов</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="insurance" value="property" id="1">
+                            <input class="form-check-input" type="checkbox" name="insurance_aim" value="Real_property" id="1">
                             <label class="form-check-label" for="1">Недвижимость </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="insurance" value="accidents" id="1">
+                            <input class="form-check-input" type="checkbox" name="insurance_aim" value="From_accidents " id="1">
                             <label class="form-check-label" for="1">От несчастных случаев</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="insurance" value="health" id="1">
+                            <input class="form-check-input" type="checkbox" name="insurance_aim" value="Health" id="1">
                             <label class="form-check-label" for="1">Здоровье</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="insurance" value="legal_services" id="1">
+                            <input class="form-check-input" type="checkbox" name="insurance_aim" value="Legal_services" id="1">
                             <label class="form-check-label" for="1">Юридические услуги</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="insurance" value="life" id="1">
+                            <input class="form-check-input" type="checkbox" name="insurance_aim" value="Life" id="1">
                             <label class="form-check-label" for="1">Жизнь </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="insurance" value="covid" id="1">
+                            <input class="form-check-input" type="checkbox" name="insurance_aim" value="Coronavirus" id="1">
                             <label class="form-check-label" for="1">Коронавирус</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="insurance" value="job_loss" id="1">
+                            <input class="form-check-input" type="checkbox" name="insurance_aim" value="Job_loss" id="1">
                             <label class="form-check-label" for="1">Потеря работы</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="insurance" value="osago" id="1">
+                            <input class="form-check-input" type="checkbox" name="insurance_aim" value="Electronic_policy_motoric_insurance" id="1">
                             <label class="form-check-label" for="1">Электронный полис ОСАГО</label>
                         </div>
                     </div>
                     <div class="panel-body">
                         <p><b style="color: #696763;"> Сумма страховой защиты:</b><br>
                             <div class="slidecontainer">
-                                <input type="range" min="1" max="10000000" value="10000" class="slider" name = "credit_sum" id="myRange5">
+                                <input type="range" min="1" max="10000000" value="10000" class="slider" name = "insurance_amount" id="myRange5">
                         <p>Сумма в рублях: <span id="demo5"></span></p>
                     </div>
                     <script>
@@ -664,64 +685,80 @@
             <div id="eighth" class="panel-collapse collapse">
                 <div class="panel-body">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="unique" value="legal_consultation" id="5">
+                        <input class="form-check-input" type="checkbox" name="unique_services" value="Legal_advice" id="5">
                         <label class="form-check-label" for="5">Консультация юриста</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="unique"value="tax_assistant" id="5">
+                        <input class="form-check-input" type="checkbox" name="unique_services"value="Tax_assistance" id="5">
                         <label class="form-check-label" for="5">Налоговый помощник</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="unique"value="upgrade_creditstory" id="5">
+                        <input class="form-check-input" type="checkbox" name="unique_services"value="Improving_credit_history" id="5">
                         <label class="form-check-label" for="5">Улучшение кредитной истории</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="unique"value="property" id="5">
+                        <input class="form-check-input" type="checkbox" name="unique_services"value="Real_estate_showcase" id="5">
                         <label class="form-check-label" for="5">Витрина недвижимости</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="unique"value="special_account" id="5">
+                        <input class="form-check-input" type="checkbox" name="unique_services"value="Special_account_for_purchasing " id="5">
                         <label class="form-check-label" for="5">Специальный счёт физического лица для участия в закупках</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="unique"value="safes" id="5">
-                        <label class="form-check-label" for="5">Аренда сейфов</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="unique"value="biometrics" id="5">
+                        <input class="form-check-input" type="checkbox" name="unique_services"value="Biometrics" id="5">
                         <label class="form-check-label" for="5">Биометрия</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="unique"value="investments" id="5">
+                        <input class="form-check-input" type="checkbox" name="unique_services"value="Investments" id="5">
                         <label class="form-check-label" for="5">Инвестиции </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="unique"value="self-employed" id="5">
+                        <input class="form-check-input" type="checkbox" name="unique_services"value="Self-employed_registration" id="5">
                         <label class="form-check-label" for="5">Регистрация самозанятых</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="unique"value="analisys" id="5">
+                        <input class="form-check-input" type="checkbox" name="unique_services"value="Analitics" id="5">
                         <label class="form-check-label" for="5">Аналитика</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="unique"value="reporting" id="5">
+                        <input class="form-check-input" type="checkbox" name="unique_services"value="Accounting" id="5">
                         <label class="form-check-label" for="5">Ведение отчётности</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="unique"value="far_east" id="5">
+                        <input class="form-check-input" type="checkbox" name="unique_services"value="Development_of_the_Far_Eastern_hectare" id="5">
                         <label class="form-check-label" for="5">Кредит на освоение «Дальневосточного гектара»</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="unique"value="marriage" id="5">
+                        <input class="form-check-input" type="checkbox" name="unique_services"value="Wedding" id="5">
                         <label class="form-check-label" for="5">Кредит на свадьбу</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="unique"value="family" id="5">
+                        <input class="form-check-input" type="checkbox" name="unique_services"value="Bank_for_whole_family " id="5">
                         <label class="form-check-label" for="5">Банк для всей семьи</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="unique"value="broker" id="5">
+                        <input class="form-check-input" type="checkbox" name="unique_services"value="Brokerage_service" id="5">
                         <label class="form-check-label" for="5">Брокерское обслуживание</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="unique_services"value="Consultations_for_pensioners" id="5">
+                        <label class="form-check-label" for="5">Консультация для пенсионеров</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="unique_services"value="Property_valuation" id="5">
+                        <label class="form-check-label" for="5">Оценка недвижимости</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="unique_services"value="Currency_card" id="5">
+                        <label class="form-check-label" for="5">Валютная карта</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="unique_services"value="Account_for_payments_to_guardians_and_parents" id="5">
+                        <label class="form-check-label" for="5">Счет для выплат опекунам\родителям\попечителям</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="unique_services"value="E-commerce" id="5">
+                        <label class="form-check-label" for="5">Электронная коммерция</label>
                     </div>
                 </div>
             </div>
@@ -778,7 +815,8 @@
                                             <a th:href="@{'bank/'+${bank.getName()}}">
                                                 <h1 th:text="${bank.getName()}"></h1>
                                             </a>
-                                            <h2 th:text="${bank.getPrice()}"></h2>
+                                            <h2 style="margin-left: 50px" th:text="${bank.getRating()}"></h2>
+                                            <a th:text="${bank.getPopularity()}"></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -795,7 +833,8 @@
                                             <a th:href="@{'bank/'+${bank.getName()}}">
                                                 <h1 th:text="${bank.getName()}"></h1>
                                             </a>
-                                            <h2 th:text="${bank.getPrice()}"></h2>
+                                            <h2 style="margin-left: 50px" th:text="${bank.getRating()}"></h2>
+                                            <a th:text="${bank.getPopularity()}"></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -812,7 +851,8 @@
                                             <a th:href="@{'bank/'+${bank.getName()}}">
                                                 <h1 th:text="${bank.getName()}"></h1>
                                             </a>
-                                            <h2 th:text="${bank.getPrice()}"></h2>
+                                            <h2 style="margin-left: 50px" th:text="${bank.getRating()}"></h2>
+                                            <a th:text="${bank.getPopularity()}"></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -829,7 +869,8 @@
                                             <a th:href="@{'bank/'+${bank.getName()}}">
                                                 <h1 th:text="${bank.getName()}"></h1>
                                             </a>
-                                            <h2 th:text="${bank.getPrice()}"></h2>
+                                            <h2 style="margin-left: 50px" th:text="${bank.getRating()}"></h2>
+                                            <a th:text="${bank.getPopularity()}"></a>
                                         </li>
                                     </ul>
                                 </div>
