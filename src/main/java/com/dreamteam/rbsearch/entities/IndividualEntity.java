@@ -5,7 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 
 @Data
-@Entity(name = "individual_bank_list")
+@Entity(name = "individual_bank_list_release")
 @AllArgsConstructor
 @NoArgsConstructor
 public class IndividualEntity extends BaseEntity {
@@ -14,79 +14,117 @@ public class IndividualEntity extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column private String name;
+    @Column
+    private String name;
 
-    @Column private String transfer_type;
+    @Column(name = "transfer_types")
+    private String transferTypes;
 
-    @Column private Boolean transfer_auto;
+    @Column(name = "transfer_auto")
+    private Boolean transferAuto;
 
-    @Column private String transfer_currency;
+    @Column(name = "transfer_currency")
+    private String transferCurrency;
 
-    @Column private String payment_method;
+    @Column(name = "payment_method")
+    private String paymentMethod;
 
-    @Column private String payment_aims_services;
+    @Column(name = "payment_aims_services")
+    private String paymentAimsServices;
 
-    @Column private Boolean payment_auto;
+    @Column(name = "payment_auto")
+    private Boolean paymentAuto;
 
-    @Column private Float deposit_rate_start;
+    @Column(name = "deposit_rate_start")
+    private Float depositRateStart;
 
-    @Column private Float deposit_rate_finish;
+    @Column(name = "deposit_rate_finish")
+    private Float depositRateFinish;
 
-    @Column private String deposit_currency;
+    @Column(name = "deposit_currency")
+    private String depositCurrency;
 
-    @Column private String deposit_additional_conditions;
+    @Column(name = "deposit_additional_conditions")
+    private String depositAdditionalConditions;
 
-    @Column private String consultation;
+    @Column
+    private String consultation;
 
-    @Column private Boolean card_free_service;
+    @Column(name = "card_free_service")
+    private Boolean cardFreeService;
 
-    @Column private String card_types;
+    @Column(name = "card_types")
+    private String cardTypes;
 
-    @Column private String card_categories;
+    @Column(name = "card_categories")
+    private String cardCategories;
 
-    @Column private Integer card_annual_service_price_start;
+    @Column(name = "card_annual_service_price_start")
+    private Integer cardAnnualServicePriceStart;
 
-    @Column private Integer card_annual_service_price_finish;
+    @Column(name = "card_annual_service_price_finish")
+    private Integer cardAnnualServicePriceFinish;
 
-    @Column private Float card_cashback_start;
+    @Column(name = "card_cashback_start")
+    private Float cardCashbackStart;
 
-    @Column private Float card_cashback_finish;
+    @Column(name = "card_cashback_finish")
+    private Float cardCashbackFinish;
 
-    @Column private Boolean card_design_to_choose;
+    @Column(name = "card_design_to_choose")
+    private Boolean cardDesignToChoose;
 
-    @Column private Integer card_validity_start;
+    @Column(name = "card_validity_start")
+    private Integer cardValidityStart;
 
-    @Column private Integer card_validity_finish;
+    @Column(name = "card_validity_finish")
+    private Integer cardValidityFinish;
 
-    @Column private String credit_aim;
+    @Column(name = "credit_aim")
+    private String creditAim;
 
-    @Column private Float credit_interest_rate_start;
+    @Column(name = "credit_interest_rate_start")
+    private Float creditInterestRateStart;
 
-    @Column private Float credit_interest_rate_finish;
+    @Column(name = "credit_interest_rate_finish")
+    private Float creditInterestRateFinish;
 
-    @Column private Integer credit_term_start;
+    @Column(name = "credit_term_start")
+    private Integer creditTermStart;
 
-    @Column private Integer credit_term_finish;
+    @Column(name = "credit_term_finish")
+    private Integer creditTermFinish;
 
-    @Column private Boolean credit_early_payment;
+    @Column(name = "credit_early_payment")
+    private Boolean creditEarlyPayment;
 
-    @Column private Integer credit_amount_start;
+    @Column(name = "credit_amount_start")
+    private Integer creditAmountStart;
 
-    @Column private Integer credit_amount_finish;
+    @Column(name = "credit_amount_finish")
+    private Integer creditAmountFinish;
 
-    @Column private String insurance_aim;
+    @Column(name = "insurance_aim")
+    private String insuranceAim;
 
-    @Column private Integer insurance_amount_start;
+    @Column(name = "insurance_amount_start")
+    private Integer insuranceAmountStart;
 
-    @Column private Integer insurance_amount_finish;
+    @Column(name = "insurance_amount_finish")
+    private Integer insuranceAmountFinish;
 
-    @Column private Float rating;
+    @Column
+    private Float rating;
 
-    @Column private Integer popularity;
+    @Column
+    private Integer popularity;
 
-    @Column private String unique_services;
+    @Column(name = "unique_services")
+    private String uniqueServices;
 
-    @Column private String advantages;
+    @Column
+    private String advantages;
 
-    @Column private String disadvantages;
+    @Column
+    private String disadvantages;
 }
