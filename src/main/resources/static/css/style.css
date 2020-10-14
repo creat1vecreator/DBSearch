@@ -1,9 +1,9 @@
 
 html,body{
-	background:#fff;
+	background:#FFFFFF;
 	font-size: 100%;
-	font-family:'Oxygen-Regular';
-	 
+	font-family:'Exo 2', sans-serif;
+
 }
 body a{
 	transition: 0.5s all;
@@ -933,22 +933,23 @@ ul.product-qty {
     color: #696763;
     border-bottom: 1px solid #EDEDED;
 }
+
 .tabs  li a:hover,.tabs  li.active a{
-	background:#5cb85c !important;
+	background:#4B0082 !important;
 	color:#fff;
 }
 .tab-content {
     padding-left: 0px;
 }
 .facts p {
-    color: #696763;
-    font-size: 0.9em;
+    color: #000000;
+    font-size: 1em;
     line-height: 2em;
     padding: 0 0 1em;
 }
 .facts ul li {
     list-style: none;
-    color: #696763;
+    color: #000000;
     font-size: 0.9em;
     padding: 0.3em 0;
 }
