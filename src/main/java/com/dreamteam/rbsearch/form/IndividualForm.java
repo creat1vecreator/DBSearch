@@ -40,8 +40,7 @@ public class IndividualForm {
     private List<String> insurance_aim;
     private Integer insurance_amount_start;
     private Integer insurance_amount_finish;
-    private Float rating;
-    private Integer popularity;
+    private String sorting;
     private List<String> unique_services;
 
     public IndividualForm(
@@ -77,8 +76,7 @@ public class IndividualForm {
             String insuranceAim,
             String insuranceAmountStart,
             String insuranceAmountFinish,
-            String rating,
-            String popularity,
+            String sorting,
             String uniqueServices
     ) {
         this.transfer_types = transferTypes == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(transferTypes.split(", ")));
@@ -113,8 +111,7 @@ public class IndividualForm {
         this.insurance_aim = insuranceAim == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(insuranceAim.split(", ")));
         this.insurance_amount_start = Integer.parseInt(insuranceAmountStart);
         this.insurance_amount_finish = Integer.parseInt(insuranceAmountFinish);
-        this.rating = Float.parseFloat(rating);
-        this.popularity = Integer.parseInt(popularity);
+        this.sorting = sorting == null ? "" : sorting;
         this.unique_services = insuranceAim == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(uniqueServices.split(", ")));
     }
 }

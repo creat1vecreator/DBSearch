@@ -17,13 +17,28 @@ public class IndividualService {
     public BankEntitiesDTO<IndividualEntity> find(IndividualForm individualForm) {
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO = new BankEntitiesDTO<>();
 
+        if (!individualForm.getSorting().isBlank()) {
+            if (individualForm.getSorting().contains("rating")) {
+                bankEntitiesDTO.addBankEntityList(
+                        sortByRating(),
+                        false
+                );
+            }
+            if (individualForm.getSorting().contains("popularity")) {
+                bankEntitiesDTO.addBankEntityList(
+                        sortByPopularity(),
+                        false
+                );
+            }
+        }
+
         if (individualForm.getCard_annual_service_price_start() >= 0) {
             bankEntitiesDTO.addBankEntityList(
                     findByCardAnnualServicePrice(
                             individualForm.getCard_annual_service_price_start(),
                             individualForm.getCard_annual_service_price_finish()
                     ),
-                    false
+                    true
             );
         }
 
@@ -354,6 +369,14 @@ public class IndividualService {
         return new BankEntitiesDTO<>(individualRepository.findAllByUniqueServicesIn(unique_services));
     }
 
+    private BankEntitiesDTO<IndividualEntity> sortByRating() {
+        return new BankEntitiesDTO<>(individualRepository.findByOrderByRating());
+    }
+
+    private BankEntitiesDTO<IndividualEntity> sortByPopularity() {
+        return new BankEntitiesDTO<>(individualRepository.findByOrderByPopularity());
+
+    }
     public IndividualEntity findByName(String name) {
         return individualRepository.findByName(name).orElseThrow(RuntimeException::new);
     }

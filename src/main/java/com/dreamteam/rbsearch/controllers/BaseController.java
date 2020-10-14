@@ -24,11 +24,11 @@ public class BaseController {
     public String returnCriteriaPage(@PathVariable String category) {
         switch (category) {
             case "individual":
-                return "criteria/individual";
+                return "answer/individual";
             case "legal_entity":
-                return "criteria/legal_entity";
+                return "answer/legal_entity";
             case "corporation":
-                return "criteria/corporation";
+                return "answer/corporation";
         }
         return returnErrorPage();
     }
