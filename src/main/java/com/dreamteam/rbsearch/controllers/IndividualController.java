@@ -41,7 +41,7 @@ public class IndividualController {
 //        return new ResponseEntity<>(jsonResponse, HttpStatus.OK);
 //    }
 
-    @RequestMapping(value = "/search", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value = "/search", method = RequestMethod.GET)
     public String getSearch(
             Model model,
             @RequestParam(value = "transfer_types", required = false) String transferTypes,
