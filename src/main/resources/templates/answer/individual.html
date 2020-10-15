@@ -14,7 +14,6 @@
     <meta name="author" content="">
     <title>Выбор ДБО</title>
     <link href="../../static/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../static/css/price-range.css" rel="stylesheet">
     <link href="../../static/css/main2.css" rel="stylesheet">
 
 
@@ -154,7 +153,7 @@
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" name="payment_aims_services" value="Public_services" id="5">
-                                            <label class="form-check-label" for="5">Гос услуги</label>
+                                            <label class="form-check-label" for="5">Гос услуги <img title="Налоги и платежи" src="../../static/images/images.png" width="15px" height="15px" style="margin-bottom: 3px">  </label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" name="payment_aims_services" value="Transport" id="6">
@@ -222,14 +221,19 @@
                                 <div id="third" class="panel-collapse collapse">
                                     <div class="panel-body">
                                         <p style="color: #696763;">Ставка:</p>
-                                        <div class="price-range">
-                                            <div class="well text-center">
-                                                <div class="slider slider-horizontal" style="width: 150px;">
-                                                    <input type="text" name="deposit_rate" value="" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="[0,7]" id="sl2" style="width: 150px;">
-                                                    <b class="pull-left">0</b> <b class="pull-right" style="margin-left: 100px">20%</b>
-                                                </div>
+                                        <div class="slidecontainer">
+                                            <input type="range" min="1" max="20" value="10" class="slider" name = "deposit rate" id="myRange0">
+                                            <p>Ставка в процентах: <span id="demo0"></span></p>
                                         </div>
-                                        </div>
+                                        <script>
+                                            var slider0 = document.getElementById("myRange0");
+                                            var output0 = document.getElementById("demo0");
+                                            output0.innerHTML = slider0.value;
+
+                                            slider0.oninput = function() {
+                                                output0.innerHTML = this.value;
+                                            }
+                                        </script>
                                     </div>
                                     <div class="panel-body">
                                         <p style="color: #696763;">Цель вклада:</p>
@@ -427,14 +431,19 @@
                                     </div>
                                     <div class="panel-body">
                                         <p><b style="color: #696763;"> Кэшбэк:</b><br>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="card_cashback_start" value="0" id="134">
-                                            <label class="form-check-label" for="1">Минимальный</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="card" value="1" id="24">
-                                            <label class="form-check-label" for="1">Максимальный</label>
-                                        </div>
+                                            <div class="slidecontainer">
+                                                <input type="range" min="1" max="20" value="10" class="slider" name = "deposit rate" id="myRange6">
+                                        <p>Ставка в процентах: <span id="demo6"></span></p>
+                                    </div>
+                                    <script>
+                                        var slider6 = document.getElementById("myRange6");
+                                        var output6 = document.getElementById("demo6");
+                                        output6.innerHTML = slider6.value;
+
+                                        slider6.oninput = function() {
+                                            output6.innerHTML = this.value;
+                                        }
+                                    </script>
                                     </div>
                                     <div class="panel-body">
                                         <div class="form-check">
@@ -890,7 +899,7 @@
     <script src="../../static/js/price-range.js"></script>
     <script src="../../static/js/bootstrap.min.js"></script>
     <script src="../../static/js/main.js"></script>
-    <script src="../../static/js/response.js"></script>
+    <script src="../../static/js/response_another.js"></script>
 
 </form>
 </body>
