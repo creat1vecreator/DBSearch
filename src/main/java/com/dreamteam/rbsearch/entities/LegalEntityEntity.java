@@ -20,7 +20,7 @@ public class LegalEntityEntity extends BaseEntity {
 
     @Column(name = "payment_aims_services")
     @ElementCollection
-    private List<String> paymentAims_services;
+    private List<String> paymentAimsServices;
 
     @Column(name = "payment_method")
     @ElementCollection
@@ -124,7 +124,7 @@ public class LegalEntityEntity extends BaseEntity {
     @ElementCollection
     private List<String> corporationFinancing;
 
-    @Column(name = "security")
+    @Column(name = "security") // only for web
     @ElementCollection
     private List<String> security;
 }
