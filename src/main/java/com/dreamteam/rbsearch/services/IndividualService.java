@@ -32,7 +32,7 @@ public class IndividualService {
             }
         }
 
-        if (individualForm.getCard_annual_service_price_start() >= 0) {
+        if (individualForm.getCard_annual_service_price_finish() >= 0) {
             bankEntitiesDTO.addBankEntityList(
                     findByCardAnnualServicePrice(
                             individualForm.getCard_annual_service_price_start(),
@@ -42,7 +42,7 @@ public class IndividualService {
             );
         }
 
-        if (individualForm.getDeposit_rate_start() >= 0) {
+        if (individualForm.getDeposit_rate_finish() >= 0) {
             bankEntitiesDTO.addBankEntityList(
                     findByDepositRate(
                             individualForm.getDeposit_rate_start(),
@@ -52,7 +52,7 @@ public class IndividualService {
             );
         }
 
-        if (individualForm.getCard_cashback_start() >= 0) {
+        if (individualForm.getCard_cashback_finish() >= 0) {
             bankEntitiesDTO.addBankEntityList(
                     findByCardCashback(
                             individualForm.getCard_cashback_start(),
@@ -62,7 +62,7 @@ public class IndividualService {
             );
         }
 
-        if (individualForm.getCard_validity_start() >= 0) {
+        if (individualForm.getCard_validity_finish() >= 0) {
             bankEntitiesDTO.addBankEntityList(
                     findByCardValidity(
                             individualForm.getCard_validity_start(),
@@ -72,7 +72,7 @@ public class IndividualService {
             );
         }
 
-        if (individualForm.getCredit_interest_rate_start() >= 0) {
+        if (individualForm.getCredit_interest_rate_finish() >= 0) {
             bankEntitiesDTO.addBankEntityList(
                     findByCreditInterestRate(
                             individualForm.getCredit_interest_rate_start(),
@@ -82,7 +82,7 @@ public class IndividualService {
             );
         }
 
-        if (individualForm.getCredit_term_start() >= 0) {
+        if (individualForm.getCredit_term_finish() >= 0) {
             bankEntitiesDTO.addBankEntityList(
                     findByCreditTerm(
                             individualForm.getCredit_term_start(),
@@ -92,7 +92,7 @@ public class IndividualService {
             );
         }
 
-        if (individualForm.getCredit_amount_start() >= 0) {
+        if (individualForm.getCredit_amount_finish() >= 0) {
             bankEntitiesDTO.addBankEntityList(
                     findByCreditAmount(
                             individualForm.getCredit_amount_start(),
@@ -102,7 +102,7 @@ public class IndividualService {
             );
         }
 
-        if (individualForm.getInsurance_amount_start() >= 0) {
+        if (individualForm.getInsurance_amount_finish() >= 0) {
             bankEntitiesDTO.addBankEntityList(
                     findByInsuranceAmount(
                             individualForm.getInsurance_amount_start(),

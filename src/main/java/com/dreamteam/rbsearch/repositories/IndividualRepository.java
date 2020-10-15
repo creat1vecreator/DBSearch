@@ -14,7 +14,7 @@ public interface IndividualRepository extends JpaRepository<IndividualEntity, Lo
 
     Optional<IndividualEntity> findByName(String name);
 
-    List<IndividualEntity> findAllByTransferTypesIn(List<String> transfer_type);
+    List<IndividualEntity> findAllByTransferTypesIn(List<String> transfer_types);
 
     List<IndividualEntity> findAllByTransferAutoEquals(Boolean transfer_auto);
 
