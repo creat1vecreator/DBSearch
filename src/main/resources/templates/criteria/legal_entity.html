@@ -46,22 +46,6 @@
                                 </div>
                                 <div id="first" class="panel-collapse collapse">
                                     <div class="panel-body">
-                                        <p style="color: #696763;"> Валюта:</p>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="payment_currency"value="ruble" id="5">
-                                            <label class="form-check-label" for="5">Рубль</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="payment_currency" value="euro" id="6">
-                                            <label class="form-check-label" for="6">Евро</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="payment_currency" value="dollar" id="6">
-                                            <label class="form-check-label" for="6">Доллар</label>
-                                        </div>
-
-                                    </div>
-                                    <div class="panel-body">
                                         <p style="color: #696763;"> Цели:</p>
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" name="payment_aims_services" value="budget_payment" id="5">
@@ -199,16 +183,18 @@
                                 <div id="third" class="panel-collapse collapse">
                                     <div class="panel-body">
                                         <p style="color: #696763;"> Стоимость обслуживания:</p>
-                                        <div>
-                                            <input type="radio" id="min_cost"
-                                                   name="account" value="min">
-                                            <label for="min_cost">Минимальная</label>
-
-                                            <input type="radio" id="max_cost"
-                                                   name="account" value="max">
-                                            <label for="max_cost">Максимальная</label>
-
+                                        <div class="slidecontainer">
+                                            <input type="range" min="1" max="2000" value="200" class="slider" name = "bank_account_opening_price" id="myRange7">
+                                            <p>Стоимость в рублях: <span id="demo7"></span></p>
                                         </div>
+                                        <script>
+                                            var slider7 = document.getElementById("myRange");
+                                            var output7 = document.getElementById("demo");
+                                            output7.innerHTML = slider7.value;
+                                            slider7.oninput = function() {
+                                                output7.innerHTML = this.value;
+                                            }
+                                        </script>
                                     </div>
                                     <div class="panel-body">
 
@@ -309,7 +295,7 @@
                                 </h4>
                             </div>
                             <div id="fifth" class="panel-collapse collapse">
-                                >
+
                                 <div class="panel-body">
                                     <p><b style="color: #696763;"> Процентная ставка:</b><br>
                                         <div class="slidecontainer">
@@ -379,16 +365,19 @@
                 <div id="sixth" class="panel-collapse collapse">
                     <div class="panel-body">
                         <p style="color: #696763;"> Ставка по вкладу:</p>
-                        <div>
-                            <input type="radio" id="min_deposit"
-                                   name="deposit" value="min">
-                            <label for="min_deposit">Минимальная</label>
-
-                            <input type="radio" id="max_deposit"
-                                   name="deposit" value="max">
-                            <label for="max_deposit">Максимальная</label>
-
+                        <div class="slidecontainer">
+                            <input type="range" min="1" max="1000000" value="10000" class="slider" name = "deposit_rate" id="myRange8">
+                            <p>Сумма ставки: <span id="demo8"></span></p>
                         </div>
+                        <script>
+                            var slider8 = document.getElementById("myRange4");
+                            var output8 = document.getElementById("demo4");
+                            output8.innerHTML = slider8.value;
+
+                            slider8.oninput = function() {
+                                output8.innerHTML = this.value;
+                            }
+                        </script>
                     </div>
                     <div class="panel-body">
                         <p style="color: #696763;"> Валюта:</p>
