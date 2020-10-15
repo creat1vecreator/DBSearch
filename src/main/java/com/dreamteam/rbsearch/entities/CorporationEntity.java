@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 
+@Deprecated
 @Data
 @Entity(name = "corporation_bank_list")
 @AllArgsConstructor
