@@ -2273,3 +2273,48 @@ td.add-check a {
     background-size: 542px;
 }
 }
+menu {
+	width: 100%;
+	display: table;
+}
+.menu nav{
+	background: #334; /* Задаем основной фон меню */
+	padding: 0 3%; /* Задаем внутренние отступы */
+}
+
+.menu nav ul {
+	list-style: none; /* Убираем маркер для элементов списка */
+}
+
+.menu nav ul li {
+	display:inline-block;/*Выстраиваем пункты меню в ряд по горизонтали */
+}
+
+.menu nav ul li a {
+	display:block; /* Настраиваем оформление пунктов меню */
+	padding: 15px 20px;
+	font-size: .9em;
+	color: #eee;
+	letter-spacing: 1px;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-top: 1px solid #445;
+}
+
+.menu nav ul li:hover {
+	background: #445; /* Меняем фон пункта меню при наведении указателя мыши */
+}
+
+.menu nav ul li ul {
+	display: none; /* Прячем пункты выпадающего блока меню */
+	position:absolute;
+	background: #334; /* Задаем фон выпадающего блока меню */
+}
+
+.menu nav ul li:hover ul {
+	display:block; /* Отображаем подменю при наведении мыши */
+}
+
+.menu nav ul li ul li {
+	display:block; /* Выстраиваем по вертикали пункты выпадающего меню */
+}
