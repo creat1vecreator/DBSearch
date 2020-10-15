@@ -28,6 +28,8 @@ public interface IndividualRepository extends JpaRepository<IndividualEntity, Lo
 
     List<IndividualEntity> findAllByDepositRateStartGreaterThanAndDepositRateFinishLessThan(Float deposit_rate_start, Float deposit_rate_finish);
 
+    List<IndividualEntity> findAllByDepositAimIn(List<String> deposit_aim);
+
     List<IndividualEntity> findAllByDepositCurrencyIn(List<String> deposit_currency);
 
     List<IndividualEntity> findAllByDepositAdditionalConditionsIn(List<String> deposit_additional_conditions);

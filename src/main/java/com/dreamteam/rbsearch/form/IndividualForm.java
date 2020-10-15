@@ -16,6 +16,7 @@ public class IndividualForm {
     private Boolean payment_auto;
     private Float deposit_rate_start;
     private Float deposit_rate_finish;
+    private List<String> deposit_aim;
     private List<String> deposit_currency;
     private List<String> deposit_additional_conditions;
     private List<String> consultation;
@@ -51,6 +52,7 @@ public class IndividualForm {
             String paymentAimsServices,
             String paymentAuto,
             String depositRate,
+            String depositAim,
             String depositCurrency,
             String depositAdditionalConditions,
             String consultation,
@@ -81,6 +83,7 @@ public class IndividualForm {
         String[] depositRateRange = depositRate.replace('[', ' ').replace(']', ' ').strip().split(", ");
         this.deposit_rate_start = Float.parseFloat(depositRateRange[0]);
         this.deposit_rate_finish = Float.parseFloat(depositRateRange[1]);
+        this.deposit_aim = depositAim == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(depositAim.split(", ")));
         this.deposit_currency = depositCurrency == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(depositCurrency.split(", ")));
         this.deposit_additional_conditions = depositAdditionalConditions == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(depositAdditionalConditions.split(", ")));
         this.consultation = consultation == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(consultation.split(", ")));

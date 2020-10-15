@@ -46,6 +46,10 @@ public class IndividualEntity extends BaseEntity {
     @Column(name = "deposit_rate_finish")
     private Float depositRateFinish;
 
+    @Column(name = "deposit_aim")
+    @ElementCollection
+    private List<String> depositAim;
+
     @Column(name = "deposit_currency")
     @ElementCollection
     private List<String> depositCurrency;

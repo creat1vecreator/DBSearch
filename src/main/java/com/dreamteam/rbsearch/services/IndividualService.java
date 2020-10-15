@@ -167,6 +167,15 @@ public class IndividualService {
             );
         }
 
+        if (individualForm.getDeposit_aim().isEmpty()) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByDepositAim(
+                            individualForm.getDeposit_aim()
+                    ),
+                    true
+            );
+        }
+
         if (!individualForm.getDeposit_currency().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
                     findByDepositCurrency(
@@ -295,6 +304,10 @@ public class IndividualService {
 
     private BankEntitiesDTO<IndividualEntity> findByDepositRate(Float deposit_rate_start, Float deposit_rate_finish) {
         return new BankEntitiesDTO<>(individualRepository.findAllByDepositRateStartGreaterThanAndDepositRateFinishLessThan(deposit_rate_start, deposit_rate_finish));
+    }
+
+    private BankEntitiesDTO<IndividualEntity> findByDepositAim(List<String> deposit_aim) {
+        return new BankEntitiesDTO<>(individualRepository.findAllByDepositAimIn(deposit_aim));
     }
 
     private BankEntitiesDTO<IndividualEntity> findByDepositCurrency(List<String> deposit_currency) {
