@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+@Deprecated
 @Data
 @Entity(name = "individual_bank_list_release")
 @AllArgsConstructor

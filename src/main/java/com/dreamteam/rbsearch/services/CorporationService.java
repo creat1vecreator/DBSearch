@@ -7,6 +7,7 @@ import com.dreamteam.rbsearch.repositories.CorporationRepository;
 import lombok.*;
 import org.springframework.stereotype.Service;
 
+@Deprecated
 @Service
 @RequiredArgsConstructor
 public class CorporationService {
