@@ -295,7 +295,7 @@ public class IndividualService {
     }
 
     private BankEntitiesDTO<IndividualEntity> findByDepositRate(Float deposit_rate) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByDepositRateLessThan(deposit_rate));
+        return new BankEntitiesDTO<>(individualRepository.findAllByDepositRateGreaterThan(deposit_rate));
     }
 
     private BankEntitiesDTO<IndividualEntity> findByDepositAim(List<String> deposit_aim) {
@@ -331,7 +331,7 @@ public class IndividualService {
     }
 
     private BankEntitiesDTO<IndividualEntity> findByCardCashback(Float card_cashback) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByCardCashbackLessThan(card_cashback));
+        return new BankEntitiesDTO<>(individualRepository.findAllByCardCashbackGreaterThan(card_cashback));
     }
 
     private BankEntitiesDTO<IndividualEntity> findByCardDesign(Boolean card_design_to_choose) {
@@ -339,7 +339,7 @@ public class IndividualService {
     }
 
     private BankEntitiesDTO<IndividualEntity> findByCardValidity(Integer card_validity) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByCardValidityLessThan(card_validity));
+        return new BankEntitiesDTO<>(individualRepository.findAllByCardValidityGreaterThan(card_validity));
     }
 
     private BankEntitiesDTO<IndividualEntity> findByCreditAim(List<String> credit_aim) {
@@ -351,7 +351,7 @@ public class IndividualService {
     }
 
     private BankEntitiesDTO<IndividualEntity> findByCreditTerm(Integer credit_term) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByCreditTermLessThan(credit_term));
+        return new BankEntitiesDTO<>(individualRepository.findAllByCreditTermGreaterThan(credit_term));
     }
 
     private BankEntitiesDTO<IndividualEntity> findByCreditEarlyPayment(Boolean credit_early_payment) {
@@ -359,7 +359,7 @@ public class IndividualService {
     }
 
     private BankEntitiesDTO<IndividualEntity> findByCreditAmount(Integer credit_amount) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByCreditAmountLessThan(credit_amount));
+        return new BankEntitiesDTO<>(individualRepository.findAllByCreditAmountGreaterThan(credit_amount));
     }
 
     private BankEntitiesDTO<IndividualEntity> findByInsuranceAim(List<String> insurance_aim) {
@@ -367,7 +367,7 @@ public class IndividualService {
     }
 
     private BankEntitiesDTO<IndividualEntity> findByInsuranceAmount(Integer insurance_amount) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByInsuranceAmountLessThan(insurance_amount));
+        return new BankEntitiesDTO<>(individualRepository.findAllByInsuranceAmountGreaterThan(insurance_amount));
     }
 
     private BankEntitiesDTO<IndividualEntity> findByUniqueServices(List<String> unique_services) {

@@ -66,17 +66,17 @@ public class IndividualForm {
             String sorting,
             String uniqueServices
     ) {
-        this.transfer_types = transferTypes == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(transferTypes.split(", ")));
+        this.transfer_types = transferTypes == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(transferTypes.split(",")));
         this.transfer_auto = Boolean.parseBoolean(transferAuto);
-        this.transfer_currency = transferCurrency == null ? new ArrayList<>() :new ArrayList<>(Arrays.asList(transferCurrency.split(", ")));
-        this.payment_method = paymentMethod == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(paymentMethod.split(", ")));
-        this.payment_aims_services = paymentAimsServices == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(paymentAimsServices.split(", ")));
+        this.transfer_currency = transferCurrency == null ? new ArrayList<>() :new ArrayList<>(Arrays.asList(transferCurrency.split(",")));
+        this.payment_method = paymentMethod == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(paymentMethod.split(",")));
+        this.payment_aims_services = paymentAimsServices == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(paymentAimsServices.split(",")));
         this.payment_auto = Boolean.parseBoolean(paymentAuto);
         this.deposit_rate = Float.parseFloat(depositRate);
-        this.deposit_aim = depositAim == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(depositAim.split(", ")));
-        this.deposit_currency = depositCurrency == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(depositCurrency.split(", ")));
-        this.deposit_additional_conditions = depositAdditionalConditions == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(depositAdditionalConditions.split(", ")));
-        this.consultation = consultation == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(consultation.split(", ")));
+        this.deposit_aim = depositAim == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(depositAim.split(",")));
+        this.deposit_currency = depositCurrency == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(depositCurrency.split(",")));
+        this.deposit_additional_conditions = depositAdditionalConditions == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(depositAdditionalConditions.split(",")));
+        this.consultation = consultation == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(consultation.split(",")));
         this.card_free_service = Boolean.parseBoolean(cardFreeService);
         this.card_types = cardTypes == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(cardTypes.split(",")));
         this.card_categories = cardCategories == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(cardCategories.split(",")));
