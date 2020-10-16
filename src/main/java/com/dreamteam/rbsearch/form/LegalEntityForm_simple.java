@@ -2,6 +2,7 @@ package com.dreamteam.rbsearch.form;
 
 import lombok.Data;
 
+@Deprecated
 @Data
 public class LegalEntityForm_simple {
     private String paymentAimsServices;

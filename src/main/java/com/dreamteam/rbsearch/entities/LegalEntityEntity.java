@@ -1,9 +1,10 @@
 package com.dreamteam.rbsearch.entities;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Data
 @Entity(name = "legal_entity_bank_list_release")
@@ -19,31 +20,25 @@ public class LegalEntityEntity extends BaseEntity {
     private String name;
 
     @Column(name = "payment_aims_services")
-    @ElementCollection
-    private List<String> paymentAimsServices;
+    private String paymentAimsServices;
 
     @Column(name = "payment_method")
-    @ElementCollection
-    private List<String> paymentMethod;
+    private String paymentMethod;
 
     @Column(name = "payment_auto")
     private Boolean paymentAuto;
 
     @Column(name = "services_financial")
-    @ElementCollection
-    private List<String> servicesFinancial;
+    private String servicesFinancial;
 
     @Column(name = "services_sales")
-    @ElementCollection
-    private List<String> servicesSales;
+    private String servicesSales;
 
     @Column(name = "services_document_management")
-    @ElementCollection
-    private List<String> servicesDocumentManagement;
+    private String servicesDocumentManagement;
 
     @Column(name = "services_analytics")
-    @ElementCollection
-    private List<String> servicesAnalytics;
+    private String servicesAnalytics;
 
     @Column(name = "bank_account_opening_price")
     private Integer bankAccountOpeningPrice;
@@ -52,23 +47,19 @@ public class LegalEntityEntity extends BaseEntity {
     private Boolean bankAccountAvailabilityOfFreePeriod;
 
     @Column(name = "bank_account_currency")
-    @ElementCollection
-    private List<String> bankAccountCurrency;
+    private String bankAccountCurrency;
 
     @Column(name = "bank_account_types")
-    @ElementCollection
-    private List<String> bankAccountTypes;
+    private String bankAccountTypes;
 
     @Column(name = "acquiring_types")
-    @ElementCollection
-    private List<String> acquiringTypes;
+    private String acquiringTypes;
 
     @Column(name = "minimum_commission_rate_of_turnover")
     private Float minimumCommissionRateOfTurnover;
 
     @Column(name = "credit_aim")
-    @ElementCollection
-    private List<String> creditAim;
+    private String creditAim;
 
     @Column(name = "credit_interest_rate")
     private Float creditInterestRate;
@@ -83,48 +74,38 @@ public class LegalEntityEntity extends BaseEntity {
     private Float depositRate;
 
     @Column(name = "deposit_currency")
-    @ElementCollection
-    private List<String> depositCurrency;
+    private String depositCurrency;
 
     @Column(name = "deposit_types_of_funds")
-    @ElementCollection
-    private List<String> depositTypesOfFunds;
+    private String depositTypesOfFunds;
 
     @Column(name = "deposit_additional_conditions")
-    @ElementCollection
-    private List<String> depositAdditionalConditions;
+    private String depositAdditionalConditions;
 
     @Column
-    @ElementCollection
-    private List<String> consultation;
+    private String consultation;
 
     @Column(name = "card_types")
-    @ElementCollection
-    private List<String> cardTypes;
+    private String cardTypes;
 
     @Column(name = "card_categories")
-    @ElementCollection
-    private List<String> cardCategories;
+    private String cardCategories;
 
     @Column(name = "card_annual_service_price")
     private Integer cardAnnualServicePrice;
 
     @Column(name = "insurance_aim")
-    @ElementCollection
-    private List<String> insuranceAim;
+    private String insuranceAim;
 
     @Column(name = "insurance_amount")
     private Integer insuranceAmount;
 
     @Column(name = "corporation_services")
-    @ElementCollection
-    private List<String> corporationServices;
+    private String corporationServices;
 
     @Column(name = "corporation_financing")
-    @ElementCollection
-    private List<String> corporationFinancing;
+    private String corporationFinancing;
 
     @Column(name = "security") // only for web
-    @ElementCollection
-    private List<String> security;
+    private String security;
 }

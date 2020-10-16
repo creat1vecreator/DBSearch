@@ -2,8 +2,8 @@ package com.dreamteam.rbsearch.controllers;
 
 import com.dreamteam.rbsearch.BankEntitiesDTO.BankEntitiesDTO;
 import com.dreamteam.rbsearch.entities.IndividualEntity;
-import com.dreamteam.rbsearch.form.IndividualForm;
-import com.dreamteam.rbsearch.services.IndividualService;
+import com.dreamteam.rbsearch.form.IndividualForm_simple;
+import com.dreamteam.rbsearch.services.IndividualService_simple;
 import com.google.gson.Gson;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -12,11 +12,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+@Deprecated
 @Controller
 @RequiredArgsConstructor
-@RequestMapping("/individual")
-public class IndividualController {
-    private final IndividualService individualService;
+@RequestMapping("/individual_simple")
+public class IndividualController_simple {
+    private final IndividualService_simple individualService_simple;
 
     @RequestMapping(value = "/search", method = RequestMethod.GET)
     public String getSearch(
@@ -38,7 +39,7 @@ public class IndividualController {
             @RequestParam(value = "card_annual_service_price", required = false) String cardAnnualServicePrice,
             @RequestParam(value = "card_cahsback", required = false) String cardCashback,
             @RequestParam(value = "card_design_to_choose", required = false) String cardDesignToChoose,
-            @RequestParam(value = "card_validity", required = false) String cardValidity,
+            @RequestParam(value = "card_validity") String cardValidity,
             @RequestParam(value = "credit_aim", required = false) String creditAim,
             @RequestParam(value = "credit_interest_rate", required = false) String creditInterestRate,
             @RequestParam(value = "credit_term", required = false) String creditTerm,
@@ -48,7 +49,7 @@ public class IndividualController {
             @RequestParam(value = "insurance_amount", required = false) String insuranceAmount,
             @RequestParam(value = "rating", required = false) String sorting,
             @RequestParam(value = "unique_services", required = false) String uniqueServices) {
-        IndividualForm individualForm = new IndividualForm(
+        IndividualForm_simple individualForm_simple = new IndividualForm_simple(
                 transferTypes,
                 transferAuto,
                 transferCurrency,
@@ -77,8 +78,8 @@ public class IndividualController {
                 sorting,
                 uniqueServices
         );
-        System.out.println(individualForm);
-        BankEntitiesDTO<IndividualEntity> bankEntitiesDTO = individualService.find(individualForm);
+        System.out.println(individualForm_simple);
+        BankEntitiesDTO<IndividualEntity> bankEntitiesDTO = individualService_simple.find(individualForm_simple);
         model.addAttribute("banks", bankEntitiesDTO.getBankEntities());
         return "answer/individual";
     }
@@ -86,9 +87,9 @@ public class IndividualController {
     @GetMapping("/bank/{name}")
     public String findByName(@PathVariable String name, Model model) {
         try {
-            IndividualEntity individualEntity = individualService.findByName(name);
+            IndividualEntity individualEntity = individualService_simple.findByName(name);
             model.addAttribute("bank", individualEntity);
-            return "single_individual";
+            return "single_individual_";
         } catch (RuntimeException runtimeException) {
             return "error";
         }
@@ -96,7 +97,7 @@ public class IndividualController {
 
     @GetMapping("/all")
     public @ResponseBody ResponseEntity<String> getAllBanks() {
-        BankEntitiesDTO<IndividualEntity> bankEntitiesDTO = individualService.findAll();
+        BankEntitiesDTO<IndividualEntity> bankEntitiesDTO = individualService_simple.findAll();
         String jsonResponse = new Gson().toJson(bankEntitiesDTO);
         System.out.println(jsonResponse);
         return new ResponseEntity<>(jsonResponse, HttpStatus.OK);
