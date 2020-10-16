@@ -8,7 +8,7 @@ import javax.persistence.*;
 
 @Deprecated
 @Data
-@Entity(name = "individual_bank_list_release")
+@Entity(name = "individual_bank_list")
 @AllArgsConstructor
 @NoArgsConstructor
 public class IndividualEntity_old extends BaseEntity {
