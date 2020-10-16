@@ -14,59 +14,59 @@ public interface IndividualRepository extends JpaRepository<IndividualEntity, Lo
 
     Optional<IndividualEntity> findByNameIgnoreCase(String name);
 
-    List<IndividualEntity> findAllByTransferTypesIn(List<String> transfer_types);
+    List<IndividualEntity> findAllByTransferTypesIn(List<String> transferTypes);
 
-    List<IndividualEntity> findAllByTransferAutoEquals(Boolean transfer_auto);
+    List<IndividualEntity> findAllByTransferAutoEquals(Boolean transferAuto);
 
-    List<IndividualEntity> findAllByTransferCurrencyIn(List<String> transfer_currency);
+    List<IndividualEntity> findAllByTransferCurrencyIn(List<String> transferCurrency);
 
-    List<IndividualEntity> findAllByPaymentMethodIn(List<String> payment_method);
+    List<IndividualEntity> findAllByPaymentMethodIn(List<String> paymentMethod);
 
-    List<IndividualEntity> findAllByPaymentAimsServicesIn(List<String> payment_aims_services);
+    List<IndividualEntity> findAllByPaymentAimsServicesIn(List<String> paymentAimsServices);
 
     List<IndividualEntity> findAllByPaymentAutoEquals(Boolean payment_auto);
 
-    List<IndividualEntity> findAllByDepositRateGreaterThan(Float deposit_rate);
+    List<IndividualEntity> findAllByDepositRateGreaterThan(Float depositRate);
 
-    List<IndividualEntity> findAllByDepositAimIn(List<String> deposit_aim);
+    List<IndividualEntity> findAllByDepositAimIn(List<String> depositAim);
 
-    List<IndividualEntity> findAllByDepositCurrencyIn(List<String> deposit_currency);
+    List<IndividualEntity> findAllByDepositCurrencyIn(List<String> depositCurrency);
 
-    List<IndividualEntity> findAllByDepositAdditionalConditionsIn(List<String> deposit_additional_conditions);
+    List<IndividualEntity> findAllByDepositAdditionalConditionsIn(List<String> depositAdditionalConditions);
 
     List<IndividualEntity> findAllByConsultationIn(List<String> consultation);
 
-    List<IndividualEntity> findAllByCardFreeServiceEquals(Boolean card_free_service);
+    List<IndividualEntity> findAllByCardFreeServiceEquals(Boolean cardFreeService);
 
-    List<IndividualEntity> findAllByCardTypesIn(List<String> card_types);
+    List<IndividualEntity> findAllByCardTypesIn(List<String> cardTypes);
 
-    List<IndividualEntity> findAllByCardCategoriesIn(List<String> card_categories);
+    List<IndividualEntity> findAllByCardCategoriesIn(List<String> cardCategories);
 
-    List<IndividualEntity> findAllByCardAnnualServicePriceLessThan(Integer card_annual_service_price);
+    List<IndividualEntity> findAllByCardAnnualServicePriceLessThan(Integer cardAnnualServicePrice);
 
-    List<IndividualEntity> findAllByCardCashbackGreaterThan(Float card_cashback);
+    List<IndividualEntity> findAllByCardCashbackGreaterThan(Float cardCashback);
 
-    List<IndividualEntity> findAllByCardDesignToChooseEquals(Boolean card_design_to_choose);
+    List<IndividualEntity> findAllByCardDesignToChooseEquals(Boolean cardDesignToChoose);
 
-    List<IndividualEntity> findAllByCardValidityGreaterThan(Integer card_validity);
+    List<IndividualEntity> findAllByCardValidityGreaterThan(Integer cardValidity);
 
-    List<IndividualEntity> findAllByCreditAimIn(List<String> credit_aim);
+    List<IndividualEntity> findAllByCreditAimIn(List<String> creditAim);
 
-    List<IndividualEntity> findAllByCreditInterestRateLessThan(Float credit_interest_rate);
+    List<IndividualEntity> findAllByCreditInterestRateLessThan(Float creditInterestRate);
 
-    List<IndividualEntity> findAllByCreditTermGreaterThan(Integer credit_term);
+    List<IndividualEntity> findAllByCreditTermGreaterThan(Integer creditTerm);
 
-    List<IndividualEntity> findAllByCreditEarlyPaymentEquals(Boolean credit_early_payment);
+    List<IndividualEntity> findAllByCreditEarlyPaymentEquals(Boolean creditEarlyPayment);
 
-    List<IndividualEntity> findAllByCreditAmountGreaterThan(Integer credit_amount);
+    List<IndividualEntity> findAllByCreditAmountGreaterThan(Integer creditAmount);
 
-    List<IndividualEntity> findAllByInsuranceAimIn(List<String> insurance_aim);
+    List<IndividualEntity> findAllByInsuranceAimIn(List<String> insuranceAim);
 
-    List<IndividualEntity> findAllByInsuranceAmountGreaterThan(Integer insurance_amount);
+    List<IndividualEntity> findAllByInsuranceAmountGreaterThan(Integer insuranceAmount);
 
-    List<IndividualEntity> findByOrderByRating(); // not-ordered
+    List<IndividualEntity> findByOrderByRating();
 
-    List<IndividualEntity> findByOrderByPopularity(); // not-ordered
+    List<IndividualEntity> findByOrderByPopularity();
 
-    List<IndividualEntity> findAllByUniqueServicesIn(List<String> unique_services);
+    List<IndividualEntity> findAllByUniqueServicesIn(List<String> uniqueServices);
 }
