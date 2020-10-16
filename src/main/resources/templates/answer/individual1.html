@@ -1,0 +1,902 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta content="text/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Individual</title>
+    <link href="../../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../static/css/main2.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+<form action="/individual/search" method="get">
+    <!--    <header id="header"></header>-->
+
+    <!--    <section id="advertisement">-->
+    <!--        <div class="container">-->
+    <!--        </div>-->
+    <!--    </section>-->
+
+    <section>
+        <img src="../../static/images/IMG_2679.png" height="75" width="75" style="margin-left: 40px;">
+        <div class="container" class="single" style="font-family:'Microsoft JhengHei'">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="left-sidebar">
+                        <h2>Criteria</h2>
+                        <div class="panel-group category-products" id="accordian">
+                            <!--                            <div class="panel panel-default">-->
+
+                            <!--                                    <div class="panel-body" style="margin-left: 20px;">-->
+                            <!--                                    <label for="name">Your name:</label>-->
+
+                            <!--                                    <input type="text" id="name" name="name">-->
+
+                            <!--                                    </div>-->
+
+                            <!--                            </div>-->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordian" href="#first">
+                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                                            Transfers
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="first" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="transfer_types" value="abroad" id="1">
+                                            <label class="form-check-label" for="1">Abroad</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="transfer_types" value="card_to_card" id="2">
+                                            <label class="form-check-label" for="2">Card to card</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="transfer_types" value="between_your_accounts" id="3">
+                                            <label class="form-check-label" for="3">Between your accounts</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <p style="color: #4B0082;">Auto transfers:</p>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="transfer_auto" value="True" id="4">
+                                            <label class="form-check-label" for="4">Auto transfers</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <p style="color: #4B0082;"> Currency:</p>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="transfer_currency"value="ruble" id="5">
+                                            <label class="form-check-label" for="5">Ruble</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="transfer_currency" value="euro" id="6">
+                                            <label class="form-check-label" for="6">Euro</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="transfer_currency" value="dollar" id="7">
+                                            <label class="form-check-label" for="7">Dollar</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="transfer_currency" value="swiss_frank" id="8">
+                                            <label class="form-check-label" for="8">Swiss frank</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="transfer_currency" value="pound_sterling" id="9">
+                                            <label class="form-check-label" for="9">Pound sterling</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordian" href="#second">
+                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                                            Payments
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="second" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p style="color: #4B0082;">Implementation methods:</p>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="payment_method" value="browser" id="10">
+                                            <label class="form-check-label" for="10">Browser</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="payment_method" value="app" id="11">
+                                            <label class="form-check-label" for="11">App</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="payment_method" value="sms" id="12">
+                                            <label class="form-check-label" for="12">SMS</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <p style="color: #4B0082;">Aims/Services:</p>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="payment_aims_services" value="mobile_connection" id="13">
+                                            <label class="form-check-label" for="13">Mobile connection</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="payment_aims_services" value="utilities" id="14">
+                                            <label class="form-check-label" for="14">Utilities</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="payment_aims_services" value="internet" id="15">
+                                            <label class="form-check-label" for="15">Internet</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="payment_aims_services" value="network_marketing" id="16">
+                                            <label class="form-check-label" for="16">Network marketing</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="payment_aims_services" value="home_phone" id="17">
+                                            <label class="form-check-label" for="17">Home phone</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="payment_aims_services" value="television" id="18">
+                                            <label class="form-check-label" for="18">Television</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="payment_aims_services" value="public_services" id="19">
+                                            <label class="form-check-label" for="19">Government services <img title="Taxes and payments" src="../../static/images/images.png" width="15px" height="15px" style="margin-bottom: 3px">  </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="payment_aims_services" value="transport" id="20">
+                                            <label class="form-check-label" for="20">Transport</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="payment_aims_services" value="electronic_wallets" id="21">
+                                            <label class="form-check-label" for="21">Electronic wallets</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="payment_aims_services" value="repayment_of_loans" id="22">
+                                            <label class="form-check-label" for="22">Repayment of loans</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="payment_aims_services" value="games" id="23">
+                                            <label class="form-check-label" for="23">Games</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="payment_aims_services" value="education" id="24">
+                                            <label class="form-check-label" for="24">Education</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="payment_aims_services" value="travel" id="25">
+                                            <label class="form-check-label" for="25">Travels</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="payment_aims_services" value="social_networks" id="26">
+                                            <label class="form-check-label" for="26">Social networks</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="payment_aims_services" value="online_stores" id="27">
+                                            <label class="form-check-label" for="27">Online stores</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="payment_aims_services" value="guard_systems" id="28">
+                                            <label class="form-check-label" for="28">Guard systems</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="payment_aims_services" value="charity" id="29">
+                                            <label class="form-check-label" for="29">Charity</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <p style="color: #4B0082;">Auto transfers:</p>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="payment_auto" value="true" id="30">
+                                            <label class="form-check-label" for="30">Auto transfers</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordian" href="#third">
+                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                                            Deposits
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="third" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p style="color: #4B0082;">Rate in %:</p>
+                                        <div class="slidecontainer">
+                                            <input type="range" min="1" max="20" value="10" class="slider" name = "deposit_rate" id="myRange0">
+                                            <p> <span id="demo0"></span></p>
+                                        </div>
+                                        <script>
+                                            var slider0 = document.getElementById("myRange0");
+                                            var output0 = document.getElementById("demo0");
+                                            output0.innerHTML = slider0.value;
+
+                                            slider0.oninput = function() {
+                                                output0.innerHTML = this.value;
+                                            }
+                                        </script>
+                                    </div>
+                                    <div class="panel-body">
+                                        <p style="color: #4B0082;">Aim of the deposit:</p>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="deposit_aim" value="general" id="31">
+                                            <label class="form-check-label" for="31">General</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="deposit_aim" value="orphans" id="32">
+                                            <label class="form-check-label" for="32">Orphans</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="deposit_aim" value="pension" id="33">
+                                            <label class="form-check-label" for="33">Pensioners</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="deposit_aim" value="motorists" id="34">
+                                            <label class="form-check-label" for="34">Motorists</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="panel-body">
+                                        <p style="color: #4B0082;">Currency:</p>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="deposit_currency"value="ruble" id="35">
+                                            <label class="form-check-label" for="35">Ruble</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="deposit_currency" value="euro" id="36">
+                                            <label class="form-check-label" for="36">Euro</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="deposit_currency" value="dollar" id="37">
+                                            <label class="form-check-label" for="37">Dollar</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="deposit_currency" value="swiss_frank" id="38">
+                                            <label class="form-check-label" for="38">Swiss frank</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="deposit_currency" value="pound_sterling" id="39">
+                                            <label class="form-check-label" for="39">Pound sterling</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="panel-body">
+                                        <p style="color: #4B0082;">Additional conditions of deposit:</p>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="deposit_additional_conditions"value="replenished " id="40">
+                                            <label class="form-check-label" for="40">Replenished  </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="deposit_additional_conditions" value="non-refillable" id="41">
+                                            <label class="form-check-label" for="41">Non-refillable</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="deposit_additional_conditions" value="partial_withdrawal" id="42">
+                                            <label class="form-check-label" for="42">Partial withdrawal</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordian" href="#fourth">
+                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                                            24/7 support
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="fourth" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="consultation" value="hotline" id="43">
+                                            <label class="form-check-label" for="43">Hotline</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="consultation" value="chat_with_expert" id="44">
+                                            <label class="form-check-label" for="44">Chat with the expert</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="consultation" value="chat-bot" id="45">
+                                            <label class="form-check-label" for="45">Chat-bot</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="consultation" value="mail" id="46">
+                                            <label class="form-check-label" for="46">Mail</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordian" href="#fifth">
+                                            <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                                            Cards
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="fifth" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="card_free_service" value="true" id="47">
+                                            <label class="form-check-label" for="47">Free service</label>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <p style="color: #4B0082;">Types of cards:</p>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="card_types" value="debit" id="48">
+                                            <label class="form-check-label" for="48">Debit card</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="card_types" value="credit" id="49">
+                                            <label class="form-check-label" for="49">Credit card</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="card_types" value="virtual" id="50">
+                                            <label class="form-check-label" for="50">Virtual card</label>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="panel-body">
+                                        <p style="color: #4B0082;">Categories of cards:</p>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="card_categories" value="standard" id="51">
+                                            <label class="form-check-label" for="51">Standard</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="card_categories" value="for_travelling" id="52">
+                                            <label class="form-check-label" for="52">For travelling</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="card_categories" value="children" id="53">
+                                            <label class="form-check-label" for="53">Children</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="card_categories" value="for_gamers" id="54">
+                                            <label class="form-check-label" for="54">For gamers</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="card_categories" value="for_drivers" id="55">
+                                            <label class="form-check-label" for="55">For drivers</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="card_categories" value="for_pensioners" id="56">
+                                            <label class="form-check-label" for="56">For pensioners</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="card_categories" value="social" id="57">
+                                            <label class="form-check-label" for="57">Social</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="card_categories" value="charitable" id="58">
+                                            <label class="form-check-label" for="58">Charitable</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="card_categories"value="for_self-employed" id="59">
+                                            <label class="form-check-label" for="59">For self-employed</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="card_categories" value="russian_railways" id="60">
+                                            <label class="form-check-label" for="60">Russian Railways</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="card_categories" value="clothes" id="61">
+                                            <label class="form-check-label" for="61">Clothes</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="card_categories" value="for_sportsmen" id="62">
+                                            <label class="form-check-label" for="62">For sportsmen</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="panel-body">
+                                        <p><b style="color: #4B0082;">Service price per year:</b><br>
+                                            <input type="text" name="card_annual_service_price" size="10">
+                                        </p>
+                                    </div>
+                                    <div class="panel-body">
+                                        <p><b style="color: #4B0082;"> Cashback in %:</b><br>
+                                            <div class="slidecontainer">
+                                                <input type="range" min="1" max="20" value="10" class="slider" name = "card_cashback" id="myRange6">
+                                        <p><span id="demo6"></span></p>
+                                    </div>
+                                    <script>
+                                        var slider6 = document.getElementById("myRange6");
+                                        var output6 = document.getElementById("demo6");
+                                        output6.innerHTML = slider6.value;
+
+                                        slider6.oninput = function() {
+                                            output6.innerHTML = this.value;
+                                        }
+                                    </script>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="card_design_to_choose" value="True" id="63">
+                                        <label class="form-check-label" for="63">Choice of design</label>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b style="color: #4B0082;">Card expiry date:</b><br>
+                                        <div class="slidecontainer">
+                                            <input type="range" min="1" max="20" value="10" class="slider" name = "card_validity" id="myRange">
+                                    <p>Term in years: <span id="demo"></span></p>
+                                </div>
+                                <script>
+                                    var slider = document.getElementById("myRange");
+                                    var output = document.getElementById("demo");
+                                    output.innerHTML = slider.value;
+
+                                    slider.oninput = function() {
+                                        output.innerHTML = this.value;
+                                    }
+                                </script>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordian" href="#sixth">
+                                    <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                                    Credit
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="sixth" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p style="color: #4B0082;">Aim:</p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="credit_aim" value="General_terms" id="64">
+                                    <label class="form-check-label" for="64">General terms</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="credit_aim" value="Renovation " id="65">
+                                    <label class="form-check-label" for="65">Repairs </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="credit_aim" value="Real_property " id="66">
+                                    <label class="form-check-label" for="66">Property </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="credit_aim" value="Car-loan" id="67">
+                                    <label class="form-check-label" for="67">Car-loan</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="credit_aim" value="Business_development " id="68">
+                                    <label class="form-check-label" for="68">Business development</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="credit_aim" value="Health" id="69">
+                                    <label class="form-check-label" for="69">Health</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="credit_aim" value="Travelling" id="70">
+                                    <label class="form-check-label" for="70">Travelling</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="credit_aim" value="For_soldiers" id="71">
+                                    <label class="form-check-label" for="71">For soldiers</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="credit_aim" value="Refinancing" id="72">
+                                    <label class="form-check-label" for="72">Refinancing</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="credit_aim" value="Pension" id="73">
+                                    <label class="form-check-label" for="73">Pension</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="credit_aim" value="Payday_loan" id="74">
+                                    <label class="form-check-label" for="74">Payday loan</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="credit_aim" value="Education" id="75">
+                                    <label class="form-check-label" for="75">Education</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="credit_aim" value="Business" id="76">
+                                    <label class="form-check-label" for="76">"Business</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="credit_aim" value="Wedding" id="77">
+                                    <label class="form-check-label" for="77">Wedding</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="credit_aim" value="Development_of_the_Far_Eastern_hectare" id="78">
+                                    <label class="form-check-label" for="78">Development of the Far Eastern hectare</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="credit_aim" value="Personal_subsidiary_farm " id="79">
+                                    <label class="form-check-label" for="79">Personal subsidiary farm</label>
+                                </div>
+
+                            </div>
+                            <div class="panel-body">
+                                <p><b style="color: #4B0082;"> Interest rate in %:</b><br>
+                                    <div class="slidecontainer">
+                                        <input type="range" min="1" max="20" value="10" class="slider" name = "credit_interest_rate" id="myRange2">
+                                <p><span id="demo2"></span></p>
+                            </div>
+                            <script>
+                                var slider2 = document.getElementById("myRange2");
+                                var output2 = document.getElementById("demo2");
+                                output2.innerHTML = slider2.value;
+
+                                slider2.oninput = function() {
+                                    output2.innerHTML = this.value;
+                                }
+                            </script>
+                        </div>
+                        <div class="panel-body">
+                            <p><b style="color: #4B0082;"> Credit term in months:</b><br>
+                                <div class="slidecontainer">
+                                    <input type="range" min="1" max="60" value="10" class="slider" name = "credit_term" id="myRange3">
+                            <p> <span id="demo3"></span></p>
+                        </div>
+                        <script>
+                            var slider3 = document.getElementById("myRange3");
+                            var output3 = document.getElementById("demo3");
+                            output3.innerHTML = slider3.value;
+
+                            slider3.oninput = function() {
+                                output3.innerHTML = this.value;
+                            }
+                        </script>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="credit_early_payment" value="true" id="80">
+                            <label class="form-check-label" for="80">Early repayment (no interest)</label>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <p><b style="color: #4B0082;"> Credit amount:</b><br>
+                            <div class="slidecontainer">
+                                <input type="range" min="1" max="10000000" value="10000" class="slider" name = "credit_amount" id="myRange4">
+                        <p> <span id="demo4"></span></p>
+                    </div>
+                    <script>
+                        var slider4 = document.getElementById("myRange4");
+                        var output4 = document.getElementById("demo4");
+                        output4.innerHTML = slider4.value;
+
+                        slider4.oninput = function() {
+                            output4.innerHTML = this.value;
+                        }
+                    </script>
+                </div>
+            </div>
+
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordian" href="#seventh">
+                        <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                        Insurance
+                    </a>
+                </h4>
+            </div>
+            <div id="seventh" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p><b style="color: #4B0082;"> Aim:</b><br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="insurance_aim" value="auto_insurance" id="81">
+                        <label class="form-check-label" for="81">Auto insurance</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="insurance_aim" value="for_tourists" id="83">
+                        <label class="form-check-label" for="83">For tourists</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="insurance_aim" value="real_property" id="84">
+                        <label class="form-check-label" for="84">Property </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="insurance_aim" value="from_accidents " id="85">
+                        <label class="form-check-label" for="85">From accidents</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="insurance_aim" value="health" id="86">
+                        <label class="form-check-label" for="86">Health</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="insurance_aim" value="legal_services" id="87">
+                        <label class="form-check-label" for="87">Legal services</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="insurance_aim" value="Life" id="88">
+                        <label class="form-check-label" for="88">Life </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="insurance_aim" value="Coronavirus" id="89">
+                        <label class="form-check-label" for="89">Coronavirus</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="insurance_aim" value="Job_loss" id="90">
+                        <label class="form-check-label" for="90">Job loss</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="insurance_aim" value="Electronic_policy_motoric_insurance" id="91">
+                        <label class="form-check-label" for="91">Electronic CTP policy</label>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <p><b style="color: #4B0082;"> Insurance coverage amount in rubles:</b><br>
+                        <div class="slidecontainer">
+                            <input type="range" min="1" max="10000000" value="10000" class="slider" name = "insurance_amount" id="myRange5">
+                    <p><span id="demo5"></span></p>
+                </div>
+                <script>
+                    var slider5 = document.getElementById("myRange5");
+                    var output5 = document.getElementById("demo5");
+                    output5.innerHTML = slider5.value;
+
+                    slider5.oninput = function() {
+                        output5.innerHTML = this.value;
+                    }
+                </script>
+            </div>
+        </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordian" href="#eighth">
+                        <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                        Unique services
+                    </a>
+                </h4>
+            </div>
+            <div id="eighth" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="unique_services" value="Legal_advice" id="92">
+                        <label class="form-check-label" for="92">Legal advice</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="unique_services" value="Tax_assistance" id="93">
+                        <label class="form-check-label" for="93">Tax assistance</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="unique_services" value="Improving_credit_history" id="94">
+                        <label class="form-check-label" for="94">Improving credit history</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="unique_services" value="Real_estate_showcase" id="95">
+                        <label class="form-check-label" for="95">Property Showcase</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="unique_services" value="Special_account_for_purchasing " id="96">
+                        <label class="form-check-label" for="96">Special account for an individual to participate in procurement</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="unique_services" value="Biometrics" id="97">
+                        <label class="form-check-label" for="97">Biometrics</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="unique_services" value="Investments" id="98">
+                        <label class="form-check-label" for="98">Investments</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="unique_services" value="Self-employed_registration" id="99">
+                        <label class="form-check-label" for="99">Self-employed registration</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="unique_services" value="Analytics" id="100">
+                        <label class="form-check-label" for="100">Analitics</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="unique_services" value="Accounting" id="101">
+                        <label class="form-check-label" for="101">Reporting</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="unique_services" value="Development_of_the_Far_Eastern_hectare" id="102">
+                        <label class="form-check-label" for="102">Credit for the development of the "Far Eastern hectare"</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="unique_services" value="Bank_for_whole_family" id="103">
+                        <label class="form-check-label" for="103">Bank for whole family</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="unique_services" value="Brokerage_service" id="104">
+                        <label class="form-check-label" for="104">Brokerage service</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="unique_services" value="Consultations_for_pensioners" id="105">
+                        <label class="form-check-label" for="105">Consultations for pensioners</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="unique_services" value="Property_valuation" id="106">
+                        <label class="form-check-label" for="106">Property valuation</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="unique_services" value="Currency_card" id="107">
+                        <label class="form-check-label" for="107">Currency card</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="unique_services" value="Account_for_payments_to_guardians_and_parents" id="108">
+                        <label class="form-check-label" for="108">Account for payments to guardians/parents </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="unique_services" value="E-commerce" id="109">
+                        <label class="form-check-label" for="109">E-commerce</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="unique_services" value="Telephone_service" id="110">
+                        <label class="form-check-label" for="110">Telephone service</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="unique_services" value="Realization_of_pledged_property" id="111">
+                        <label class="form-check-label" for="111">Realization of pledged property</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordian" href="#ninth">
+                        <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                        Sorting
+                    </a>
+                </h4>
+            </div>
+            <div id="ninth" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p style="color: #4B0082;"> Sorted by:</p>
+                    <div>
+                        <input type="radio" id="min_cost"
+                               name="sort" value="Popularity" checked>
+                        <label for="min_cost">Popularity</label>
+
+                        <input type="radio" id="max_cost"
+                               name="sort" value="Rating">
+                        <label for="max_cost">Rating</label>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+
+
+        <a><input type="submit" value="Search" style="background-color: #4B0082;color: white" ></a>
+        </div>
+        </div>
+
+        <div class="col-sm-9 padding-right">
+            <div class="features_items">
+                <h2 class="title text-center">Suitable banks</h2>
+                <div class="sidebar_section sidebar_options" th:each="bank : ${banks}">
+                    <div class="sidebar_section_content">
+                        <div class="sidebar_option d-flex flex-row align-items-center justify-content-start">
+                            <div class="option_content">
+                                <div class="option_subtitle">
+                                    <ul>
+                                        <li>
+                                            <a th:href="@{'bank/'+${bank.getName()}}">
+                                                <h1 th:text="${bank.getName()}"></h1>
+                                            </a>
+                                            <h2 style="margin-left: 50px" th:text="${bank.getRating()}"></h2>
+                                            <a th:text="${bank.getPopularity()}"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!--                        <div class="sidebar_option d-flex flex-row align-items-center justify-content-start">-->
+                        <!--                            <div class="option_content">-->
+
+                        <!--                                <div class="option_subtitle">-->
+                        <!--                                    <ul>-->
+                        <!--                                        <li th:each="bank : ${banks}">-->
+                        <!--                                            <a th:href="@{'bank/'+${bank.getName()}}">-->
+                        <!--                                                <h1 th:text="${bank.getName()}"></h1>-->
+                        <!--                                            </a>-->
+                        <!--                                            <h2 style="margin-left: 50px" th:text="${bank.getRating()}"></h2>-->
+                        <!--                                            <a th:text="${bank.getPopularity()}"></a>-->
+                        <!--                                        </li>-->
+                        <!--                                    </ul>-->
+                        <!--                                </div>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
+
+
+                        <!--                        <div class="sidebar_option d-flex flex-row align-items-center justify-content-start">-->
+                        <!--                            <div class="option_content">-->
+
+                        <!--                                <div class="option_subtitle">-->
+                        <!--                                    <ul>-->
+                        <!--                                        <li th:each="bank : ${banks}">-->
+                        <!--                                            <a th:href="@{'bank/'+${bank.getName()}}">-->
+                        <!--                                                <h1 th:text="${bank.getName()}"></h1>-->
+                        <!--                                            </a>-->
+                        <!--                                            <h2 style="margin-left: 50px" th:text="${bank.getRating()}"></h2>-->
+                        <!--                                            <a th:text="${bank.getPopularity()}"></a>-->
+                        <!--                                        </li>-->
+                        <!--                                    </ul>-->
+                        <!--                                </div>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
+
+
+                        <!--                        <div class="sidebar_option d-flex flex-row align-items-center justify-content-start">-->
+                        <!--                            <div class="option_content">-->
+
+                        <!--                                <div class="option_subtitle">-->
+                        <!--                                    <ul>-->
+                        <!--                                        <li th:each="bank : ${banks}">-->
+                        <!--                                            <a th:href="@{'bank/'+${bank.getName()}}">-->
+                        <!--                                                <h1 th:text="${bank.getName()}"></h1>-->
+                        <!--                                            </a>-->
+                        <!--                                            <h2 style="margin-left: 50px" th:text="${bank.getRating()}"></h2>-->
+                        <!--                                            <a th:text="${bank.getPopularity()}"></a>-->
+                        <!--                                        </li>-->
+                        <!--                                    </ul>-->
+                        <!--                                </div>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+
+
+
+    </footer>
+
+
+
+    <script src="../../static/js/jquery.js"></script>
+    <script src="../../static/js/price-range.js"></script>
+    <script src="../../static/js/bootstrap.min.js"></script>
+    <script src="../../static/js/main.js"></script>
+    <script src="../../static/js/response_another.js"></script>
+
+</form>
+</body>
+</html>
