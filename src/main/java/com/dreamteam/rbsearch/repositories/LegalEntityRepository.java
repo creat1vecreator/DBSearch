@@ -12,6 +12,8 @@ public interface LegalEntityRepository extends JpaRepository<LegalEntityEntity, 
 
     Optional<LegalEntityEntity> findById(Long id);
 
+    Optional<LegalEntityEntity> findByNameIgnoreCase(String name);
+
     List<LegalEntityEntity> findAllByPaymentAimsServicesIn(List<String> paymentAimsServices);
 
     List<LegalEntityEntity> findAllByPaymentMethodIn(List<String> paymentMethod);

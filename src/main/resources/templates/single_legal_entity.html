@@ -62,28 +62,30 @@
                     </div>
                     <div class="col-md-20 tabulation" style="margin-top: 40%;margin-left:-100%">
                         <ul class="nav nav-tabs">
-                            <li class="active"><a data-toggle="tab" href="#text1">Transfers</a></li>
+                            <li class="active"><a data-toggle="tab" href="#text1">Services</a></li>
                             <li><a data-toggle="tab" href="#text2">Payments</a></li>
                             <li><a data-toggle="tab" href="#text3">Cards</a></li>
                             <li><a data-toggle="tab" href="#text4">Credits</a></li>
                             <li><a data-toggle="tab" href="#text5">Deposits</a></li>
                             <li><a data-toggle="tab" href="#text6">Insurance</a></li>
                             <li><a data-toggle="tab" href="#text7"> 24/7 support</a></li>
-                            <li><a data-toggle="tab" href="#text8">Unique services</a></li>
-                            <li><a data-toggle="tab" href="#text9">Security</a></li>
-
+                            <li><a data-toggle="tab" href="#text8">Bank Account</a></li>
+                            <li><a data-toggle="tab" href="#text9">Acquiring</a></li>
+                            <li><a data-toggle="tab" href="#text10">Corporation</a></li>
+                            <li><a data-toggle="tab" href="#text11">Security</a></li>
                         </ul>
                         <div class="tab-content">
                             <div id="text1" class="tab-pane fade in active" style="margin-top: 20px;margin-left: 20px">
                                 <ul>
-                                    <li th:text="${bank.getTransferTypes()}"><</li>
-                                    <li th:text="${bank.getTransferAuto()}"></li>
-                                    <li th:text="${bank.getTransferCurrency()}"></li>
+                                    <li th:text="${bank.getServicesFinancial()}"></li>
+                                    <li th:text="${bank.getServicesSales()}"></li>
+                                    <li th:text="${bank.getServicesDocumentManagement()}"></li>
+                                    <li th:text="${bank.getServicesAnalytics()}"></li>
                                 </ul>
                             </div>
                             <div id="text2" class="tab-pane fade" style="margin-top: 20px;margin-left: 125px">
                                 <ul>
-                                    <li th:text="${bank.getPaymentMethod()}"><</li>
+                                    <li th:text="${bank.getPaymentMethod()}"></li>
                                     <li th:text="${bank.getPaymentAimsServices()}"></li>
                                     <li th:text="${bank.getPaymentAuto()}"></li>
 
@@ -93,32 +95,27 @@
                                 <div class="row">
                                     <ul>
                                         <ul>
-                                            <li th:text="${bank.getCardFreeService()}"><</li>
                                             <li th:text="${bank.getCardTypes()}"></li>
                                             <li th:text="${bank.getCardCategories()}"></li>
                                             <li th:text="${bank.getCardAnnualServicePrice()}"></li>
-                                            <li th:text="${bank.getCardCashback()}"><</li>
-                                            <li th:text="${bank.getCardDesignToChoose()}"></li>
-                                            <li th:text="${bank.getCardValidity()}"></li>
                                         </ul>
                                     </ul>
                                 </div>
                             </div>
                             <div id="text4" class="tab-pane fade" style="margin-top: 20px;margin-left: 310px">
                                 <ul>
-                                    <li th:text="${bank.getCreditAim()}"><</li>
+                                    <li th:text="${bank.getCreditAim()}"></li>
                                     <li th:text="${bank.getCreditInterestRate()}"></li>
                                     <li th:text="${bank.getCreditTerm()}"></li>
                                     <li th:text="${bank.getCreditEarlyPayment()}"></li>
-                                    <li th:text="${bank.getCreditAmount()}"><</li>
 
 
                                 </ul>
                             </div>
                             <div id="text5" class="tab-pane fade" style="margin-top: 20px;margin-left: 395px">
                                 <ul>
-                                    <li th:text="${bank.getDepositRate()}"><</li>
-                                    <li th:text="${bank.getDepositAim()}"></li>
+                                    <li th:text="${bank.getDepositRate()}"></li>
+                                    <li th:text="${bank.getDepositTypesOfFunds()}"></li>
                                     <li th:text="${bank.getDepositCurrency()}"></li>
                                     <li th:text="${bank.getDepositAdditionalConditions()}"></li>
 
@@ -126,7 +123,7 @@
                             </div>
                             <div id="text6"class="tab-pane fade" style="margin-top: 20px;margin-left: 495px">
                                 <ul>
-                                    <li th:text="${bank.getInsuranceAim()}"><</li>
+                                    <li th:text="${bank.getInsuranceAim()}"></li>
                                     <li th:text="${bank.getInsuranceAmount()}"></li>
 
                                 </ul>
@@ -139,11 +136,25 @@
                             </div>
                             <div id="text8" class="tab-pane fade" style="margin-top: 20px;margin-left: 730px">
                                 <ul>
-                                    <li th:text="${bank.getUniqueServices()}"></li>
-
+                                    <li th:text="${bank.getBankAccountOpeningPrice()}"></li>
+                                    <li th:text="${bank.getBankAccountAvailabilityOfFreePeriod()}"></li>
+                                    <li th:text="${bank.getBankAccountCurrency()}"></li>
+                                    <li th:text="${bank.getBankAccountTypes()}"></li>
                                 </ul>
                             </div>
                             <div id="text9" class="tab-pane fade" style="margin-top: 20px;margin-left: 20px">
+                                <ul>
+                                    <li th:text="${bank.getAcquiringTypes()}"></li>
+                                    <li th:text="${bank.getMinimumCommissionRateOfTurnover()}"></li>
+                                </ul>
+                            </div>
+                            <div id="text10" class="tab-pane fade" style="margin-top: 20px;margin-left: 125px">
+                                <ul>
+                                    <li th:text="${bank.getCorporationServices()}"></li>
+                                    <li th:text="${bank.getCorporationFinancing()}"></li>
+                                </ul>
+                            </div>
+                            <div id="text11" class="tab-pane fade" style="margin-top: 20px;margin-left: 250px">
                                 <ul>
                                     <li th:text="${bank.getConsultation()}"></li>
 

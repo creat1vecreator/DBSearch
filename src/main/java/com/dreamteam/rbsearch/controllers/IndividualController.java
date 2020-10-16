@@ -123,7 +123,7 @@ public class IndividualController {
         try {
             IndividualEntity individualEntity = individualService.findByName(name);
             model.addAttribute("bank", individualEntity);
-            return "single/individual";
+            return "single_individual";
         } catch (RuntimeException runtimeException) {
             return "error";
         }

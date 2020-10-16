@@ -12,7 +12,7 @@ public interface IndividualRepository extends JpaRepository<IndividualEntity, Lo
 
     Optional<IndividualEntity> findById(Long id);
 
-    Optional<IndividualEntity> findByName(String name);
+    Optional<IndividualEntity> findByNameIgnoreCase(String name);
 
     List<IndividualEntity> findAllByTransferTypesIn(List<String> transfer_types);
 

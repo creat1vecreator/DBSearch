@@ -93,7 +93,7 @@ public class LegalEntityController {
         try {
             LegalEntityEntity legalEntityEntity = legalEntityService.findByName(name);
             model.addAttribute("bank", legalEntityEntity);
-            return "single/legal_entity";
+            return "single_legal_entity";
         } catch (RuntimeException runtimeException) {
             return "error";
         }

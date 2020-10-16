@@ -383,7 +383,7 @@ public class IndividualService {
 
     }
     public IndividualEntity findByName(String name) {
-        return individualRepository.findByName(name).orElseThrow(RuntimeException::new);
+        return individualRepository.findByNameIgnoreCase(name).orElseThrow(RuntimeException::new);
     }
     public BankEntitiesDTO<IndividualEntity> findAll() {
         return new BankEntitiesDTO<>(individualRepository.findAll());

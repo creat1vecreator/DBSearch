@@ -398,7 +398,7 @@ public class LegalEntityService {
     }
 
     public LegalEntityEntity findByName(String name) {
-        return legalEntityRepository.findByName(name).orElseThrow(RuntimeException::new);
+        return legalEntityRepository.findByNameIgnoreCase(name).orElseThrow(RuntimeException::new);
     }
     public BankEntitiesDTO<LegalEntityEntity> findAll() {
         return new BankEntitiesDTO<>(legalEntityRepository.findAll());
