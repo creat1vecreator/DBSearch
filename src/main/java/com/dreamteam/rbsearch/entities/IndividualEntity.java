@@ -2,12 +2,14 @@ package com.dreamteam.rbsearch.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
-@Entity(name = "individual_bank_list_release")
+@Entity(name = "individuals_bank_list_release")
 @AllArgsConstructor
 @NoArgsConstructor
 public class IndividualEntity extends BaseEntity {

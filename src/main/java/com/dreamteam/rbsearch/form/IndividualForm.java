@@ -28,7 +28,6 @@ public class IndividualForm {
     private Integer cardValidity;
     private List<String> creditAim;
     private Float creditInterestRate;
-    private Integer creditTermStart;
     private Integer creditTerm;
     private Boolean creditEarlyPayment;
     private Integer creditAmount;

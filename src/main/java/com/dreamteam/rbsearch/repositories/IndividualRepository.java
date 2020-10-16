@@ -69,4 +69,6 @@ public interface IndividualRepository extends JpaRepository<IndividualEntity, Lo
     List<IndividualEntity> findByOrderByPopularity();
 
     List<IndividualEntity> findAllByUniqueServicesContains(String uniqueServices);
+
+    List<IndividualEntity> findAll();
 }

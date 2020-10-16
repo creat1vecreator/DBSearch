@@ -2,10 +2,12 @@ package com.dreamteam.rbsearch.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
 @Entity(name = "legal_entity_bank_list_release")
 @AllArgsConstructor
@@ -106,6 +108,5 @@ public class LegalEntityEntity extends BaseEntity {
     @Column(name = "corporation_financing")
     private String corporationFinancing;
 
-    @Column(name = "security") // only for web
     private String security;
 }

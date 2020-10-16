@@ -23,8 +23,8 @@
 <!--    </section>-->
 
     <section>
-        <img src="../../static/images/IMG_2679.png" height="75" width="75" style="margin-left: 40px;">
-        <div class="container" class="single" style="font-family:'Microsoft JhengHei'">
+        <img src="../../static/images/IMG_2679.png" height="75" width="75" style="margin-left: 40px;" alt="photo">
+        <div class="container" style="font-family:'Microsoft JhengHei'">
             <div class="row">
                 <div class="col-sm-3">
                     <div class="left-sidebar">
@@ -74,7 +74,7 @@
                                     <div class="panel-body">
                                         <p style="color: #4B0082;"> Currency:</p>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="transfer_currency"value="ruble" id="5">
+                                            <input class="form-check-input" type="checkbox" name="transfer_currency" value="ruble" id="5">
                                             <label class="form-check-label" for="5">Ruble</label>
                                         </div>
                                         <div class="form-check">
@@ -153,7 +153,7 @@
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" name="payment_aims_services" value="public_services" id="19">
-                                            <label class="form-check-label" for="19">Government services <img title="Taxes and payments" src="../../static/images/images.png" width="15px" height="15px" style="margin-bottom: 3px">  </label>
+                                            <label class="form-check-label" for="19">Government services <img alt="" title="Taxes and payments" src="../../static/images/images.png" width="15px" height="15px" style="margin-bottom: 3px">  </label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" name="payment_aims_services" value="transport" id="20">
@@ -222,7 +222,7 @@
                                     <div class="panel-body">
                                         <p style="color: #4B0082;">Rate in %:</p>
                                         <div class="slidecontainer">
-                                            <input type="range" min="1" max="20" value="10" class="slider" name = "deposit_rate" id="myRange0">
+                                            <label for="myRange0"></label><input type="range" min="1" max="20" value="10" class="slider" name = "deposit_rate" id="myRange0">
                                             <p> <span id="demo0"></span></p>
                                         </div>
                                         <script>
@@ -790,19 +790,13 @@
                 </div>
             </div>
         </div>
-        </div>
-
-
-
 
         <a><input type="submit" value="Search" style="background-color: #4B0082;color: white" ></a>
-        </div>
-        </div>
 
         <div class="col-sm-9 padding-right">
             <div class="features_items">
                 <h2 class="title text-center">Suitable banks</h2>
-                <div class="sidebar_section sidebar_options" th:each="bank : ${banks}">
+                <div class="sidebar_section sidebar_options"  th:each="bank : ${banks}">
                     <div class="sidebar_section_content">
                         <div class="sidebar_option d-flex flex-row align-items-center justify-content-start">
                             <div class="option_content">
@@ -812,7 +806,11 @@
                                             <a th:href="@{'bank/'+${bank.getName()}}">
                                                 <h1 th:text="${bank.getName()}"></h1>
                                             </a>
+                                        </li>
+                                        <li>
                                             <h2 style="margin-left: 50px" th:text="${bank.getRating()}"></h2>
+                                        </li>
+                                        <li>
                                             <a th:text="${bank.getPopularity()}"></a>
                                         </li>
                                     </ul>
@@ -879,15 +877,10 @@
 
             </div>
         </div>
-        </div>
-        </div>
+
     </section>
 
-    <footer id="footer">
-
-
-
-    </footer>
+    <footer id="footer"</footer>
 
 
 

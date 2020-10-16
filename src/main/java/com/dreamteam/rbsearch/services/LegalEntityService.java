@@ -281,32 +281,74 @@ public class LegalEntityService {
         return bankEntitiesDTO;
     }
 
-    private BankEntitiesDTO<LegalEntityEntity> findByPaymentAimsService(List<StringSentSevice) {
-        return new BankEntitiesDTO<>(legalEntityRepository.findAllByPaymentAimsServicesContains(paymentService));
+    private BankEntitiesDTO<LegalEntityEntity> findByPaymentAimsService(List<String> paymentService) {
+        BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        for (String criterion : paymentService) {
+            bankEntitiesDTO_temp.addBankEntityList(
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByPaymentAimsServicesContains(criterion)),
+                    true
+            );
+        }
+        return bankEntitiesDTO_temp;
     }
 
-    private BankEntitiesDTO<LegalEntityEntity> findByPaymentMethod(String paymentMethod) {
-        return new BankEntitiesDTO<>(legalEntityRepository.findAllByPaymentMethodContains(paymentMethod));
+    private BankEntitiesDTO<LegalEntityEntity> findByPaymentMethod(List<String> paymentMethod) {
+        BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        for (String criterion : paymentMethod) {
+            bankEntitiesDTO_temp.addBankEntityList(
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByPaymentMethodContains(criterion)),
+                    true
+            );
+        }
+        return bankEntitiesDTO_temp;
     }
 
     private BankEntitiesDTO<LegalEntityEntity> findByPaymentAuto(Boolean paymentAuto) {
         return new BankEntitiesDTO<>(legalEntityRepository.findAllByPaymentAutoEquals(paymentAuto));
     }
 
-    private BankEntitiesDTO<LegalEntityEntity> findByServicesFinancial(String servicesFinancial) {
-        return new BankEntitiesDTO<>(legalEntityRepository.findAllByServicesFinancialContains(servicesFinancial));
+    private BankEntitiesDTO<LegalEntityEntity> findByServicesFinancial(List<String> servicesFinancial) {
+        BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        for (String criterion : servicesFinancial) {
+            bankEntitiesDTO_temp.addBankEntityList(
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByServicesFinancialContains(criterion)),
+                    true
+            );
+        }
+        return bankEntitiesDTO_temp;
     }
 
-    private BankEntitiesDTO<LegalEntityEntity> findByServicesSales(String servicesSales) {
-        return new BankEntitiesDTO<>(legalEntityRepository.findAllByServicesSalesContains(servicesSales));
+    private BankEntitiesDTO<LegalEntityEntity> findByServicesSales(List<String> servicesSales) {
+        BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        for (String criterion : servicesSales) {
+            bankEntitiesDTO_temp.addBankEntityList(
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByServicesSalesContains(criterion)),
+                    true
+            );
+        }
+        return bankEntitiesDTO_temp;
     }
 
-    private BankEntitiesDTO<LegalEntityEntity> findByServiceDocumentManagement(String serviceDocumentManagement) {
-        return new BankEntitiesDTO<>(legalEntityRepository.findAllByServicesDocumentManagementContains(serviceDocumentManagement));
+    private BankEntitiesDTO<LegalEntityEntity> findByServiceDocumentManagement(List<String> serviceDocumentManagement) {
+        BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        for (String criterion : serviceDocumentManagement) {
+            bankEntitiesDTO_temp.addBankEntityList(
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByServicesDocumentManagementContains(criterion)),
+                    true
+            );
+        }
+        return bankEntitiesDTO_temp;
     }
 
-    private BankEntitiesDTO<LegalEntityEntity> findByServicesAnalytics(String servicesAnalytics) {
-        return new BankEntitiesDTO<>(legalEntityRepository.findAllByServicesAnalyticsContains(servicesAnalytics));
+    private BankEntitiesDTO<LegalEntityEntity> findByServicesAnalytics(List<String> servicesAnalytics) {
+        BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        for (String criterion : servicesAnalytics) {
+            bankEntitiesDTO_temp.addBankEntityList(
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByServicesAnalyticsContains(criterion)),
+                    true
+            );
+        }
+        return bankEntitiesDTO_temp;
     }
 
     private BankEntitiesDTO<LegalEntityEntity> findByBankAccountOpeningPrice(Integer bankAccountOpeningPrice) {
@@ -317,20 +359,41 @@ public class LegalEntityService {
         return new BankEntitiesDTO<>(legalEntityRepository.findAllByBankAccountAvailabilityOfFreePeriodEquals(bankAccountAvailabilityOfFreePeriod));
     }
 
-    private BankEntitiesDTO<LegalEntityEntity> findByBankAccountCurrency(String bankAccountCurrency) {
-        return new BankEntitiesDTO<>(legalEntityRepository.findAllByBankAccountCurrencyContains(bankAccountCurrency));
+    private BankEntitiesDTO<LegalEntityEntity> findByBankAccountCurrency(List<String> bankAccountCurrency) {
+        BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        for (String criterion : bankAccountCurrency) {
+            bankEntitiesDTO_temp.addBankEntityList(
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByBankAccountCurrencyContains(criterion)),
+                    true
+            );
+        }
+        return bankEntitiesDTO_temp;
     }
 
-    private BankEntitiesDTO<LegalEntityEntity> findByBankAccountTypes(String bankAccountType) {
-        return new BankEntitiesDTO<>(legalEntityRepository.findAllByBankAccountTypesContains(bankAccountType));
+    private BankEntitiesDTO<LegalEntityEntity> findByBankAccountTypes(List<String> bankAccountType) {
+        BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        for (String criterion : bankAccountType) {
+            bankEntitiesDTO_temp.addBankEntityList(
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByBankAccountTypesContains(criterion)),
+                    true
+            );
+        }
+        return bankEntitiesDTO_temp;
     }
 
     private BankEntitiesDTO<LegalEntityEntity> findByMinimumCommissionRateOfTurnover(Float minimumCommission) {
         return new BankEntitiesDTO<>(legalEntityRepository.findAllByMinimumCommissionRateOfTurnoverLessThan(minimumCommission));
     }
 
-    private BankEntitiesDTO<LegalEntityEntity> findByCreditAim(String creditAim) {
-        return new BankEntitiesDTO<>(legalEntityRepository.findAllByCreditAimContains(creditAim));
+    private BankEntitiesDTO<LegalEntityEntity> findByCreditAim(List<String> creditAim) {
+        BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        for (String criterion : creditAim) {
+            bankEntitiesDTO_temp.addBankEntityList(
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByCreditAimContains(criterion)),
+                    true
+            );
+        }
+        return bankEntitiesDTO_temp;
     }
 
     private BankEntitiesDTO<LegalEntityEntity> findByCreditInterestRate(Float creditInterestRate) {
@@ -349,52 +412,122 @@ public class LegalEntityService {
         return new BankEntitiesDTO<>(legalEntityRepository.findAllByDepositRateGreaterThan(depositRate));
     }
 
-    private BankEntitiesDTO<LegalEntityEntity> findByDepositCurrency(String depositCurrency) {
-        return new BankEntitiesDTO<>(legalEntityRepository.findAllByDepositCurrencyContains(depositCurrency));
+    private BankEntitiesDTO<LegalEntityEntity> findByDepositCurrency(List<String> depositCurrency) {
+        BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        for (String criterion : depositCurrency) {
+            bankEntitiesDTO_temp.addBankEntityList(
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByDepositCurrencyContains(criterion)),
+                    true
+            );
+        }
+        return bankEntitiesDTO_temp;
     }
 
-    private BankEntitiesDTO<LegalEntityEntity> findByDepositTypesOfFunds(String depositTypesOfFunds) {
-        return new BankEntitiesDTO<>(legalEntityRepository.findAllByDepositTypesOfFundsContains(depositTypesOfFunds));
+    private BankEntitiesDTO<LegalEntityEntity> findByDepositTypesOfFunds(List<String> depositTypesOfFunds) {
+        BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        for (String criterion : depositTypesOfFunds) {
+            bankEntitiesDTO_temp.addBankEntityList(
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByDepositTypesOfFundsContains(criterion)),
+                    true
+            );
+        }
+        return bankEntitiesDTO_temp;
     }
 
-    private BankEntitiesDTO<LegalEntityEntity> findByDepositAdditionalConditions(String depositAdditionalConditions) {
-        return new BankEntitiesDTO<>(legalEntityRepository.findAllByDepositAdditionalConditionsContains(depositAdditionalConditions));
+    private BankEntitiesDTO<LegalEntityEntity> findByDepositAdditionalConditions(List<String> depositAdditionalConditions) {
+        BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        for (String criterion : depositAdditionalConditions) {
+            bankEntitiesDTO_temp.addBankEntityList(
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByDepositAdditionalConditionsContains(criterion)),
+                    true
+            );
+        }
+        return bankEntitiesDTO_temp;
     }
 
-    private BankEntitiesDTO<LegalEntityEntity> findByConsultation(String consultation) {
-        return new BankEntitiesDTO<>(legalEntityRepository.findAllByConsultationContains(consultation));
+    private BankEntitiesDTO<LegalEntityEntity> findByConsultation(List<String> consultation) {
+        BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        for (String criterion : consultation) {
+            bankEntitiesDTO_temp.addBankEntityList(
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByConsultationContains(criterion)),
+                    true
+            );
+        }
+        return bankEntitiesDTO_temp;
     }
 
-    private BankEntitiesDTO<LegalEntityEntity> findByCardTypes(String cardTypes) {
-        return new BankEntitiesDTO<>(legalEntityRepository.findAllByCardTypesContains(cardTypes));
+    private BankEntitiesDTO<LegalEntityEntity> findByCardTypes(List<String> cardTypes) {
+        BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        for (String criterion : cardTypes) {
+            bankEntitiesDTO_temp.addBankEntityList(
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByCardTypesContains(criterion)),
+                    true
+            );
+        }
+        return bankEntitiesDTO_temp;
     }
 
-    private BankEntitiesDTO<LegalEntityEntity> findByCardCategories(String cardCategories) {
-        return new BankEntitiesDTO<>(legalEntityRepository.findAllByCardCategoriesContains(cardCategories));
+    private BankEntitiesDTO<LegalEntityEntity> findByCardCategories(List<String> cardCategories) {
+        BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        for (String criterion : cardCategories) {
+            bankEntitiesDTO_temp.addBankEntityList(
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByCardCategoriesContains(criterion)),
+                    true
+            );
+        }
+        return bankEntitiesDTO_temp;
     }
 
     private BankEntitiesDTO<LegalEntityEntity> findByCardAnnualServicePrice(Integer cardAnnualServicePrice) {
         return new BankEntitiesDTO<>(legalEntityRepository.findAllByCardAnnualServicePriceLessThan(cardAnnualServicePrice));
     }
 
-    private BankEntitiesDTO<LegalEntityEntity> findByInsuranceAim(String insuranceAim) {
-        return new BankEntitiesDTO<>(legalEntityRepository.findAllByInsuranceAimContains(insuranceAim));
+    private BankEntitiesDTO<LegalEntityEntity> findByInsuranceAim(List<String> insuranceAim) {
+        BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        for (String criterion : insuranceAim) {
+            bankEntitiesDTO_temp.addBankEntityList(
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByInsuranceAimContains(criterion)),
+                    true
+            );
+        }
+        return bankEntitiesDTO_temp;
     }
 
     private BankEntitiesDTO<LegalEntityEntity> findByInsuranceAmount(Integer insuranceAmount) {
         return new BankEntitiesDTO<>(legalEntityRepository.findAllByInsuranceAmountGreaterThan(insuranceAmount));
     }
 
-    private BankEntitiesDTO<LegalEntityEntity> findByCorporationServices(String corporationServices) {
-        return new BankEntitiesDTO<>(legalEntityRepository.findAllByCorporationServicesContains(corporationServices));
+    private BankEntitiesDTO<LegalEntityEntity> findByCorporationServices(List<String> corporationServices) {
+        BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        for (String criterion : corporationServices) {
+            bankEntitiesDTO_temp.addBankEntityList(
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByCorporationServicesContains(criterion)),
+                    true
+            );
+        }
+        return bankEntitiesDTO_temp;
     }
 
-    private BankEntitiesDTO<LegalEntityEntity> findByCorporationFinancing(String corporationFinancing) {
-        return new BankEntitiesDTO<>(legalEntityRepository.findAllByCorporationFinancingContains(corporationFinancing));
+    private BankEntitiesDTO<LegalEntityEntity> findByCorporationFinancing(List<String> corporationFinancing) {
+        BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        for (String criterion : corporationFinancing) {
+            bankEntitiesDTO_temp.addBankEntityList(
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByCorporationFinancingContains(criterion)),
+                    true
+            );
+        }
+        return bankEntitiesDTO_temp;
     }
 
-    private BankEntitiesDTO<LegalEntityEntity> findByAcquiringTypes(String acquiringTypes) {
-        return new BankEntitiesDTO<>(legalEntityRepository.findAllByAcquiringTypesContains(acquiringTypes));
+    private BankEntitiesDTO<LegalEntityEntity> findByAcquiringTypes(List<String> acquiringTypes) {
+        BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        for (String criterion : acquiringTypes) {
+            bankEntitiesDTO_temp.addBankEntityList(
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByAcquiringTypesContains(criterion)),
+                    true
+            );
+        }
+        return bankEntitiesDTO_temp;
     }
 
     public LegalEntityEntity findByName(String name) {

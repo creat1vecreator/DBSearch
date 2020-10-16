@@ -272,24 +272,9 @@ public class IndividualService {
         return bankEntitiesDTO;
     }
 
-    private BankEntitiesDTO<IndividualEntity> findByTransferType(List<String> transfer_type) {
+    private BankEntitiesDTO<IndividualEntity> findByTransferType(List<String> transferType) {
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
-        for (String transfer_type_one : transfer_type) {
-            bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(individualRepository.findAllByTransferTypesContains(transfer_type_one)),
-                    true
-            );
-        }
-        return bankEntitiesDTO_temp;
-    }
-
-    private BankEntitiesDTO<IndividualEntity> findByTransferAuto(Boolean transfer_auto) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByTransferAutoEquals(transfer_auto));
-    }
-
-    private BankEntitiesDTO<IndividualEntity> findByTransferCurrency(List<String> transfer_currency) {
-        BankEntitiesDTO<IndividualEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
-        for (String criterion : transfer_currency) {
+        for (String criterion : transferType) {
             bankEntitiesDTO_temp.addBankEntityList(
                     new BankEntitiesDTO<>(individualRepository.findAllByTransferTypesContains(criterion)),
                     true
@@ -298,61 +283,76 @@ public class IndividualService {
         return bankEntitiesDTO_temp;
     }
 
-    private BankEntitiesDTO<IndividualEntity> findByPaymentMethod(List<String> payment_method) {
+    private BankEntitiesDTO<IndividualEntity> findByTransferAuto(Boolean transferAuto) {
+        return new BankEntitiesDTO<>(individualRepository.findAllByTransferAutoEquals(transferAuto));
+    }
+
+    private BankEntitiesDTO<IndividualEntity> findByTransferCurrency(List<String> transferCurrency) {
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
-        for (String criterion : payment_method) {
+        for (String criterion : transferCurrency) {
             bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(individualRepository.findAllByTransferTypesContains(criterion)),
+                    new BankEntitiesDTO<>(individualRepository.findAllByTransferCurrencyContains(criterion)),
+                    true
+            );
+        }
+        return bankEntitiesDTO_temp;
+    }
+
+    private BankEntitiesDTO<IndividualEntity> findByPaymentMethod(List<String> paymentMethod) {
+        BankEntitiesDTO<IndividualEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        for (String criterion : paymentMethod) {
+            bankEntitiesDTO_temp.addBankEntityList(
+                    new BankEntitiesDTO<>(individualRepository.findAllByPaymentMethodContains(criterion)),
                     true
             );
         }
         return bankEntitiesDTO_temp;     }
 
-    private BankEntitiesDTO<IndividualEntity> findByPaymentAims(List<String> payment_aims) {
+    private BankEntitiesDTO<IndividualEntity> findByPaymentAims(List<String> paymentAims) {
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
-        for (String criterion : payment_aims) {
+        for (String criterion : paymentAims) {
             bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(individualRepository.findAllByTransferTypesContains(criterion)),
+                    new BankEntitiesDTO<>(individualRepository.findAllByPaymentAimsServicesContains(criterion)),
                     true
             );
         }
         return bankEntitiesDTO_temp;     }
 
-    private BankEntitiesDTO<IndividualEntity> findByPaymentAuto(Boolean payment_auto) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByPaymentAutoEquals(payment_auto));
+    private BankEntitiesDTO<IndividualEntity> findByPaymentAuto(Boolean paymentAuto) {
+        return new BankEntitiesDTO<>(individualRepository.findAllByPaymentAutoEquals(paymentAuto));
     }
 
-    private BankEntitiesDTO<IndividualEntity> findByDepositRate(Float deposit_rate) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByDepositRateGreaterThan(deposit_rate));
+    private BankEntitiesDTO<IndividualEntity> findByDepositRate(Float depositRate) {
+        return new BankEntitiesDTO<>(individualRepository.findAllByDepositRateGreaterThan(depositRate));
     }
 
-    private BankEntitiesDTO<IndividualEntity> findByDepositAim(List<String> deposit_aim) {
+    private BankEntitiesDTO<IndividualEntity> findByDepositAim(List<String> depositAim) {
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
-        for (String criterion : deposit_aim) {
+        for (String criterion : depositAim) {
             bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(individualRepository.findAllByTransferTypesContains(criterion)),
+                    new BankEntitiesDTO<>(individualRepository.findAllByDepositAimContains(criterion)),
                     true
             );
         }
         return bankEntitiesDTO_temp;
     }
 
-    private BankEntitiesDTO<IndividualEntity> findByDepositCurrency(List<String> deposit_currency) {
+    private BankEntitiesDTO<IndividualEntity> findByDepositCurrency(List<String> depositCurrency) {
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
-        for (String criterion : deposit_currency) {
+        for (String criterion : depositCurrency) {
             bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(individualRepository.findAllByTransferTypesContains(criterion)),
+                    new BankEntitiesDTO<>(individualRepository.findAllByDepositCurrencyContains(criterion)),
                     true
             );
         }
         return bankEntitiesDTO_temp;
     }
 
-    private BankEntitiesDTO<IndividualEntity> findByDepositAddition(List<String> deposit_additions) {
+    private BankEntitiesDTO<IndividualEntity> findByDepositAddition(List<String> depositAdditions) {
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
-        for (String criterion : deposit_additions) {
+        for (String criterion : depositAdditions) {
             bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(individualRepository.findAllByTransferTypesContains(criterion)),
+                    new BankEntitiesDTO<>(individualRepository.findAllByDepositAdditionalConditionsContains(criterion)),
                     true
             );
         }
@@ -363,97 +363,97 @@ public class IndividualService {
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
         for (String criterion : consultation) {
             bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(individualRepository.findAllByTransferTypesContains(criterion)),
+                    new BankEntitiesDTO<>(individualRepository.findAllByConsultationContains(criterion)),
                     true
             );
         }
         return bankEntitiesDTO_temp;     }
 
-    private BankEntitiesDTO<IndividualEntity> findByCardFreeService(Boolean card_free_service) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByCardFreeServiceEquals(card_free_service));
+    private BankEntitiesDTO<IndividualEntity> findByCardFreeService(Boolean cardFreeService) {
+        return new BankEntitiesDTO<>(individualRepository.findAllByCardFreeServiceEquals(cardFreeService));
     }
 
-    private BankEntitiesDTO<IndividualEntity> findByCardTypes(List<String> card_types) {
+    private BankEntitiesDTO<IndividualEntity> findByCardTypes(List<String> cardTypes) {
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
-        for (String criterion : card_types) {
+        for (String criterion : cardTypes) {
             bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(individualRepository.findAllByTransferTypesContains(criterion)),
+                    new BankEntitiesDTO<>(individualRepository.findAllByCardTypesContains(criterion)),
                     true
             );
         }
         return bankEntitiesDTO_temp;     }
 
-    private BankEntitiesDTO<IndividualEntity> findByCardCategories(List<String> card_categories) {
+    private BankEntitiesDTO<IndividualEntity> findByCardCategories(List<String> cardCategories) {
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
-        for (String criterion : card_categories) {
+        for (String criterion : cardCategories) {
             bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(individualRepository.findAllByTransferTypesContains(criterion)),
+                    new BankEntitiesDTO<>(individualRepository.findAllByCardCategoriesContains(criterion)),
                     true
             );
         }
         return bankEntitiesDTO_temp;     }
 
-    private BankEntitiesDTO<IndividualEntity> findByCardAnnualServicePrice(Integer card_annual_service_price) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByCardAnnualServicePriceLessThan(card_annual_service_price));
+    private BankEntitiesDTO<IndividualEntity> findByCardAnnualServicePrice(Integer cardAnnualServicePrice) {
+        return new BankEntitiesDTO<>(individualRepository.findAllByCardAnnualServicePriceLessThan(cardAnnualServicePrice));
     }
 
-    private BankEntitiesDTO<IndividualEntity> findByCardCashback(Float card_cashback) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByCardCashbackGreaterThan(card_cashback));
+    private BankEntitiesDTO<IndividualEntity> findByCardCashback(Float cardCashback) {
+        return new BankEntitiesDTO<>(individualRepository.findAllByCardCashbackGreaterThan(cardCashback));
     }
 
-    private BankEntitiesDTO<IndividualEntity> findByCardDesign(Boolean card_design_to_choose) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByCardDesignToChooseEquals(card_design_to_choose));
+    private BankEntitiesDTO<IndividualEntity> findByCardDesign(Boolean cardDesignToChoose) {
+        return new BankEntitiesDTO<>(individualRepository.findAllByCardDesignToChooseEquals(cardDesignToChoose));
     }
 
-    private BankEntitiesDTO<IndividualEntity> findByCardValidity(Integer card_validity) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByCardValidityGreaterThan(card_validity));
+    private BankEntitiesDTO<IndividualEntity> findByCardValidity(Integer cardValidity) {
+        return new BankEntitiesDTO<>(individualRepository.findAllByCardValidityGreaterThan(cardValidity));
     }
 
-    private BankEntitiesDTO<IndividualEntity> findByCreditAim(List<String> credit_aim) {
+    private BankEntitiesDTO<IndividualEntity> findByCreditAim(List<String> creditAim) {
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
-        for (String criterion : credit_aim) {
+        for (String criterion : creditAim) {
             bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(individualRepository.findAllByTransferTypesContains(criterion)),
+                    new BankEntitiesDTO<>(individualRepository.findAllByCreditAimContains(criterion)),
                     true
             );
         }
         return bankEntitiesDTO_temp;     }
 
-    private BankEntitiesDTO<IndividualEntity> findByCreditInterestRate(Float credit_interest_rate) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByCreditInterestRateLessThan(credit_interest_rate));
+    private BankEntitiesDTO<IndividualEntity> findByCreditInterestRate(Float creditInterestRate) {
+        return new BankEntitiesDTO<>(individualRepository.findAllByCreditInterestRateLessThan(creditInterestRate));
     }
 
-    private BankEntitiesDTO<IndividualEntity> findByCreditTerm(Integer credit_term) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByCreditTermGreaterThan(credit_term));
+    private BankEntitiesDTO<IndividualEntity> findByCreditTerm(Integer creditTerm) {
+        return new BankEntitiesDTO<>(individualRepository.findAllByCreditTermGreaterThan(creditTerm));
     }
 
-    private BankEntitiesDTO<IndividualEntity> findByCreditEarlyPayment(Boolean credit_early_payment) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByCreditEarlyPaymentEquals(credit_early_payment));
+    private BankEntitiesDTO<IndividualEntity> findByCreditEarlyPayment(Boolean creditEarlyPayment) {
+        return new BankEntitiesDTO<>(individualRepository.findAllByCreditEarlyPaymentEquals(creditEarlyPayment));
     }
 
-    private BankEntitiesDTO<IndividualEntity> findByCreditAmount(Integer credit_amount) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByCreditAmountGreaterThan(credit_amount));
+    private BankEntitiesDTO<IndividualEntity> findByCreditAmount(Integer creditAmount) {
+        return new BankEntitiesDTO<>(individualRepository.findAllByCreditAmountGreaterThan(creditAmount));
     }
 
-    private BankEntitiesDTO<IndividualEntity> findByInsuranceAim(List<String> insurance_aim) {
+    private BankEntitiesDTO<IndividualEntity> findByInsuranceAim(List<String> insuranceAim) {
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
-        for (String criterion : insurance_aim) {
+        for (String criterion : insuranceAim) {
             bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(individualRepository.findAllByTransferTypesContains(criterion)),
+                    new BankEntitiesDTO<>(individualRepository.findAllByInsuranceAimContains(criterion)),
                     true
             );
         }
         return bankEntitiesDTO_temp;     }
 
-    private BankEntitiesDTO<IndividualEntity> findByInsuranceAmount(Integer insurance_amount) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByInsuranceAmountGreaterThan(insurance_amount));
+    private BankEntitiesDTO<IndividualEntity> findByInsuranceAmount(Integer insuranceAmount) {
+        return new BankEntitiesDTO<>(individualRepository.findAllByInsuranceAmountGreaterThan(insuranceAmount));
     }
 
-    private BankEntitiesDTO<IndividualEntity> findByUniqueServices(List<String> unique_services) {
+    private BankEntitiesDTO<IndividualEntity> findByUniqueServices(List<String> uniqueServices) {
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
-        for (String criterion : unique_services) {
+        for (String criterion : uniqueServices) {
             bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(individualRepository.findAllByTransferTypesContains(criterion)),
+                    new BankEntitiesDTO<>(individualRepository.findAllByUniqueServicesContains(criterion)),
                     true
             );
         }
