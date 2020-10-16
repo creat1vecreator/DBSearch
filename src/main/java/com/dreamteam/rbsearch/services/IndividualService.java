@@ -32,155 +32,155 @@ public class IndividualService {
             }
         }
 
-        if (individualForm.getCard_annual_service_price() >= 0) {
+        if (individualForm.getCardAnnualServicePrice() >= 0) {
             bankEntitiesDTO.addBankEntityList(
                     findByCardAnnualServicePrice(
-                            individualForm.getCard_annual_service_price()
+                            individualForm.getCardAnnualServicePrice()
                     ),
                     true
             );
         }
 
-        if (individualForm.getDeposit_rate() >= 0) {
+        if (individualForm.getDepositRate() >= 0) {
             bankEntitiesDTO.addBankEntityList(
                     findByDepositRate(
-                            individualForm.getDeposit_rate()
+                            individualForm.getDepositRate()
                     ),
                     true
             );
         }
 
-        if (individualForm.getCard_cashback() >= 0) {
+        if (individualForm.getCardCashback() >= 0) {
             bankEntitiesDTO.addBankEntityList(
                     findByCardCashback(
-                            individualForm.getCard_cashback()
+                            individualForm.getCardCashback()
                     ),
                     true
             );
         }
 
-        if (individualForm.getCard_validity() >= 0) {
+        if (individualForm.getCardValidity() >= 0) {
             bankEntitiesDTO.addBankEntityList(
                     findByCardValidity(
-                            individualForm.getCard_validity()
+                            individualForm.getCardValidity()
                     ),
                     true
             );
         }
 
-        if (individualForm.getCredit_interest_rate() >= 0) {
+        if (individualForm.getCreditInterestRate() >= 0) {
             bankEntitiesDTO.addBankEntityList(
                     findByCreditInterestRate(
-                            individualForm.getCredit_interest_rate()
+                            individualForm.getCreditInterestRate()
                     ),
                     true
             );
         }
 
-        if (individualForm.getCredit_term() >= 0) {
+        if (individualForm.getCreditTerm() >= 0) {
             bankEntitiesDTO.addBankEntityList(
                     findByCreditTerm(
-                            individualForm.getCredit_term()
+                            individualForm.getCreditTerm()
                     ),
                     true
             );
         }
 
-        if (individualForm.getCredit_amount() >= 0) {
+        if (individualForm.getCreditAmount() >= 0) {
             bankEntitiesDTO.addBankEntityList(
                     findByCreditAmount(
-                            individualForm.getCredit_amount()
+                            individualForm.getCreditAmount()
                     ),
                     true
             );
         }
 
-        if (individualForm.getInsurance_amount() >= 0) {
+        if (individualForm.getInsuranceAmount() >= 0) {
             bankEntitiesDTO.addBankEntityList(
                     findByInsuranceAmount(
-                            individualForm.getCredit_amount()
+                            individualForm.getCreditAmount()
                     ),
                     true
             );
         }
 
 
-        if (!individualForm.getTransfer_types().isEmpty()) {
+        if (!individualForm.getTransferTypes().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
                     findByTransferType(
-                            individualForm.getTransfer_types()
+                            individualForm.getTransferTypes()
                     ),
                     true
             );
         }
 
-        if (individualForm.getTransfer_auto() != null) {
+        if (individualForm.getTransferAuto() != null) {
             bankEntitiesDTO.addBankEntityList(
                     findByTransferAuto(
-                            individualForm.getTransfer_auto()
+                            individualForm.getTransferAuto()
                     ),
                     true
             );
         }
 
-        if (!individualForm.getTransfer_currency().isEmpty()) {
+        if (!individualForm.getTransferCurrency().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
                     findByTransferCurrency(
-                            individualForm.getTransfer_currency()
+                            individualForm.getTransferCurrency()
                     ),
                     true
             );
         }
 
-        if (!individualForm.getPayment_method().isEmpty()) {
+        if (!individualForm.getPaymentMethod().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
                     findByPaymentMethod(
-                            individualForm.getPayment_method()
+                            individualForm.getPaymentMethod()
                     ),
                     true
             );
         }
 
-        if (!individualForm.getPayment_aims_services().isEmpty()) {
+        if (!individualForm.getPaymentAimsServices().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
                     findByPaymentAims(
-                            individualForm.getPayment_aims_services()
+                            individualForm.getPaymentAimsServices()
                     ),
                     true
             );
         }
 
-        if (individualForm.getPayment_auto() != null) {
+        if (individualForm.getPaymentAuto() != null) {
             bankEntitiesDTO.addBankEntityList(
                     findByPaymentAuto(
-                            individualForm.getPayment_auto()
+                            individualForm.getPaymentAuto()
                     ),
                     true
             );
         }
 
-        if (individualForm.getDeposit_aim().isEmpty()) {
+        if (individualForm.getDepositAim().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
                     findByDepositAim(
-                            individualForm.getDeposit_aim()
+                            individualForm.getDepositAim()
                     ),
                     true
             );
         }
 
-        if (!individualForm.getDeposit_currency().isEmpty()) {
+        if (!individualForm.getDepositCurrency().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
                     findByDepositCurrency(
-                            individualForm.getDeposit_currency()
+                            individualForm.getDepositCurrency()
                     ),
                     true
             );
         }
 
-        if (!individualForm.getDeposit_additional_conditions().isEmpty()) {
+        if (!individualForm.getDepositAdditionalConditions().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
                     findByDepositAddition(
-                            individualForm.getDeposit_additional_conditions()
+                            individualForm.getDepositAdditionalConditions()
                     ),
                     true
             );
@@ -195,73 +195,73 @@ public class IndividualService {
             );
         }
 
-        if (individualForm.getCard_free_service() != null) {
+        if (individualForm.getCardFreeService() != null) {
             bankEntitiesDTO.addBankEntityList(
                     findByCardFreeService(
-                            individualForm.getCard_free_service()
+                            individualForm.getCardFreeService()
                     ),
                     true
             );
         }
 
-        if (!individualForm.getCard_types().isEmpty()) {
+        if (!individualForm.getCardTypes().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
                     findByCardTypes(
-                            individualForm.getCard_types()
+                            individualForm.getCardTypes()
                     ),
                     true
             );
         }
 
-        if (!individualForm.getCard_categories().isEmpty()) {
+        if (!individualForm.getCardCategories().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
                     findByCardCategories(
-                            individualForm.getCard_categories()
+                            individualForm.getCardCategories()
                     ),
                     true
             );
         }
 
-        if (individualForm.getCard_design_to_choose() != null) {
+        if (individualForm.getCardDesignToChoose() != null) {
             bankEntitiesDTO.addBankEntityList(
                     findByCardDesign(
-                            individualForm.getCard_design_to_choose()
+                            individualForm.getCardDesignToChoose()
                     ),
                     true
             );
         }
 
-        if (!individualForm.getCredit_aim().isEmpty()) {
+        if (!individualForm.getCreditAim().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
                     findByCreditAim(
-                            individualForm.getCredit_aim()
+                            individualForm.getCreditAim()
                     ),
                     true
             );
         }
 
-        if (individualForm.getCredit_early_payment() != null) {
+        if (individualForm.getCreditEarlyPayment() != null) {
             bankEntitiesDTO.addBankEntityList(
                     findByCreditEarlyPayment(
-                            individualForm.getCredit_early_payment()
+                            individualForm.getCreditEarlyPayment()
                     ),
                     true
             );
         }
 
-        if (!individualForm.getInsurance_aim().isEmpty()) {
+        if (!individualForm.getInsuranceAim().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
                     findByInsuranceAim(
-                            individualForm.getInsurance_aim()
+                            individualForm.getInsuranceAim()
                     ),
                     true
             );
         }
 
-        if (!individualForm.getUnique_services().isEmpty()) {
+        if (!individualForm.getUniqueServices().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
                     findByUniqueServices(
-                            individualForm.getUnique_services()
+                            individualForm.getUniqueServices()
                     ),
                     true
             );
