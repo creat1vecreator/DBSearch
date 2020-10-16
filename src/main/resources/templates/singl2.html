@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <title>bank pattern</title>
     <link href="../static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
@@ -61,74 +62,101 @@
                     </div>
                     <div class="col-md-20 tabulation" style="margin-top: 40%;margin-left:-100%">
                         <ul class="nav nav-tabs">
-                            <li class="active"><a data-toggle="tab" href="#text1">Transfers</a></li>
+                            <li class="active"><a data-toggle="tab" href="#text1">Services</a></li>
                             <li><a data-toggle="tab" href="#text2">Payments</a></li>
                             <li><a data-toggle="tab" href="#text3">Cards</a></li>
                             <li><a data-toggle="tab" href="#text4">Credits</a></li>
                             <li><a data-toggle="tab" href="#text5">Deposits</a></li>
                             <li><a data-toggle="tab" href="#text6">Insurance</a></li>
                             <li><a data-toggle="tab" href="#text7"> 24/7 support</a></li>
-                            <li><a data-toggle="tab" href="#text8">Unique services</a></li>
-
+                            <li><a data-toggle="tab" href="#text8">Bank Account</a></li>
+                            <li><a data-toggle="tab" href="#text9">Acquiring</a></li>
+                            <li><a data-toggle="tab" href="#text10">Corporation</a></li>
+                            <li><a data-toggle="tab" href="#text11">Security</a></li>
                         </ul>
                         <div class="tab-content">
                             <div id="text1" class="tab-pane fade in active" style="margin-top: 20px;margin-left: 20px">
                                 <ul>
-                                    <li>dsgaadf</li>
-                                    <li>dsfdgsdf</li>
-
+                                    <li th:text="${bank.getServicesFinancial()}"><</li>
+                                    <li th:text="${bank.getServicesSales()}"></li>
+                                    <li th:text="${bank.getServicesDocumentManagement()}"></li>
+                                    <li th:text="${bank.getServicesAnalytics()}"></li>
                                 </ul>
                             </div>
                             <div id="text2" class="tab-pane fade" style="margin-top: 20px;margin-left: 125px">
                                 <ul>
-                                    <li>dsrgrgfrbfgrgrgrf</li>
-                                    <li>dsfdgsdf</li>
+                                    <li th:text="${bank.getPaymentMethod()}"><</li>
+                                    <li th:text="${bank.getPaymentAimsServices()}"></li>
+                                    <li th:text="${bank.getPaymentAuto()}"></li>
 
                                 </ul>
                             </div>
                             <div id="text3" class="tab-pane fade" style="margin-top: 20px;margin-left: 250px">
                                 <div class="row">
                                     <ul>
-                                        <li>The Big Oxmox advised her not to do so</li>
-                                        <li>Because there were thousands of bad Commas</li>
-                                        <li>Wild Question Marks and devious Semikoli</li>
-                                        <li>She packed her seven versalia</li>
-                                        <li>tial into the belt and made herself on the way.</li>
+                                        <ul>
+                                            <li th:text="${bank.getCardTypes()}"></li>
+                                            <li th:text="${bank.getCardCategories()}"></li>
+                                            <li th:text="${bank.getCardAnnualServicePrice()}"></li>
+                                        </ul>
                                     </ul>
                                 </div>
                             </div>
                             <div id="text4" class="tab-pane fade" style="margin-top: 20px;margin-left: 310px">
                                 <ul>
-                                    <li>dsrgrgfrbfgrgrgrf</li>
-                                    <li>dsfdgsdf</li>
+                                    <li th:text="${bank.getCreditAim()}"><</li>
+                                    <li th:text="${bank.getCreditInterestRate()}"></li>
+                                    <li th:text="${bank.getCreditTerm()}"></li>
+                                    <li th:text="${bank.getCreditEarlyPayment()}"></li>
+
 
                                 </ul>
                             </div>
                             <div id="text5" class="tab-pane fade" style="margin-top: 20px;margin-left: 395px">
                                 <ul>
-                                    <li>dsrgrgfrbfgrgrgrf</li>
-                                    <li>dsfdgsdf</li>
+                                    <li th:text="${bank.getDepositRate()}"><</li>
+                                    <li th:text="${bank.getDepositTypesOfFunds()}"></li>
+                                    <li th:text="${bank.getDepositCurrency()}"></li>
+                                    <li th:text="${bank.getDepositAdditionalConditions()}"></li>
 
                                 </ul>
                             </div>
                             <div id="text6"class="tab-pane fade" style="margin-top: 20px;margin-left: 495px">
                                 <ul>
-                                    <li>dsrgrgfrbfgrgrgrf</li>
-                                    <li>dsfdgsdf</li>
+                                    <li th:text="${bank.getInsuranceAim()}"><</li>
+                                    <li th:text="${bank.getInsuranceAmount()}"></li>
 
                                 </ul>
                             </div>
                             <div id="text7" class="tab-pane fade" style="margin-top: 20px;margin-left: 600px">
                                 <ul>
-                                    <li>dsrgrgfrbfgrgrgrf</li>
-                                    <li>dsfdgsdf</li>
+                                    <li th:text="${bank.getConsultation()}"></li>
 
                                 </ul>
                             </div>
                             <div id="text8" class="tab-pane fade" style="margin-top: 20px;margin-left: 730px">
                                 <ul>
-                                    <li>dsrgrgfrbfgrgrgrf</li>
-                                    <li>dsfdgsdf</li>
+                                    <li th:text="${bank.getBankAccountOpeningPrice()}"></li>
+                                    <li th:text="${bank.getBankAccountAvailabilityOfFreePeriod()}"></li>
+                                    <li th:text="${bank.getBankAccountCurrency()}"></li>
+                                    <li th:text="${bank.getBankAccountTypes()}"></li>
+                                </ul>
+                            </div>
+                            <div id="text9" class="tab-pane fade" style="margin-top: 20px;margin-left: 20px">
+                                <ul>
+                                    <li th:text="${bank.getAcquiringTypes()}"></li>
+                                    <li th:text="${bank.getMinimumCommissionRateOfTurnover()}"></li>
+                                </ul>
+                            </div>
+                            <div id="text10" class="tab-pane fade" style="margin-top: 20px;margin-left: 125px">
+                                <ul>
+                                    <li th:text="${bank.getCorporationServices()}"></li>
+                                    <li th:text="${bank.getCorporationFinancing()}"></li>
+                                </ul>
+                            </div>
+                            <div id="text11" class="tab-pane fade" style="margin-top: 20px;margin-left: 250px">
+                                <ul>
+                                    <li th:text="${bank.getConsultation()}"></li>
 
                                 </ul>
                             </div>
