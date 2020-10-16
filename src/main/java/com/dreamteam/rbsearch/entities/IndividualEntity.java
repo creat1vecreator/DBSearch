@@ -122,4 +122,8 @@ public class IndividualEntity extends BaseEntity {
     @Column
     @ElementCollection
     private List<String> disadvantages;
+
+    @Column
+    @ElementCollection
+    private List<String> security;
 }

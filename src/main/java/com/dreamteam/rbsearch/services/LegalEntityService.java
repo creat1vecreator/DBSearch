@@ -14,8 +14,6 @@ import java.util.List;
 public class LegalEntityService {
     private final LegalEntityRepository legalEntityRepository;
 
-
-    // todo
     public BankEntitiesDTO<LegalEntityEntity> find(LegalEntityForm legalEntityForm) {
         BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO = findAll();
 
@@ -23,6 +21,258 @@ public class LegalEntityService {
             bankEntitiesDTO.addBankEntityList(
                     findByPaymentAimsService(
                             legalEntityForm.getPaymentAimsServices()
+                    ),
+                    true
+            );
+        }
+
+        if (!legalEntityForm.getPaymentMethod().isEmpty()) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByPaymentMethod(
+                            legalEntityForm.getPaymentMethod()
+                    ),
+                    true
+            );
+        }
+
+        if (legalEntityForm.getPaymentAuto() != null) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByPaymentAuto(
+                            legalEntityForm.getPaymentAuto()
+                    ),
+                    true
+            );
+        }
+
+        if (!legalEntityForm.getServicesFinancial().isEmpty()) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByServicesFinancial(
+                            legalEntityForm.getServicesFinancial()
+                    ),
+                    true
+            );
+        }
+
+        if (!legalEntityForm.getServicesSales().isEmpty()) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByServicesSales(
+                            legalEntityForm.getServicesSales()
+                    ),
+                    true
+            );
+        }
+
+        if (!legalEntityForm.getServicesDocumentManagement().isEmpty()) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByServiceDocumentManagement(
+                            legalEntityForm.getServicesDocumentManagement()
+                    ),
+                    true
+            );
+        }
+
+        if (!legalEntityForm.getServicesAnalytics().isEmpty()) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByServicesAnalytics(
+                            legalEntityForm.getServicesAnalytics()
+                    ),
+                    true
+            );
+        }
+
+        if (legalEntityForm.getBankAccountOpeningPrice() >= 0) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByBankAccountOpeningPrice(
+                            legalEntityForm.getBankAccountOpeningPrice()
+                    ),
+                    true
+            );
+        }
+
+        if (legalEntityForm.getBankAccountAvailabilityOfFreePeriod() != null) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByBankAccountAvailabilityOfFreePeriod(
+                            legalEntityForm.getBankAccountAvailabilityOfFreePeriod()
+                    ),
+                    true
+            );
+        }
+
+        if (!legalEntityForm.getBankAccountCurrency().isEmpty()) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByBankAccountCurrency(
+                            legalEntityForm.getBankAccountCurrency()
+                    ),
+                    true
+            );
+        }
+
+        if (!legalEntityForm.getBankAccountTypes().isEmpty()) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByBankAccountTypes(
+                        legalEntityForm.getBankAccountTypes()
+                    ),
+                    true
+            );
+        }
+
+        if (legalEntityForm.getMinimumCommissionRateOfTurnover() >= 0) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByMinimumCommissionRateOfTurnover(
+                            legalEntityForm.getMinimumCommissionRateOfTurnover()
+                    ),
+                    true
+            );
+        }
+
+        if (!legalEntityForm.getCreditAim().isEmpty()) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByCreditAim(
+                            legalEntityForm.getCreditAim()
+                    ),
+                    true
+            );
+        }
+
+        if (legalEntityForm.getCreditInterestRate() >= 0) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByCreditInterestRate(
+                            legalEntityForm.getCreditInterestRate()
+                    ),
+                    true
+            );
+        }
+
+        if (legalEntityForm.getCreditTerm() >= 0) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByCreditTerm(
+                            legalEntityForm.getCreditTerm()
+                    ),
+                    true
+            );
+        }
+
+        if (legalEntityForm.getCreditEarlyRepayment() != null) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByCreditEarlyRepayment(
+                            legalEntityForm.getCreditEarlyRepayment()
+                    ),
+                    true
+            );
+        }
+
+        if (legalEntityForm.getDepositRate() >= 0) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByDepositRate(
+                            legalEntityForm.getDepositRate()
+                    ),
+                    true
+            );
+        }
+
+        if (!legalEntityForm.getDepositCurrency().isEmpty()) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByDepositCurrency(
+                            legalEntityForm.getDepositCurrency()
+                    ),
+                    true
+            );
+        }
+
+        if (!legalEntityForm.getDepositTypesOfFunds().isEmpty()) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByDepositTypesOfFunds(
+                            legalEntityForm.getDepositTypesOfFunds()
+                    ),
+                    true
+            );
+        }
+
+        if (!legalEntityForm.getDepositAdditionalConditions().isEmpty()) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByDepositAdditionalConditions(
+                            legalEntityForm.getDepositAdditionalConditions()
+                    ),
+                    true
+            );
+        }
+
+        if (!legalEntityForm.getConsultation().isEmpty()) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByConsultation(
+                            legalEntityForm.getConsultation()
+                    ),
+                    true
+            );
+        }
+
+        if (!legalEntityForm.getCardTypes().isEmpty()) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByCardTypes(
+                            legalEntityForm.getCardTypes()
+                    ),
+                    true
+            );
+        }
+
+        if (!legalEntityForm.getCardCategories().isEmpty()) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByCardCategories(
+                            legalEntityForm.getCardCategories()
+                    ),
+                    true
+            );
+        }
+
+        if (legalEntityForm.getCardAnnualServicePrice() >= 0) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByCardAnnualServicePrice(
+                            legalEntityForm.getCardAnnualServicePrice()
+                    ),
+                    true
+            );
+        }
+
+        if (!legalEntityForm.getInsuranceAim().isEmpty()) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByInsuranceAim(
+                            legalEntityForm.getInsuranceAim()
+                    ),
+                    true
+            );
+        }
+
+        if (legalEntityForm.getInsuranceAmount() >= 0) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByInsuranceAmount(
+                            legalEntityForm.getInsuranceAmount()
+                    ),
+                    true
+            );
+        }
+
+        if (!legalEntityForm.getCorporationServices().isEmpty()) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByCorporationServices(
+                            legalEntityForm.getCorporationServices()
+                    ),
+                    true
+            );
+        }
+
+        if (!legalEntityForm.getCorporationFinancing().isEmpty()) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByCorporationFinancing(
+                            legalEntityForm.getCorporationFinancing()
+                    ),
+                    true
+            );
+        }
+
+        if (!legalEntityForm.getAcquiringTypes().isEmpty()) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByAcquiringTypes(
+                            legalEntityForm.getAcquiringTypes()
                     ),
                     true
             );
