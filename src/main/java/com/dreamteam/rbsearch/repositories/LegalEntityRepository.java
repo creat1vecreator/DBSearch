@@ -1,6 +1,7 @@
 package com.dreamteam.rbsearch.repositories;
 
 import com.dreamteam.rbsearch.entities.LegalEntityEntity;
+import com.dreamteam.rbsearch.entities.LegalEntityEntity_simple;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -14,33 +15,33 @@ public interface LegalEntityRepository extends JpaRepository<LegalEntityEntity, 
 
     Optional<LegalEntityEntity> findByNameIgnoreCase(String name);
 
-    List<LegalEntityEntity> findAllByPaymentAimsServicesIn(List<String> paymentAimsServices);
+    List<LegalEntityEntity> findAllByPaymentAimsServicesContains(String paymentAimsServices);
 
-    List<LegalEntityEntity> findAllByPaymentMethodIn(List<String> paymentMethod);
+    List<LegalEntityEntity> findAllByPaymentMethodContains(String paymentMethod);
 
     List<LegalEntityEntity> findAllByPaymentAutoEquals(Boolean paymentAuto);
 
-    List<LegalEntityEntity> findAllByServicesFinancialIn(List<String> servicesFinancial);
+    List<LegalEntityEntity> findAllByServicesFinancialContains(String servicesFinancial);
 
-    List<LegalEntityEntity> findAllByServicesSalesIn(List<String> servicesSales);
+    List<LegalEntityEntity> findAllByServicesSalesContains(String servicesSales);
 
-    List<LegalEntityEntity> findAllByServicesDocumentManagementIn(List<String> servicesDocumentManagement);
+    List<LegalEntityEntity> findAllByServicesDocumentManagementContains(String servicesDocumentManagement);
 
-    List<LegalEntityEntity> findAllByServicesAnalyticsIn(List<String> servicesAnalytics);
+    List<LegalEntityEntity> findAllByServicesAnalyticsContains(String servicesAnalytics);
 
     List<LegalEntityEntity> findAllByBankAccountOpeningPriceLessThan(Integer bankAccountOpeningPrice);
 
     List<LegalEntityEntity> findAllByBankAccountAvailabilityOfFreePeriodEquals(Boolean bankAccountAvailabilityOfFreePeriod);
 
-    List<LegalEntityEntity> findAllByBankAccountCurrencyIn(List<String> bankAccountCurrency);
+    List<LegalEntityEntity> findAllByBankAccountCurrencyContains(String bankAccountCurrency);
 
-    List<LegalEntityEntity> findAllByBankAccountTypesIn(List<String> bankAccountType);
+    List<LegalEntityEntity> findAllByBankAccountTypesContains(String bankAccountType);
 
-    List<LegalEntityEntity> findAllByAcquiringTypesIn(List<String> acquiringTypes);
+    List<LegalEntityEntity> findAllByAcquiringTypesContains(String acquiringTypes);
 
     List<LegalEntityEntity> findAllByMinimumCommissionRateOfTurnoverLessThan(Float minimumCommissionRateOfTurnover);
 
-    List<LegalEntityEntity> findAllByCreditAimIn(List<String> creditAim);
+    List<LegalEntityEntity> findAllByCreditAimContains(String creditAim);
 
     List<LegalEntityEntity> findAllByCreditInterestRateLessThan(Float creditInterestRate);
 
@@ -50,27 +51,27 @@ public interface LegalEntityRepository extends JpaRepository<LegalEntityEntity, 
 
     List<LegalEntityEntity> findAllByDepositRateGreaterThan(Float depositRate);
 
-    List<LegalEntityEntity> findAllByDepositCurrencyIn(List<String> depositCurrency);
+    List<LegalEntityEntity> findAllByDepositCurrencyContains(String depositCurrency);
 
-    List<LegalEntityEntity> findAllByDepositTypesOfFundsIn(List<String> depositTypesOfFunds);
+    List<LegalEntityEntity> findAllByDepositTypesOfFundsCOAnd(String depositTypesOfFunds);
 
-    List<LegalEntityEntity> findAllByDepositAdditionalConditionsIn(List<String> depositAdditionalConditions);
+    List<LegalEntityEntity> findAllByDepositAdditionalConditionsContains(String depositAdditionalConditions);
 
-    List<LegalEntityEntity> findAllByConsultationIn(List<String> consultation);
+    List<LegalEntityEntity> findAllByConsultationContains(String consultation);
 
-    List<LegalEntityEntity> findAllByCardTypesIn(List<String> cardTypes);
+    List<LegalEntityEntity> findAllByCardTypesContains(String cardTypes);
 
-    List<LegalEntityEntity> findAllByCardCategoriesIn(List<String> cardCategories);
+    List<LegalEntityEntity> findAllByCardCategoriesContains(String cardCategories);
 
     List<LegalEntityEntity> findAllByCardAnnualServicePriceLessThan(Integer cardAnnualServicePrice);
 
-    List<LegalEntityEntity> findAllByInsuranceAimIn(List<String> insurance_aim);
+    List<LegalEntityEntity> findAllByInsuranceAimContains(String insurance_aim);
 
     List<LegalEntityEntity> findAllByInsuranceAmountGreaterThan(Integer insuranceAmount);
 
-    List<LegalEntityEntity> findAllByCorporationServicesIn(List<String> corporationServices);
+    List<LegalEntityEntity> findAllByCorporationServicesContains(String corporationServices);
 
-    List<LegalEntityEntity> findAllByCorporationFinancingIn(List<String> corporationFinancing);
+    List<LegalEntityEntity> findAllByCorporationFinancingContains(String corporationFinancing);
 
     Optional<LegalEntityEntity> findByName(String name);
 }

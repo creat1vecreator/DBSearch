@@ -3,7 +3,6 @@ package com.dreamteam.rbsearch.services;
 import com.dreamteam.rbsearch.BankEntitiesDTO.BankEntitiesDTO;
 import com.dreamteam.rbsearch.entities.LegalEntityEntity;
 import com.dreamteam.rbsearch.form.LegalEntityForm;
-import com.dreamteam.rbsearch.repositories.LegalEntityRepository;
 import lombok.*;
 import org.springframework.stereotype.Service;
 
@@ -390,7 +389,7 @@ public class LegalEntityService {
     }
 
     private BankEntitiesDTO<LegalEntityEntity> findByCorporationFinancing(List<String> corporationFinancing) {
-        return new BankEntitiesDTO<>(legalEntityRepository.findAllByCorporationFinancingIn(corporationFinancing));
+        return new BankEntitiesDTO<>(legalEntityRepository.findAllByCorporationFinancing(corporationFinancing));
     }
 
     private BankEntitiesDTO<LegalEntityEntity> findByAcquiringTypes(List<String> acquiringTypes) {
