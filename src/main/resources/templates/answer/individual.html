@@ -42,6 +42,16 @@
                         <h2>Criterias</h2>
                         <div class="panel-group category-products" id="accordian">
                             <div class="panel panel-default">
+
+                                    <div class="panel-body" style="margin-left: 20px;">
+                                    <label for="name">Your name:</label>
+
+                                    <input type="text" id="name" name="name">
+
+                                    </div>
+
+                            </div>
+                            <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
                                         <a data-toggle="collapse" data-parent="#accordian" href="#first">
@@ -251,10 +261,6 @@
                                             <label class="form-check-label" for="5">Pensioners</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="deposit_aim" value="veterans" id="6">
-                                            <label class="form-check-label" for="6">WWII veterans and invalids</label>
-                                        </div>
-                                        <div class="form-check">
                                             <input class="form-check-input" type="checkbox" name="deposit_aim" value="motorists" id="6">
                                             <label class="form-check-label" for="6">Motorists</label>
                                         </div>
@@ -372,7 +378,7 @@
                                     <div class="panel-body">
                                         <p style="color: #4B0082;">Categories of cards:</p>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="card_categories" value="ыtandard" id="5">
+                                            <input class="form-check-input" type="checkbox" name="card_categories" value="standard" id="5">
                                             <label class="form-check-label" for="5">Standard</label>
                                         </div>
                                         <div class="form-check">
@@ -390,10 +396,6 @@
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" name="card_categories" value="for_drivers" id="6">
                                             <label class="form-check-label" for="6">For drivers</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="card_categories" value="for_moscow_residents" id="6">
-                                            <label class="form-check-label" for="6">For Moscow residents</label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" name="card_categories" value="for_pensioners" id="5">
@@ -427,13 +429,13 @@
                                     </div>
                                     <div class="panel-body">
                                         <p><b style="color: #4B0082;">Service price per year:</b><br>
-                                            <input type="text" name="card_annual_service_price_start" size="10">
+                                            <input type="text" name="card_annual_service_price" size="10">
                                         </p>
                                     </div>
                                     <div class="panel-body">
                                         <p><b style="color: #4B0082;"> Cashback in %:</b><br>
                                             <div class="slidecontainer">
-                                                <input type="range" min="1" max="20" value="10" class="slider" name = "deposit rate" id="myRange6">
+                                                <input type="range" min="1" max="20" value="10" class="slider" name = "card_cashback" id="myRange6">
                                         <p><span id="demo6"></span></p>
                                     </div>
                                     <script>
@@ -571,7 +573,7 @@
                             <div class="panel-body">
                                 <p><b style="color: #4B0082;"> Credit term in months:</b><br>
                                     <div class="slidecontainer">
-                                        <input type="range" min="1" max="60" value="10" class="slider" name = "credit_validity"i d="myRange3">
+                                        <input type="range" min="1" max="60" value="10" class="slider" name = "credit_term" id="myRange3">
                                 <p> <span id="demo3"></span></p>
                             </div>
                             <script>
@@ -659,7 +661,7 @@
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" name="insurance_aim" value="Electronic_policy_motoric_insurance" id="1">
-                            <label class="form-check-label" for="1">Electronic CTP policy/label>
+                            <label class="form-check-label" for="1">Electronic CTP policy</label>
                         </div>
                     </div>
                     <div class="panel-body">
@@ -736,10 +738,6 @@
                         <label class="form-check-label" for="5">Credit for the development of the "Far Eastern hectare"</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="unique_services" value="Wedding" id="5">
-                        <label class="form-check-label" for="5">Wedding credit</label>
-                    </div>
-                    <div class="form-check">
                         <input class="form-check-input" type="checkbox" name="unique_services" value="Bank_for_whole_family" id="5">
                         <label class="form-check-label" for="5">Bank for whole family</label>
                     </div>
@@ -766,6 +764,14 @@
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" name="unique_services" value="E-commerce" id="5">
                         <label class="form-check-label" for="5">E-commerce</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="unique_services" value="Telephone_service" id="5">
+                        <label class="form-check-label" for="5">Telephone service</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="unique_services" value="Realization_of_pledged_property" id="5">
+                        <label class="form-check-label" for="5">Realization of pledged property</label>
                     </div>
                 </div>
             </div>
@@ -800,7 +806,7 @@
 
 
 
-        <div class="title__action"><a href="../single.html" class="btn btn-success" style="margin-top: 25px;"><input type="submit" value="Применить"></a></div>
+        <a><input type="submit" value="Применить" style="background-color: #4B0082;color: white" ></a>
         </div>
         </div>
 
