@@ -2,17 +2,11 @@
         "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
-    <title>Individual</title>
-</head>
-<body>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
+    <meta content="text/html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Выбор ДБО</title>
+    <title>Individual</title>
     <link href="../../static/css/bootstrap.min.css" rel="stylesheet">
     <link href="../../static/css/main2.css" rel="stylesheet">
 
@@ -21,10 +15,7 @@
 
 <body>
 <form action="/individual/search" method="get">
-    <header id="header">
-
-
-    </header>
+    <header id="header"></header>
 
     <section id="advertisement">
         <div class="container">
@@ -32,14 +23,12 @@
     </section>
 
     <section>
-        <img src="../../static/images/IMG_2679.png" height="75" width="75" style="
-    margin-left: 40px;
-">
+        <img src="../../static/images/IMG_2679.png" height="75" width="75" style="margin-left: 40px;">
         <div class="container" class="single" style="font-family:'Microsoft JhengHei'">
             <div class="row">
                 <div class="col-sm-3">
                     <div class="left-sidebar">
-                        <h2>Criterias</h2>
+                        <h2>Criteria</h2>
                         <div class="panel-group category-products" id="accordian">
                             <div class="panel panel-default">
 
@@ -813,13 +802,13 @@
         <div class="col-sm-9 padding-right">
             <div class="features_items">
                 <h2 class="title text-center">Suitable banks</h2>
-                <div class="sidebar_section sidebar_options">
+                <div class="sidebar_section sidebar_options" th:each="bank : ${banks}">
                     <div class="sidebar_section_content">
                         <div class="sidebar_option d-flex flex-row align-items-center justify-content-start">
                             <div class="option_content">
                                 <div class="option_subtitle">
                                     <ul>
-                                        <li th:each="bank : ${banks}">
+                                        <li>
                                             <a th:href="@{'bank/'+${bank.getName()}}">
                                                 <h1 th:text="${bank.getName()}"></h1>
                                             </a>
@@ -832,58 +821,58 @@
                         </div>
 
 
-                        <div class="sidebar_option d-flex flex-row align-items-center justify-content-start">
-                            <div class="option_content">
+<!--                        <div class="sidebar_option d-flex flex-row align-items-center justify-content-start">-->
+<!--                            <div class="option_content">-->
 
-                                <div class="option_subtitle">
-                                    <ul>
-                                        <li th:each="bank : ${banks}">
-                                            <a th:href="@{'bank/'+${bank.getName()}}">
-                                                <h1 th:text="${bank.getName()}"></h1>
-                                            </a>
-                                            <h2 style="margin-left: 50px" th:text="${bank.getRating()}"></h2>
-                                            <a th:text="${bank.getPopularity()}"></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="sidebar_option d-flex flex-row align-items-center justify-content-start">
-                            <div class="option_content">
-
-                                <div class="option_subtitle">
-                                    <ul>
-                                        <li th:each="bank : ${banks}">
-                                            <a th:href="@{'bank/'+${bank.getName()}}">
-                                                <h1 th:text="${bank.getName()}"></h1>
-                                            </a>
-                                            <h2 style="margin-left: 50px" th:text="${bank.getRating()}"></h2>
-                                            <a th:text="${bank.getPopularity()}"></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+<!--                                <div class="option_subtitle">-->
+<!--                                    <ul>-->
+<!--                                        <li th:each="bank : ${banks}">-->
+<!--                                            <a th:href="@{'bank/'+${bank.getName()}}">-->
+<!--                                                <h1 th:text="${bank.getName()}"></h1>-->
+<!--                                            </a>-->
+<!--                                            <h2 style="margin-left: 50px" th:text="${bank.getRating()}"></h2>-->
+<!--                                            <a th:text="${bank.getPopularity()}"></a>-->
+<!--                                        </li>-->
+<!--                                    </ul>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
 
 
-                        <div class="sidebar_option d-flex flex-row align-items-center justify-content-start">
-                            <div class="option_content">
+<!--                        <div class="sidebar_option d-flex flex-row align-items-center justify-content-start">-->
+<!--                            <div class="option_content">-->
 
-                                <div class="option_subtitle">
-                                    <ul>
-                                        <li th:each="bank : ${banks}">
-                                            <a th:href="@{'bank/'+${bank.getName()}}">
-                                                <h1 th:text="${bank.getName()}"></h1>
-                                            </a>
-                                            <h2 style="margin-left: 50px" th:text="${bank.getRating()}"></h2>
-                                            <a th:text="${bank.getPopularity()}"></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+<!--                                <div class="option_subtitle">-->
+<!--                                    <ul>-->
+<!--                                        <li th:each="bank : ${banks}">-->
+<!--                                            <a th:href="@{'bank/'+${bank.getName()}}">-->
+<!--                                                <h1 th:text="${bank.getName()}"></h1>-->
+<!--                                            </a>-->
+<!--                                            <h2 style="margin-left: 50px" th:text="${bank.getRating()}"></h2>-->
+<!--                                            <a th:text="${bank.getPopularity()}"></a>-->
+<!--                                        </li>-->
+<!--                                    </ul>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+
+<!--                        <div class="sidebar_option d-flex flex-row align-items-center justify-content-start">-->
+<!--                            <div class="option_content">-->
+
+<!--                                <div class="option_subtitle">-->
+<!--                                    <ul>-->
+<!--                                        <li th:each="bank : ${banks}">-->
+<!--                                            <a th:href="@{'bank/'+${bank.getName()}}">-->
+<!--                                                <h1 th:text="${bank.getName()}"></h1>-->
+<!--                                            </a>-->
+<!--                                            <h2 style="margin-left: 50px" th:text="${bank.getRating()}"></h2>-->
+<!--                                            <a th:text="${bank.getPopularity()}"></a>-->
+<!--                                        </li>-->
+<!--                                    </ul>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
 
                     </div>
                 </div>
@@ -909,8 +898,5 @@
     <script src="../../static/js/response_another.js"></script>
 
 </form>
-</body>
-</html>
-
 </body>
 </html>
