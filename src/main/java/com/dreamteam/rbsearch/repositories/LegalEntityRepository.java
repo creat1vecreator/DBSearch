@@ -53,7 +53,7 @@ public interface LegalEntityRepository extends JpaRepository<LegalEntityEntity, 
 
     List<LegalEntityEntity> findAllByDepositCurrencyContains(String depositCurrency);
 
-    List<LegalEntityEntity> findAllByDepositTypesOfFundsCOAnd(String depositTypesOfFunds);
+    List<LegalEntityEntity> findAllByDepositTypesOfFundsContains(String depositTypesOfFunds);
 
     List<LegalEntityEntity> findAllByDepositAdditionalConditionsContains(String depositAdditionalConditions);
 
