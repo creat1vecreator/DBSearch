@@ -2,10 +2,7 @@ package com.dreamteam.rbsearch.controllers;
 
 import com.dreamteam.rbsearch.BankEntitiesDTO.BankEntitiesDTO;
 import com.dreamteam.rbsearch.entities.IndividualEntity;
-import com.dreamteam.rbsearch.entities.IndividualEntity_simple;
-import com.dreamteam.rbsearch.form.IndividualForm;
 import com.dreamteam.rbsearch.form.IndividualForm_simple;
-import com.dreamteam.rbsearch.services.IndividualService;
 import com.dreamteam.rbsearch.services.IndividualService_simple;
 import com.google.gson.Gson;
 import lombok.RequiredArgsConstructor;
@@ -15,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+@Deprecated
 @Controller
 @RequiredArgsConstructor
 @RequestMapping("/individual_simple")
@@ -81,7 +79,7 @@ public class IndividualController_simple {
                 uniqueServices
         );
         System.out.println(individualForm_simple);
-        BankEntitiesDTO<IndividualEntity_simple> bankEntitiesDTO = individualService_simple.find(individualForm_simple);
+        BankEntitiesDTO<IndividualEntity> bankEntitiesDTO = individualService_simple.find(individualForm_simple);
         model.addAttribute("banks", bankEntitiesDTO.getBankEntities());
         return "answer/individual";
     }
@@ -89,9 +87,9 @@ public class IndividualController_simple {
     @GetMapping("/bank/{name}")
     public String findByName(@PathVariable String name, Model model) {
         try {
-            IndividualEntity_simple individualEntity = individualService_simple.findByName(name);
+            IndividualEntity individualEntity = individualService_simple.findByName(name);
             model.addAttribute("bank", individualEntity);
-            return "single_individual";
+            return "single_individual_";
         } catch (RuntimeException runtimeException) {
             return "error";
         }
@@ -99,7 +97,7 @@ public class IndividualController_simple {
 
     @GetMapping("/all")
     public @ResponseBody ResponseEntity<String> getAllBanks() {
-        BankEntitiesDTO<IndividualEntity_simple> bankEntitiesDTO = individualService_simple.findAll();
+        BankEntitiesDTO<IndividualEntity> bankEntitiesDTO = individualService_simple.findAll();
         String jsonResponse = new Gson().toJson(bankEntitiesDTO);
         System.out.println(jsonResponse);
         return new ResponseEntity<>(jsonResponse, HttpStatus.OK);

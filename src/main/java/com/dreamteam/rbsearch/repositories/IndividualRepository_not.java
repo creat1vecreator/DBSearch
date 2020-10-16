@@ -1,46 +1,46 @@
 package com.dreamteam.rbsearch.repositories;
 
-import com.dreamteam.rbsearch.entities.IndividualEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
+@Deprecated
 @Repository
-public interface IndividualRepository extends JpaRepository<IndividualEntity, Long> {
+public interface IndividualRepository_not extends JpaRepository<IndividualEntity, Long> {
 
     Optional<IndividualEntity> findById(Long id);
 
     Optional<IndividualEntity> findByNameIgnoreCase(String name);
 
-    List<IndividualEntity> findAllByTransferTypesContains(String transferTypes);
+    List<IndividualEntity> findAllByTransferTypesIn(List<String> transferTypes);
 
     List<IndividualEntity> findAllByTransferAutoEquals(Boolean transferAuto);
 
-    List<IndividualEntity> findAllByTransferCurrencyContains(String transferCurrency);
+    List<IndividualEntity> findAllByTransferCurrencyIn(List<String> transferCurrency);
 
-    List<IndividualEntity> findAllByPaymentMethodContains(String paymentMethod);
+    List<IndividualEntity> findAllByPaymentMethodIn(List<String> paymentMethod);
 
-    List<IndividualEntity> findAllByPaymentAimsServicesContains(String paymentAimsServices);
+    List<IndividualEntity> findAllByPaymentAimsServicesIn(List<String> paymentAimsServices);
 
     List<IndividualEntity> findAllByPaymentAutoEquals(Boolean payment_auto);
 
     List<IndividualEntity> findAllByDepositRateGreaterThan(Float depositRate);
 
-    List<IndividualEntity> findAllByDepositAimContains(String depositAim);
+    List<IndividualEntity> findAllByDepositAimIn(List<String> depositAim);
 
-    List<IndividualEntity> findAllByDepositCurrencyContains(String depositCurrency);
+    List<IndividualEntity> findAllByDepositCurrencyIn(List<String> depositCurrency);
 
-    List<IndividualEntity> findAllByDepositAdditionalConditionsContains(String depositAdditionalConditions);
+    List<IndividualEntity> findAllByDepositAdditionalConditionsIn(List<String> depositAdditionalConditions);
 
-    List<IndividualEntity> findAllByConsultationContains(String consultation);
+    List<IndividualEntity> findAllByConsultationIn(List<String> consultation);
 
     List<IndividualEntity> findAllByCardFreeServiceEquals(Boolean cardFreeService);
 
-    List<IndividualEntity> findAllByCardTypesContains(String cardTypes);
+    List<IndividualEntity> findAllByCardTypesIn(List<String> cardTypes);
 
-    List<IndividualEntity> findAllByCardCategoriesContains(String cardCategories);
+    List<IndividualEntity> findAllByCardCategoriesIn(List<String> cardCategories);
 
     List<IndividualEntity> findAllByCardAnnualServicePriceLessThan(Integer cardAnnualServicePrice);
 
@@ -50,7 +50,7 @@ public interface IndividualRepository extends JpaRepository<IndividualEntity, Lo
 
     List<IndividualEntity> findAllByCardValidityGreaterThan(Integer cardValidity);
 
-    List<IndividualEntity> findAllByCreditAimContains(String creditAim);
+    List<IndividualEntity> findAllByCreditAimIn(List<String> creditAim);
 
     List<IndividualEntity> findAllByCreditInterestRateLessThan(Float creditInterestRate);
 
@@ -60,7 +60,7 @@ public interface IndividualRepository extends JpaRepository<IndividualEntity, Lo
 
     List<IndividualEntity> findAllByCreditAmountGreaterThan(Integer creditAmount);
 
-    List<IndividualEntity> findAllByInsuranceAimContains(String insuranceAim);
+    List<IndividualEntity> findAllByInsuranceAimIn(List<String> insuranceAim);
 
     List<IndividualEntity> findAllByInsuranceAmountGreaterThan(Integer insuranceAmount);
 
@@ -68,5 +68,5 @@ public interface IndividualRepository extends JpaRepository<IndividualEntity, Lo
 
     List<IndividualEntity> findByOrderByPopularity();
 
-    List<IndividualEntity> findAllByUniqueServicesContains(String uniqueServices);
+    List<IndividualEntity> findAllByUniqueServicesIn(List<String> uniqueServices);
 }

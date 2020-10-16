@@ -1,16 +1,16 @@
 package com.dreamteam.rbsearch.entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
+@Deprecated
 @Data
-@Entity(name = "legal_entity_bank_list_2")
+@Entity(name = "legal_entity_bank_list_release")
 @AllArgsConstructor
 @NoArgsConstructor
-public class LegalEntityEntity_simple extends BaseEntity {
+public class LegalEntityEntity_not extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,25 +20,31 @@ public class LegalEntityEntity_simple extends BaseEntity {
     private String name;
 
     @Column(name = "payment_aims_services")
-    private String paymentAimsServices;
+    @ElementCollection
+    private List<String> paymentAimsServices;
 
     @Column(name = "payment_method")
-    private String paymentMethod;
+    @ElementCollection
+    private List<String> paymentMethod;
 
     @Column(name = "payment_auto")
     private Boolean paymentAuto;
 
     @Column(name = "services_financial")
-    private String servicesFinancial;
+    @ElementCollection
+    private List<String> servicesFinancial;
 
     @Column(name = "services_sales")
-    private String servicesSales;
+    @ElementCollection
+    private List<String> servicesSales;
 
     @Column(name = "services_document_management")
-    private String servicesDocumentManagement;
+    @ElementCollection
+    private List<String> servicesDocumentManagement;
 
     @Column(name = "services_analytics")
-    private String servicesAnalytics;
+    @ElementCollection
+    private List<String> servicesAnalytics;
 
     @Column(name = "bank_account_opening_price")
     private Integer bankAccountOpeningPrice;
@@ -47,19 +53,23 @@ public class LegalEntityEntity_simple extends BaseEntity {
     private Boolean bankAccountAvailabilityOfFreePeriod;
 
     @Column(name = "bank_account_currency")
-    private String bankAccountCurrency;
+    @ElementCollection
+    private List<String> bankAccountCurrency;
 
     @Column(name = "bank_account_types")
-    private String bankAccountTypes;
+    @ElementCollection
+    private List<String> bankAccountTypes;
 
     @Column(name = "acquiring_types")
-    private String acquiringTypes;
+    @ElementCollection
+    private List<String> acquiringTypes;
 
     @Column(name = "minimum_commission_rate_of_turnover")
     private Float minimumCommissionRateOfTurnover;
 
     @Column(name = "credit_aim")
-    private String creditAim;
+    @ElementCollection
+    private List<String> creditAim;
 
     @Column(name = "credit_interest_rate")
     private Float creditInterestRate;
@@ -74,38 +84,48 @@ public class LegalEntityEntity_simple extends BaseEntity {
     private Float depositRate;
 
     @Column(name = "deposit_currency")
-    private String depositCurrency;
+    @ElementCollection
+    private List<String> depositCurrency;
 
     @Column(name = "deposit_types_of_funds")
-    private String depositTypesOfFunds;
+    @ElementCollection
+    private List<String> depositTypesOfFunds;
 
     @Column(name = "deposit_additional_conditions")
-    private String depositAdditionalConditions;
+    @ElementCollection
+    private List<String> depositAdditionalConditions;
 
     @Column
-    private String consultation;
+    @ElementCollection
+    private List<String> consultation;
 
     @Column(name = "card_types")
-    private String cardTypes;
+    @ElementCollection
+    private List<String> cardTypes;
 
     @Column(name = "card_categories")
-    private String cardCategories;
+    @ElementCollection
+    private List<String> cardCategories;
 
     @Column(name = "card_annual_service_price")
     private Integer cardAnnualServicePrice;
 
     @Column(name = "insurance_aim")
-    private String insuranceAim;
+    @ElementCollection
+    private List<String> insuranceAim;
 
     @Column(name = "insurance_amount")
     private Integer insuranceAmount;
 
     @Column(name = "corporation_services")
-    private String corporationServices;
+    @ElementCollection
+    private List<String> corporationServices;
 
     @Column(name = "corporation_financing")
-    private String corporationFinancing;
+    @ElementCollection
+    private List<String> corporationFinancing;
 
     @Column(name = "security") // only for web
-    private String security;
+    @ElementCollection
+    private List<String> security;
 }

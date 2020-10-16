@@ -38,7 +38,7 @@ public class IndividualController {
             @RequestParam(value = "card_annual_service_price", required = false) String cardAnnualServicePrice,
             @RequestParam(value = "card_cahsback", required = false) String cardCashback,
             @RequestParam(value = "card_design_to_choose", required = false) String cardDesignToChoose,
-            @RequestParam(value = "card_validity") String cardValidity,
+            @RequestParam(value = "card_validity", required = false) String cardValidity,
             @RequestParam(value = "credit_aim", required = false) String creditAim,
             @RequestParam(value = "credit_interest_rate", required = false) String creditInterestRate,
             @RequestParam(value = "credit_term", required = false) String creditTerm,

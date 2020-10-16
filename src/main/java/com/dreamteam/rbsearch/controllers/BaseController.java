@@ -1,6 +1,6 @@
 package com.dreamteam.rbsearch.controllers;
 
-import com.dreamteam.rbsearch.services.IndividualService;
+import com.dreamteam.rbsearch.services.IndividualService_not;
 import com.dreamteam.rbsearch.services.LegalEntityService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequiredArgsConstructor
 @RequestMapping()
 public class BaseController {
-    private final IndividualService individualService;
+    private final IndividualService_not individualService;
     private final LegalEntityService legalEntityService;
 
     @GetMapping("/")
