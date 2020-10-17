@@ -12,7 +12,7 @@
 
 
 </head>
-<form action="/individual/search" th:action="@{/search}" method="get">
+<form action="/individual/search" method="get">
 <div>
 
 <!--    <header id="header"></header>-->
@@ -418,7 +418,7 @@
                                     </div>
                                     <div class="panel-body">
                                         <p><b style="color: #4B0082;">Service price per year:</b><br>
-                                            <input type="text" name="card_annual_service_price" size="10">
+                                            <input type="text" name="card_annual_service_price" size="10" value="200">
                                         </p>
                                     </div>
                                     <div class="panel-body">
@@ -798,7 +798,7 @@
         <div class="col-sm-9 padding-right">
             <div class="features_items">
                 <h2 class="title text-center">Suitable banks</h2>
-                <div class="sidebar_section sidebar_options" th:each="bank : ${banks}">
+                <div class="sidebar_section sidebar_options" th:each="bank : ${banks.getBankEntities()}">
                     <div class="sidebar_section_content">
                         <div class="sidebar_option d-flex flex-row align-items-center justify-content-start">
                             <div class="option_content">
@@ -812,9 +812,9 @@
                                         <li>
                                             <h2 style="margin-left: 50px" th:text="${bank.getRating()}"></h2>
                                         </li>
-                                        <li>
-                                            <a th:text="${bank.getPopularity()}"></a>
-                                        </li>
+<!--                                        <li>-->
+<!--                                            <a th:text="${bank.getPopularity()}"></a>-->
+<!--                                        </li>-->
                                     </ul>
                                 </div>
                             </div>

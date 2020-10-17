@@ -80,7 +80,7 @@ public class LegalEntityService {
             );
         }
 
-        if (legalEntityForm.getBankAccountOpeningPrice() >= 0) {
+        if (legalEntityForm.getBankAccountOpeningPrice() != null) {
             bankEntitiesDTO.addBankEntityList(
                     findByBankAccountOpeningPrice(
                             legalEntityForm.getBankAccountOpeningPrice()
@@ -116,7 +116,7 @@ public class LegalEntityService {
             );
         }
 
-        if (legalEntityForm.getMinimumCommissionRateOfTurnover() >= 0) {
+        if (legalEntityForm.getMinimumCommissionRateOfTurnover() != null) {
             bankEntitiesDTO.addBankEntityList(
                     findByMinimumCommissionRateOfTurnover(
                             legalEntityForm.getMinimumCommissionRateOfTurnover()
@@ -134,7 +134,7 @@ public class LegalEntityService {
             );
         }
 
-        if (legalEntityForm.getCreditInterestRate() >= 0) {
+        if (legalEntityForm.getCreditInterestRate() != null) {
             bankEntitiesDTO.addBankEntityList(
                     findByCreditInterestRate(
                             legalEntityForm.getCreditInterestRate()
@@ -143,7 +143,7 @@ public class LegalEntityService {
             );
         }
 
-        if (legalEntityForm.getCreditTerm() >= 0) {
+        if (legalEntityForm.getCreditTerm() != null) {
             bankEntitiesDTO.addBankEntityList(
                     findByCreditTerm(
                             legalEntityForm.getCreditTerm()
@@ -161,7 +161,7 @@ public class LegalEntityService {
             );
         }
 
-        if (legalEntityForm.getDepositRate() >= 0) {
+        if (legalEntityForm.getDepositRate() != null) {
             bankEntitiesDTO.addBankEntityList(
                     findByDepositRate(
                             legalEntityForm.getDepositRate()
@@ -224,7 +224,7 @@ public class LegalEntityService {
             );
         }
 
-        if (legalEntityForm.getCardAnnualServicePrice() >= 0) {
+        if (legalEntityForm.getCardAnnualServicePrice() != null) {
             bankEntitiesDTO.addBankEntityList(
                     findByCardAnnualServicePrice(
                             legalEntityForm.getCardAnnualServicePrice()
@@ -242,7 +242,7 @@ public class LegalEntityService {
             );
         }
 
-        if (legalEntityForm.getInsuranceAmount() >= 0) {
+        if (legalEntityForm.getInsuranceAmount() != null) {
             bankEntitiesDTO.addBankEntityList(
                     findByInsuranceAmount(
                             legalEntityForm.getInsuranceAmount()

@@ -32,7 +32,7 @@ public class IndividualService {
             }
         }
 
-        if (individualForm.getCardAnnualServicePrice() >= 0) {
+        if (individualForm.getCardAnnualServicePrice() != null) {
             bankEntitiesDTO.addBankEntityList(
                     findByCardAnnualServicePrice(
                             individualForm.getCardAnnualServicePrice()
@@ -41,7 +41,7 @@ public class IndividualService {
             );
         }
 
-        if (individualForm.getDepositRate() >= 0) {
+        if (individualForm.getDepositRate() != null) {
             bankEntitiesDTO.addBankEntityList(
                     findByDepositRate(
                             individualForm.getDepositRate()
@@ -50,7 +50,7 @@ public class IndividualService {
             );
         }
 
-        if (individualForm.getCardCashback() >= 0) {
+        if (individualForm.getCardCashback() != null) {
             bankEntitiesDTO.addBankEntityList(
                     findByCardCashback(
                             individualForm.getCardCashback()
@@ -59,7 +59,7 @@ public class IndividualService {
             );
         }
 
-        if (individualForm.getCardValidity() >= 0) {
+        if (individualForm.getCardValidity() != null) {
             bankEntitiesDTO.addBankEntityList(
                     findByCardValidity(
                             individualForm.getCardValidity()
@@ -68,7 +68,7 @@ public class IndividualService {
             );
         }
 
-        if (individualForm.getCreditInterestRate() >= 0) {
+        if (individualForm.getCreditInterestRate() != null) {
             bankEntitiesDTO.addBankEntityList(
                     findByCreditInterestRate(
                             individualForm.getCreditInterestRate()
@@ -77,7 +77,7 @@ public class IndividualService {
             );
         }
 
-        if (individualForm.getCreditTerm() >= 0) {
+        if (individualForm.getCreditTerm() != null) {
             bankEntitiesDTO.addBankEntityList(
                     findByCreditTerm(
                             individualForm.getCreditTerm()
@@ -86,7 +86,7 @@ public class IndividualService {
             );
         }
 
-        if (individualForm.getCreditAmount() >= 0) {
+        if (individualForm.getCreditAmount() != null) {
             bankEntitiesDTO.addBankEntityList(
                     findByCreditAmount(
                             individualForm.getCreditAmount()
@@ -95,7 +95,7 @@ public class IndividualService {
             );
         }
 
-        if (individualForm.getInsuranceAmount() >= 0) {
+        if (individualForm.getInsuranceAmount() != null) {
             bankEntitiesDTO.addBankEntityList(
                     findByInsuranceAmount(
                             individualForm.getCreditAmount()
