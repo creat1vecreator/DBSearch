@@ -17,24 +17,16 @@
 <div th:object="${bank}" class="single" style="font-family:'Microsoft JhengHei'">
     <div class="container">
         <div class="col-md-9">
-            <div class="col-md-5 grid">
-
-                <img src="../static/images/VyFIANEr_400x400.jpg" height="250" width="250">
-
-            </div>
 
             <div class="col-md-7 single-top-in">
-                    <h3>Name of the Bank</h3>
+                    <h3 th:text="${bank.getName()}"></h3>
                     <div class="tab-head">
-
                             <ul><a>Advantages</a>
                                 <li><p th:text="${bank.getAdvantages()}"></p></li>
                             </ul>
                             <ul><a>Disadvantages</a>
                                 <li><p th:text="${bank.getDisadvantages()}"></p></li>
                             </ul>
-
-
                     </div>
                 <div class="col-md-20 tabulation" style="margin-top: 40%;margin-left:-100%">
 
@@ -42,7 +34,7 @@
                                 <ul><h2 style="font-size: 20px">Transfers</h2>
                                     <li> <p th:text="${bank.getTransferTypes()}"></p></li>
                                     <li> <p th:text="${bank.getTransferAuto()}"></p></li>
-                                    <p> <p th:text="${bank.getTransferCurrency()}"></p></li>
+                                    <li> <p th:text="${bank.getTransferCurrency()}"></p></li>
                                 </ul>
                             </div>
                             <div>
@@ -56,82 +48,66 @@
                             </div>
                             <div>
                                 <ul><h2 style="font-size: 20px">Cards</h2>
-                                    <li> <p th:text="${bank.getCardFreeService()}"></p></li>
-                                            <li><p th:text="${bank.getCardTypes()}"></p></li>
-                                            <li><p th:text="${bank.getCardCategories()}"></p></li>
-                                            <li><p th:text="${bank.getCardAnnualServicePrice()}"></p></li>
-                                            <li><p th:text="${bank.getCardCashback()}"></p></li>
-                                            <li><p th:text="${bank.getCardDesignToChoose()}"></p></li>
-                                            <li><p th:text="${bank.getCardValidity()}"></p></li>
-                                        </ul>
-                                </div>
+                                    <li><p th:text="${bank.getCardFreeService()}"></p></li>
+                                    <li><p th:text="${bank.getCardTypes()}"></p></li>
+                                    <li><p th:text="${bank.getCardCategories()}"></p></li>
+                                    <li><p th:text="${bank.getCardAnnualServicePrice()}"></p></li>
+                                    <li><p th:text="${bank.getCardCashback()}"></p></li>
+                                    <li><p th:text="${bank.getCardDesignToChoose()}"></p></li>
+                                    <li><p th:text="${bank.getCardValidity()}"></p></li>
+                                </ul>
+                            </div>
 
                             <div >
-                                <ul><h2 style="font-size: 20px">Credits</h2>
+                                <ul>
+                                    <li><h2 style="font-size: 20px">Credits</h2></li>
                                     <li> <p th:text="${bank.getCreditAim()}"></p></li>
                                     <li><p th:text="${bank.getCreditInterestRate()}"></p></li>
                                     <li ><p th:text="${bank.getCreditTerm()}"></p></li>
                                     <li> <p th:text="${bank.getCreditEarlyPayment()}"></p></li>
                                     <li> <p th:text="${bank.getCreditAmount()}"></p></li>
-
-
                                 </ul>
                             </div>
                             <div >
-                                <ul><h2 style="font-size: 20px">Deposits</h2>
+                                <ul>
+                                    <li><h2 style="font-size: 20px">Deposits</h2></li>
                                     <li> <p th:text="${bank.getDepositRate()}"></p></li>
                                     <li> <p th:text="${bank.getDepositAim()}"></p></li>
                                     <li> <p th:text="${bank.getDepositCurrency()}"></p></li>
                                     <li> <p th:text="${bank.getDepositAdditionalConditions()}"></p></li>
-
                                 </ul>
                             </div>
                             <div>
-                                <ul><h2 style="font-size: 20px">Insurance</h2>
+                                <ul>
+                                    <li><h2 style="font-size: 20px">Insurance</h2></li>
                                     <li> <p th:text="${bank.getInsuranceAim()}"></p></li>
                                     <li> <p th:text="${bank.getInsuranceAmount()}"></p></li>
-
                                 </ul>
                             </div>
                             <div>
-                                <ul><h2 style="font-size: 20px">24/7 support</h2>
+                                <ul>
+                                    <li><h2 style="font-size: 20px">24/7 support</h2></li>
                                     <li> <p th:text="${bank.getConsultation()}"></p></li>
-
                                 </ul>
                             </div>
                             <div >
-                                <ul><h2 style="font-size: 20px">Unique services</h2>
+                                <ul>
+                                    <li><h2 style="font-size: 20px">Unique services</h2></li>
                                     <li> <p th:text="${bank.getUniqueServices()}"></p></li>
-
                                 </ul>
                             </div>
                             <div >
-                                <ul><h2 style="font-size: 20px">Security</h2>
+                                <ul>
+                                    <li><h2 style="font-size: 20px">Security</h2></li>
                                     <li> <p th:text="${bank.getConsultation()}"></p></li>
-
                                 </ul>
                             </div>
                         </div>
-
                     </div>
-
-
-
-
                 <div class="clearfix"></div>
             </div>
-
         </div>
     </div>
-
-    <footer id="footer">
-
-
-    </footer>
-
-
-
-
     <script src="../static/js/bootstrap.min.js"></script>
 
 </div>

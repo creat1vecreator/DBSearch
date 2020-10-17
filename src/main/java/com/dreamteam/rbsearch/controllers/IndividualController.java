@@ -91,6 +91,7 @@ public class IndividualController {
     public String findByName(@PathVariable String name, Model model) {
         try {
             IndividualEntity individualEntity = individualService.findByName(name);
+            System.out.println(individualEntity);
             model.addAttribute("bank", individualEntity);
             return "single_individual";
         } catch (RuntimeException runtimeException) {
