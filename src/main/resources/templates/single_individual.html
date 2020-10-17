@@ -35,13 +35,14 @@
                         </nav>
                         <div class="tab-content one">
                             <div class="tab-pane active text-style" id="tab12">
-                                <div class="facts" >
-                                    <ul>
-                                        <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>first</li>
-                                        <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>second</li>
-                                        <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>third</li>
+                                <div class="facts">
+<!--                                    <ul>-->
+<!--                                        <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>first</li>-->
+<!--                                        <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>second</li>-->
+<!--                                        <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>third</li>-->
 
-                                    </ul>
+<!--                                    </ul>-->
+                                    <p th:text="${bank.getAdvantages()}"></p>
                                 </div>
 
                             </div>
@@ -49,11 +50,12 @@
 
                                 <div class="facts">
 
-                                    <ul >
-                                        <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>first</li>
-                                        <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>second</li>
-                                        <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>third </li>
-                                    </ul>
+<!--                                    <ul >-->
+<!--                                        <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>first</li>-->
+<!--                                        <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>second</li>-->
+<!--                                        <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>third </li>-->
+<!--                                    </ul>-->
+                                    <p th:text="${bank.getDisadvantages()}"></p>
                                 </div>
 
                             </div>
