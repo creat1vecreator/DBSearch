@@ -81,7 +81,6 @@ public class IndividualController {
         System.out.println(individualForm);
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO = individualService.find(individualForm);
         System.out.println(bankEntitiesDTO.getBankEntities().size());
-//        bankEntitiesDTO.getBankEntities().forEach(System.out::println);
         model.addAttribute("banks", bankEntitiesDTO.getBankEntities());
         return "answer/individual";
     }

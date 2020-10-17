@@ -108,5 +108,12 @@ public class LegalEntityEntity extends BaseEntity {
     @Column(name = "corporation_financing")
     private String corporationFinancing;
 
+    @Column
     private String security;
+
+    @Column
+    private String rating;
+
+    @Column
+    private String popularity;
 }

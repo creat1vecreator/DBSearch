@@ -49,7 +49,8 @@ public class LegalEntityController {
             @RequestParam(name = "insurance_aim", required = false) String insuranceAim,
             @RequestParam(name = "insurance_amount", required = false) String insuranceAmount,
             @RequestParam(name = "corporation_services", required = false) String corporationServices,
-            @RequestParam(name = "corporation_financing", required = false) String corporationFinancing
+            @RequestParam(name = "corporation_financing", required = false) String corporationFinancing,
+            @RequestParam(name = "sorting", required = false) String sorting
     ) {
         LegalEntityForm legalEntityForm = new LegalEntityForm(
                 paymentAimsServices,
@@ -80,7 +81,8 @@ public class LegalEntityController {
                 insuranceAim,
                 insuranceAmount,
                 corporationServices,
-                corporationFinancing
+                corporationFinancing,
+                sorting
         );
         System.out.println(legalEntityForm);
         BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO = legalEntityService.find(legalEntityForm);

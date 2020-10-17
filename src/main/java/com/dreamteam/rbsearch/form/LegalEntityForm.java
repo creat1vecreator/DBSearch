@@ -37,6 +37,7 @@ public class LegalEntityForm {
     private Integer insuranceAmount;
     private List<String> corporationServices;
     private List<String> corporationFinancing;
+    private String sorting;
 
     public LegalEntityForm(
             String paymentAimsServices,
@@ -67,7 +68,8 @@ public class LegalEntityForm {
             String insuranceAim,
             String insuranceAmount,
             String corporationServices,
-            String corporationFinancing
+            String corporationFinancing,
+            String sorting
     ) {
         this.paymentAimsServices = paymentAimsServices == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(paymentAimsServices.split(",")));
         this.paymentMethod = paymentMethod == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(paymentMethod.split(",")));
@@ -98,5 +100,6 @@ public class LegalEntityForm {
         this.insuranceAmount = Integer.parseInt(insuranceAmount);
         this.corporationServices = corporationServices == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(corporationServices.split(",")));
         this.corporationFinancing = corporationFinancing == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(corporationFinancing.split(",")));
+        this.sorting = sorting == null ? "" : sorting;
     }
 }

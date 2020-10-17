@@ -44,11 +44,11 @@ public interface LegalEntityRepository extends JpaRepository<LegalEntityEntity, 
 
     List<LegalEntityEntity> findAllByCreditInterestRateLessThan(Float creditInterestRate);
 
-    List<LegalEntityEntity> findAllByCreditTermGreaterThan(Integer creditTerm);
+    List<LegalEntityEntity> findAllByCreditTermGreaterThanEqual(Integer creditTerm);
 
     List<LegalEntityEntity> findAllByCreditEarlyRepaymentEquals(Boolean creditEarlyRepayment);
 
-    List<LegalEntityEntity> findAllByDepositRateGreaterThan(Float depositRate);
+    List<LegalEntityEntity> findAllByDepositRateGreaterThanEqual(Float depositRate);
 
     List<LegalEntityEntity> findAllByDepositCurrencyContainsIgnoreCase(String depositCurrency);
 
@@ -66,11 +66,15 @@ public interface LegalEntityRepository extends JpaRepository<LegalEntityEntity, 
 
     List<LegalEntityEntity> findAllByInsuranceAimContainsIgnoreCase(String insurance_aim);
 
-    List<LegalEntityEntity> findAllByInsuranceAmountGreaterThan(Integer insuranceAmount);
+    List<LegalEntityEntity> findAllByInsuranceAmountGreaterThanEqual(Integer insuranceAmount);
 
     List<LegalEntityEntity> findAllByCorporationServicesContainsIgnoreCase(String corporationServices);
 
     List<LegalEntityEntity> findAllByCorporationFinancingContainsIgnoreCase(String corporationFinancing);
+
+    List<LegalEntityEntity> findAllByOrderByRating();
+
+    List<LegalEntityEntity> findAllByOrderByPopularity();
 
     Optional<LegalEntityEntity> findByName(String name);
 }
