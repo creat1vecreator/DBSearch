@@ -17,11 +17,6 @@ public class LegalEntityService {
     public BankEntitiesDTO<LegalEntityEntity> find(LegalEntityForm legalEntityForm) {
         BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO = new BankEntitiesDTO<>();
 
-        for (LegalEntityEntity bank : bankEntitiesDTO.getBankEntities()) {
-            System.out.println(bank.getName());
-        }
-        System.out.println(bankEntitiesDTO.getBankEntities().size());
-
         if (!legalEntityForm.getSorting().isBlank()) {
             if (legalEntityForm.getSorting().contains("Rating")) {
                 bankEntitiesDTO.addBankEntityList(
@@ -37,10 +32,10 @@ public class LegalEntityService {
             }
         }
 
-        for (LegalEntityEntity bank : bankEntitiesDTO.getBankEntities()) {
-            System.out.println(bank.getName());
-        }
-        System.out.println(bankEntitiesDTO.getBankEntities().size());
+//        for (LegalEntityEntity bank : bankEntitiesDTO.getBankEntities()) {
+//            System.out.println(bank.getName());
+//        }
+//        System.out.println(bankEntitiesDTO.getBankEntities().size());
 
         if (!legalEntityForm.getPaymentAimsServices().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
@@ -51,6 +46,11 @@ public class LegalEntityService {
             );
         }
 
+//        for (LegalEntityEntity bank : bankEntitiesDTO.getBankEntities()) {
+//            System.out.println(bank.getName());
+//        }
+//        System.out.println(bankEntitiesDTO.getBankEntities().size());
+
         if (!legalEntityForm.getPaymentMethod().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
                     findByPaymentMethod(
@@ -59,6 +59,11 @@ public class LegalEntityService {
                     true
             );
         }
+
+//        for (LegalEntityEntity bank : bankEntitiesDTO.getBankEntities()) {
+//            System.out.println(bank.getName());
+//        }
+//        System.out.println(bankEntitiesDTO.getBankEntities().size());
 
         if (legalEntityForm.getPaymentAuto() != null) {
             bankEntitiesDTO.addBankEntityList(
@@ -69,6 +74,11 @@ public class LegalEntityService {
             );
         }
 
+//        for (LegalEntityEntity bank : bankEntitiesDTO.getBankEntities()) {
+//            System.out.println(bank.getName());
+//        }
+//        System.out.println(bankEntitiesDTO.getBankEntities().size());
+
         if (!legalEntityForm.getServicesFinancial().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
                     findByServicesFinancial(
@@ -77,6 +87,11 @@ public class LegalEntityService {
                     true
             );
         }
+
+//        for (LegalEntityEntity bank : bankEntitiesDTO.getBankEntities()) {
+//            System.out.println(bank.getName());
+//        }
+//        System.out.println(bankEntitiesDTO.getBankEntities().size());
 
         if (!legalEntityForm.getServicesSales().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
@@ -105,6 +120,11 @@ public class LegalEntityService {
             );
         }
 
+//        for (LegalEntityEntity bank : bankEntitiesDTO.getBankEntities()) {
+//            System.out.println(bank.getName());
+//        }
+//        System.out.println(bankEntitiesDTO.getBankEntities().size());
+
         if (legalEntityForm.getBankAccountOpeningPrice() != null) {
             bankEntitiesDTO.addBankEntityList(
                     findByBankAccountOpeningPrice(
@@ -113,6 +133,11 @@ public class LegalEntityService {
                     true
             );
         }
+
+//        for (LegalEntityEntity bank : bankEntitiesDTO.getBankEntities()) {
+//            System.out.println(bank.getName());
+//        }
+//        System.out.println(bankEntitiesDTO.getBankEntities().size());
 
         if (legalEntityForm.getBankAccountAvailabilityOfFreePeriod() != null) {
             bankEntitiesDTO.addBankEntityList(
@@ -140,6 +165,11 @@ public class LegalEntityService {
                     true
             );
         }
+
+//        for (LegalEntityEntity bank : bankEntitiesDTO.getBankEntities()) {
+//            System.out.println(bank.getName());
+//        }
+//        System.out.println(bankEntitiesDTO.getBankEntities().size());
 
         if (legalEntityForm.getMinimumCommissionRateOfTurnover() != null) {
             bankEntitiesDTO.addBankEntityList(
@@ -177,6 +207,11 @@ public class LegalEntityService {
             );
         }
 
+//        for (LegalEntityEntity bank : bankEntitiesDTO.getBankEntities()) {
+//            System.out.println(bank.getName());
+//        }
+//        System.out.println(bankEntitiesDTO.getBankEntities().size());
+
         if (legalEntityForm.getCreditEarlyRepayment() != null) {
             bankEntitiesDTO.addBankEntityList(
                     findByCreditEarlyRepayment(
@@ -204,6 +239,11 @@ public class LegalEntityService {
             );
         }
 
+//        for (LegalEntityEntity bank : bankEntitiesDTO.getBankEntities()) {
+//            System.out.println(bank.getName());
+//        }
+//        System.out.println(bankEntitiesDTO.getBankEntities().size());
+
         if (!legalEntityForm.getDepositCurrency().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
                     findByDepositCurrency(
@@ -230,6 +270,11 @@ public class LegalEntityService {
                     true
             );
         }
+
+//        for (LegalEntityEntity bank : bankEntitiesDTO.getBankEntities()) {
+//            System.out.println(bank.getName());
+//        }
+//        System.out.println(bankEntitiesDTO.getBankEntities().size());
 
         if (!legalEntityForm.getConsultation().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
@@ -276,6 +321,11 @@ public class LegalEntityService {
             );
         }
 
+//        for (LegalEntityEntity bank : bankEntitiesDTO.getBankEntities()) {
+//            System.out.println(bank.getName());
+//        }
+//        System.out.println(bankEntitiesDTO.getBankEntities().size());
+
         if (!legalEntityForm.getInsuranceAim().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
                     findByInsuranceAim(
@@ -285,6 +335,11 @@ public class LegalEntityService {
             );
         }
 
+        for (LegalEntityEntity bank : bankEntitiesDTO.getBankEntities()) {
+            System.out.println(bank.getName());
+        }
+        System.out.println(bankEntitiesDTO.getBankEntities().size());
+
         if (legalEntityForm.getInsuranceAmount() != null) {
             bankEntitiesDTO.addBankEntityList(
                     findByInsuranceAmount(
@@ -293,6 +348,11 @@ public class LegalEntityService {
                     true
             );
         }
+
+        for (LegalEntityEntity bank : bankEntitiesDTO.getBankEntities()) {
+            System.out.println(bank.getName());
+        }
+        System.out.println(bankEntitiesDTO.getBankEntities().size());
 
         if (!legalEntityForm.getCorporationServices().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
@@ -320,6 +380,8 @@ public class LegalEntityService {
                     true
             );
         }
+
+        System.out.println(bankEntitiesDTO.getBankEntities().size());
 
         return bankEntitiesDTO;
     }

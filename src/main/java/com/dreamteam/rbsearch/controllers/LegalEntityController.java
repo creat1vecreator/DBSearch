@@ -54,9 +54,6 @@ public class LegalEntityController {
             @RequestParam(name = "corporation_financing", required = false) String corporationFinancing,
             @RequestParam(name = "sorting", required = false) String sorting
     ) {
-        System.out.println("---");
-        System.out.println(minimumCommissionRateOfTurnover);
-        System.out.println("---");
         LegalEntityForm legalEntityForm = new LegalEntityForm(
                 paymentAimsServices,
                 paymentMethod,
