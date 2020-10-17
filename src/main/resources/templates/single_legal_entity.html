@@ -12,166 +12,125 @@
 
 
 </head>
-<body>
+<div>
 
-<div class="single" style="font-family:'Microsoft JhengHei'">
+<div th:object="${bank}" class="single" style="font-family:'Microsoft JhengHei',serif">
     <div class="container">
         <div class="col-md-9">
-            <div class="col-md-5 grid">
+            <!--          <div class="col-md-5 grid">-->
 
-                <img src="../static/images/VyFIANEr_400x400.jpg" height="250" width="250">
+                <!--                <img src="../static/images/VyFIANEr_400x400.jpg" height="250" width="250">&lt;!&ndash;сам класс удалять не нужно,его содержимое можно удалить(img)&ndash;&gt;-->
 
-            </div>
+                <!--            </div>-->
 
-            <div class="col-md-7 single-top-in">
-                <div class="span_2_of_a1 simpleCart_shelfItem">
-                    <h3>Name of the Bank</h3>
-                    <div class="tab-head">
-                        <nav class="nav-sidebar">
-                            <ul class="nav tabs">
-                                <li class="active"><a href="#tab12" data-toggle="tab">Advantages</a></li>
-                                <li class=""><a href="#tab22" data-toggle="tab">Disadvantages</a></li>
-                            </ul>
-                        </nav>
-                        <div class="tab-content one">
-                            <div class="tab-pane active text-style" id="tab12">
-                                <div class="facts" >
-                                    <ul>
-                                        <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>first</li>
-                                        <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>second</li>
-                                        <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>third</li>
+            <div>
 
-                                    </ul>
-                                </div>
 
-                            </div>
-                            <div class="tab-pane text-style" id="tab22">
-
-                                <div class="facts">
-
-                                    <ul >
-                                        <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>first</li>
-                                        <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>second</li>
-                                        <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>third </li>
-                                    </ul>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-md-20 tabulation" style="margin-top: 40%;margin-left:-100%">
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a data-toggle="tab" href="#text1">Services</a></li>
-                            <li><a data-toggle="tab" href="#text2">Payments</a></li>
-                            <li><a data-toggle="tab" href="#text3">Cards</a></li>
-                            <li><a data-toggle="tab" href="#text4">Credits</a></li>
-                            <li><a data-toggle="tab" href="#text5">Deposits</a></li>
-                            <li><a data-toggle="tab" href="#text6">Insurance</a></li>
-                            <li><a data-toggle="tab" href="#text7"> 24/7 support</a></li>
-                            <li><a data-toggle="tab" href="#text8">Bank Account</a></li>
-                            <li><a data-toggle="tab" href="#text9">Acquiring</a></li>
-                            <li><a data-toggle="tab" href="#text10">Corporation</a></li>
-                            <li><a data-toggle="tab" href="#text11">Security</a></li>
-                        </ul>
-                        <div class="tab-content">
-                            <div id="text1" class="tab-pane fade in active" style="margin-top: 20px;margin-left: 20px">
-                                <ul>
-                                    <li th:text="${bank.getServicesFinancial()}"></li>
-                                    <li th:text="${bank.getServicesSales()}"></li>
-                                    <li th:text="${bank.getServicesDocumentManagement()}"></li>
-                                    <li th:text="${bank.getServicesAnalytics()}"></li>
+                <h3 th:text="${bank.getName()}"></h3>
+                <div class="tab-head">
+                    <ul>Advantages
+                        <li><p th:text="${bank.getAdvantages()}"></p></li>
+                    </ul>
+                    <ul>Disadvantages
+                        <li><p th:text="${bank.getDisadvantages()}"></p></li>
+                    </ul>
+                </div>
+                    <div style="margin-top: 20px">
+                        <div>
+                        <ul><h2 style="font-size: 20px">Services</h2>
+                                    <li> <p th:text="${bank.getServicesFinancial()}"></p></li>
+                                    <li> <p  th:text="${bank.getServicesSales()}"></p></li>
+                                    <li> <p  th:text="${bank.getServicesDocumentManagement()}"></p></li>
+                                    <li> <p  th:text="${bank.getServicesAnalytics()}"></p></li>
                                 </ul>
                             </div>
-                            <div id="text2" class="tab-pane fade" style="margin-top: 20px;margin-left: 125px">
-                                <ul>
-                                    <li th:text="${bank.getPaymentMethod()}"></li>
-                                    <li th:text="${bank.getPaymentAimsServices()}"></li>
-                                    <li th:text="${bank.getPaymentAuto()}"></li>
+                        <div>
+                                <ul><h2 style="font-size: 20px">Payments</h2>
+                                    <li> <p  th:text="${bank.getPaymentMethod()}"></p></li>
+                                    <li> <p  th:text="${bank.getPaymentAimsServices()}"></p></li>
+                                    <li> <p  th:text="${bank.getPaymentAuto()}"></p></li>
 
                                 </ul>
                             </div>
-                            <div id="text3" class="tab-pane fade" style="margin-top: 20px;margin-left: 250px">
-                                <div class="row">
-                                    <ul>
-                                        <ul>
-                                            <li th:text="${bank.getCardTypes()}"></li>
-                                            <li th:text="${bank.getCardCategories()}"></li>
-                                            <li th:text="${bank.getCardAnnualServicePrice()}"></li>
+                            <div>
+                                        <ul><h2 style="font-size: 20px">Cards</h2>
+                                            <li> <p  th:text="${bank.getCardTypes()}"></p></li>
+                                            <li> <p  th:text="${bank.getCardCategories()}"></p></li>
+                                            <li> <p  th:text="${bank.getCardAnnualServicePrice()}"></p></li>
                                         </ul>
-                                    </ul>
-                                </div>
                             </div>
-                            <div id="text4" class="tab-pane fade" style="margin-top: 20px;margin-left: 310px">
+                               <div>
                                 <ul>
-                                    <li th:text="${bank.getCreditAim()}"></li>
-                                    <li th:text="${bank.getCreditInterestRate()}"></li>
-                                    <li th:text="${bank.getCreditTerm()}"></li>
-                                    <li th:text="${bank.getCreditEarlyPayment()}"></li>
-
-
+                                    <h2 style="font-size: 20px">Credits</h2>
+                                    <li> <p  th:text="${bank.getCreditAim()}"></p></li>
+                                    <li> <p  th:text="${bank.getCreditInterestRate()}"></p></li>
+                                    <li> <p  th:text="${bank.getCreditTerm()}"></p></li>
+                                    <li> <p  th:text="${bank.getCreditEarlyPayment()}"></p></li>
                                 </ul>
                             </div>
-                            <div id="text5" class="tab-pane fade" style="margin-top: 20px;margin-left: 395px">
-                                <ul>
-                                    <li th:text="${bank.getDepositRate()}"></li>
-                                    <li th:text="${bank.getDepositTypesOfFunds()}"></li>
-                                    <li th:text="${bank.getDepositCurrency()}"></li>
-                                    <li th:text="${bank.getDepositAdditionalConditions()}"></li>
+                             <div>
+                                <ul><h2 style="font-size: 20px">Deposits</h2>
+                                    <li> <p  th:text="${bank.getDepositRate()}"></p></li>
+                                    <li> <p  th:text="${bank.getDepositTypesOfFunds()}"></p></li>
+                                    <li> <p  th:text="${bank.getDepositCurrency()}"></p></li>
+                                    <li> <p  th:text="${bank.getDepositAdditionalConditions()}"></p></li>
 
                                 </ul>
                             </div>
-                            <div id="text6"class="tab-pane fade" style="margin-top: 20px;margin-left: 495px">
-                                <ul>
-                                    <li th:text="${bank.getInsuranceAim()}"></li>
-                                    <li th:text="${bank.getInsuranceAmount()}"></li>
+                             <div>
+                                <ul><h2 style="font-size: 20px">Insurance</h2>
+                                    <li> <p  th:text="${bank.getInsuranceAim()}"></p></li>
+                                    <li> <p  th:text="${bank.getInsuranceAmount()}"></p></li>
 
                                 </ul>
                             </div>
-                            <div id="text7" class="tab-pane fade" style="margin-top: 20px;margin-left: 600px">
-                                <ul>
-                                    <li th:text="${bank.getConsultation()}"></li>
+                               <div>
+                                <ul><h2 style="font-size: 20px">24/7 support</h2>
+                                    <li> <p th:text="${bank.getConsultation()}"></p></li>
 
                                 </ul>
                             </div>
-                            <div id="text8" class="tab-pane fade" style="margin-top: 20px;margin-left: 730px">
-                                <ul>
-                                    <li th:text="${bank.getBankAccountOpeningPrice()}"></li>
-                                    <li th:text="${bank.getBankAccountAvailabilityOfFreePeriod()}"></li>
-                                    <li th:text="${bank.getBankAccountCurrency()}"></li>
-                                    <li th:text="${bank.getBankAccountTypes()}"></li>
+                            <div>
+                                <ul><h2 style="font-size: 20px">Bank Account</h2>
+                                    <li> <p  th:text="${bank.getBankAccountOpeningPrice()}"></p></li>
+                                    <li> <p  th:text="${bank.getBankAccountAvailabilityOfFreePeriod()}"></p></li>
+                                    <li> <p  th:text="${bank.getBankAccountCurrency()}"></p></li>
+                                    <liv th:text="${bank.getBankAccountTypes()}"></p></liv>
                                 </ul>
                             </div>
-                            <div id="text9" class="tab-pane fade" style="margin-top: 20px;margin-left: 20px">
-                                <ul>
-                                    <li th:text="${bank.getAcquiringTypes()}"></li>
-                                    <li th:text="${bank.getMinimumCommissionRateOfTurnover()}"></li>
+                              <div>
+                                <ul><h2 style="font-size: 20px">Acquiring</h2>
+                                    <li> <p  th:text="${bank.getAcquiringTypes()}"></p></li>
+                                    <li> <p  th:text="${bank.getMinimumCommissionRateOfTurnover()}"></p></li>
                                 </ul>
                             </div>
-                            <div id="text10" class="tab-pane fade" style="margin-top: 20px;margin-left: 125px">
-                                <ul>
-                                    <li th:text="${bank.getCorporationServices()}"></li>
-                                    <li th:text="${bank.getCorporationFinancing()}"></li>
+                             <div>
+                                <ul><h2 style="font-size: 20px">Corporation</h2>
+                                    <li> <p  th:text="${bank.getCorporationServices()}"></p></li>
+                                    <li> <p  th:text="${bank.getCorporationFinancing()}"></p></li>
                                 </ul>
                             </div>
-                            <div id="text11" class="tab-pane fade" style="margin-top: 20px;margin-left: 250px">
-                                <ul>
-                                    <li th:text="${bank.getConsultation()}"></li>
+                              <div>
+                                <ul><h2 style="font-size: 20px">Security</h2>
+                                    <li> <p  th:text="${bank.getConsultation()}"></p></li>
 
                                 </ul>
                             </div>
-                        </div>
-
-                    </div>
-
                 </div>
 
-
-                <div class="clearfix"></div>
             </div>
-
+        <div class="clearfix"></div>
         </div>
     </div>
+</div>
+</div>
+
+
+              
+
+
+
+   
 
     <footer id="footer">
 
@@ -183,6 +142,6 @@
 
     <script src="../static/js/bootstrap.min.js"></script>
 
-</div>
+
 </body>
 </html>
