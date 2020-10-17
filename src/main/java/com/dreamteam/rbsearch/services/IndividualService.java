@@ -104,10 +104,10 @@ public class IndividualService {
             );
         }
 
-        for (IndividualEntity bank : bankEntitiesDTO.getBankEntities()) {
-            System.out.println(bank.getName());
-        }
-        System.out.println(bankEntitiesDTO.getBankEntities().size());
+//        for (IndividualEntity bank : bankEntitiesDTO.getBankEntities()) {
+//            System.out.println(bank.getName());
+//        }
+//        System.out.println(bankEntitiesDTO.getBankEntities().size());
 
         if (!individualForm.getTransferTypes().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
@@ -118,10 +118,10 @@ public class IndividualService {
             );
         }
 
-        for (IndividualEntity bank : bankEntitiesDTO.getBankEntities()) {
-            System.out.println(bank.getName());
-        }
-        System.out.println(bankEntitiesDTO.getBankEntities().size());
+//        for (IndividualEntity bank : bankEntitiesDTO.getBankEntities()) {
+//            System.out.println(bank.getName());
+//        }
+//        System.out.println(bankEntitiesDTO.getBankEntities().size());
 
         if (individualForm.getTransferAuto() != null) {
             bankEntitiesDTO.addBankEntityList(
@@ -283,10 +283,11 @@ public class IndividualService {
 
     private BankEntitiesDTO<IndividualEntity> findByTransferType(List<String> transferType) {
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        int i = 0;
         for (String criterion : transferType) {
             bankEntitiesDTO_temp.addBankEntityList(
                     new BankEntitiesDTO<>(individualRepository.findAllByTransferTypesContainsIgnoreCase(criterion)),
-                    true
+                    i++ != 0
             );
         }
         return bankEntitiesDTO_temp;
@@ -298,10 +299,11 @@ public class IndividualService {
 
     private BankEntitiesDTO<IndividualEntity> findByTransferCurrency(List<String> transferCurrency) {
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        int i = 0;
         for (String criterion : transferCurrency) {
             bankEntitiesDTO_temp.addBankEntityList(
                     new BankEntitiesDTO<>(individualRepository.findAllByTransferCurrencyContainsIgnoreCase(criterion)),
-                    true
+                    i++ != 0
             );
         }
         return bankEntitiesDTO_temp;
@@ -309,20 +311,22 @@ public class IndividualService {
 
     private BankEntitiesDTO<IndividualEntity> findByPaymentMethod(List<String> paymentMethod) {
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        int i = 0;
         for (String criterion : paymentMethod) {
             bankEntitiesDTO_temp.addBankEntityList(
                     new BankEntitiesDTO<>(individualRepository.findAllByPaymentMethodContainsIgnoreCase(criterion)),
-                    true
+                    i++ != 0
             );
         }
         return bankEntitiesDTO_temp;     }
 
     private BankEntitiesDTO<IndividualEntity> findByPaymentAims(List<String> paymentAims) {
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        int i = 0;
         for (String criterion : paymentAims) {
             bankEntitiesDTO_temp.addBankEntityList(
                     new BankEntitiesDTO<>(individualRepository.findAllByPaymentAimsServicesContainsIgnoreCase(criterion)),
-                    true
+                    i++ != 0
             );
         }
         return bankEntitiesDTO_temp;     }
@@ -337,10 +341,11 @@ public class IndividualService {
 
     private BankEntitiesDTO<IndividualEntity> findByDepositAim(List<String> depositAim) {
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        int i = 0;
         for (String criterion : depositAim) {
             bankEntitiesDTO_temp.addBankEntityList(
                     new BankEntitiesDTO<>(individualRepository.findAllByDepositAimContainsIgnoreCase(criterion)),
-                    true
+                    i++ != 0
             );
         }
         return bankEntitiesDTO_temp;
@@ -348,10 +353,11 @@ public class IndividualService {
 
     private BankEntitiesDTO<IndividualEntity> findByDepositCurrency(List<String> depositCurrency) {
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        int i = 0;
         for (String criterion : depositCurrency) {
             bankEntitiesDTO_temp.addBankEntityList(
                     new BankEntitiesDTO<>(individualRepository.findAllByDepositCurrencyContainsIgnoreCase(criterion)),
-                    true
+                    i++ != 0
             );
         }
         return bankEntitiesDTO_temp;
@@ -359,10 +365,11 @@ public class IndividualService {
 
     private BankEntitiesDTO<IndividualEntity> findByDepositAddition(List<String> depositAdditions) {
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        int i = 0;
         for (String criterion : depositAdditions) {
             bankEntitiesDTO_temp.addBankEntityList(
                     new BankEntitiesDTO<>(individualRepository.findAllByDepositAdditionalConditionsContainsIgnoreCase(criterion)),
-                    true
+                    i++ != 0
             );
         }
         return bankEntitiesDTO_temp;
@@ -370,10 +377,11 @@ public class IndividualService {
 
     private BankEntitiesDTO<IndividualEntity> findByConsultation(List<String> consultation) {
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        int i = 0;
         for (String criterion : consultation) {
             bankEntitiesDTO_temp.addBankEntityList(
                     new BankEntitiesDTO<>(individualRepository.findAllByConsultationContainsIgnoreCase(criterion)),
-                    true
+                    i++ != 0
             );
         }
         return bankEntitiesDTO_temp;     }
@@ -384,20 +392,22 @@ public class IndividualService {
 
     private BankEntitiesDTO<IndividualEntity> findByCardTypes(List<String> cardTypes) {
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        int i = 0;
         for (String criterion : cardTypes) {
             bankEntitiesDTO_temp.addBankEntityList(
                     new BankEntitiesDTO<>(individualRepository.findAllByCardTypesContainsIgnoreCase(criterion)),
-                    true
+                    i++ != 0
             );
         }
         return bankEntitiesDTO_temp;     }
 
     private BankEntitiesDTO<IndividualEntity> findByCardCategories(List<String> cardCategories) {
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        int i = 0;
         for (String criterion : cardCategories) {
             bankEntitiesDTO_temp.addBankEntityList(
                     new BankEntitiesDTO<>(individualRepository.findAllByCardCategoriesContainsIgnoreCase(criterion)),
-                    true
+                    i++ != 0
             );
         }
         return bankEntitiesDTO_temp;     }
@@ -420,10 +430,11 @@ public class IndividualService {
 
     private BankEntitiesDTO<IndividualEntity> findByCreditAim(List<String> creditAim) {
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        int i = 0;
         for (String criterion : creditAim) {
             bankEntitiesDTO_temp.addBankEntityList(
                     new BankEntitiesDTO<>(individualRepository.findAllByCreditAimContainsIgnoreCase(criterion)),
-                    true
+                    i++ != 0
             );
         }
         return bankEntitiesDTO_temp;     }
@@ -446,10 +457,11 @@ public class IndividualService {
 
     private BankEntitiesDTO<IndividualEntity> findByInsuranceAim(List<String> insuranceAim) {
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        int i = 0;
         for (String criterion : insuranceAim) {
             bankEntitiesDTO_temp.addBankEntityList(
                     new BankEntitiesDTO<>(individualRepository.findAllByInsuranceAimContainsIgnoreCase(criterion)),
-                    true
+                    i++ != 0
             );
         }
         return bankEntitiesDTO_temp;     }
@@ -460,10 +472,11 @@ public class IndividualService {
 
     private BankEntitiesDTO<IndividualEntity> findByUniqueServices(List<String> uniqueServices) {
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
+        int i = 0;
         for (String criterion : uniqueServices) {
             bankEntitiesDTO_temp.addBankEntityList(
                     new BankEntitiesDTO<>(individualRepository.findAllByUniqueServicesContainsIgnoreCase(criterion)),
-                    true
+                    i++ != 0
             );
         }
         return bankEntitiesDTO_temp;
