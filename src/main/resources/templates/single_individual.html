@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="../static/css/style4.css" rel="stylesheet" type="text/css" media="all" />
-<!--    <script src="../static/js/jquery.min.js"></script>-->
+   <script src="../static/js/jquery.min.js"></script>
 
 
 </head>
@@ -17,8 +17,13 @@
 <div th:object="${bank}" class="single" style="font-family:'Microsoft JhengHei'">
     <div class="container">
         <div class="col-md-9">
+            <div class="col-md-5 grid">
 
+                <img src="../static/images/VyFIANEr_400x400.jpg" height="250" width="250"><!--сам класс удалять не нужно,его содержимое можно удалить(img)-->
+
+            </div>
             <div class="col-md-7 single-top-in">
+
                     <h3 th:text="${bank.getName()}"></h3>
                     <div class="tab-head">
                             <ul><a>Advantages</a>
@@ -28,6 +33,7 @@
                                 <li><p th:text="${bank.getDisadvantages()}"></p></li>
                             </ul>
                     </div>
+
                 <div class="col-md-20 tabulation" style="margin-top: 40%;margin-left:-100%">
 
                             <div>
@@ -96,7 +102,7 @@
                                     <li> <p th:text="${bank.getUniqueServices()}"></p></li>
                                 </ul>
                             </div>
-                            <div >
+                            <div>
                                 <ul>
                                     <li><h2 style="font-size: 20px">Security</h2></li>
                                     <li> <p th:text="${bank.getConsultation()}"></p></li>
@@ -108,6 +114,8 @@
             </div>
         </div>
     </div>
+
+
     <script src="../static/js/bootstrap.min.js"></script>
 
 </div>
