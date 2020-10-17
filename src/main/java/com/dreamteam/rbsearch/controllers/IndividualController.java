@@ -49,8 +49,6 @@ public class IndividualController {
             @RequestParam(value = "rating", required = false) String sorting,
             @RequestParam(value = "unique_services", required = false) String uniqueServices) {
 
-        // check all nulls throw exception
-
         IndividualForm individualForm = new IndividualForm(
                 transferTypes,
                 transferAuto,
@@ -81,6 +79,7 @@ public class IndividualController {
                 uniqueServices
         );
         System.out.println(individualForm);
+        System.out.println(individualForm.getCreditAmount());
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO = individualService.find(individualForm);
         bankEntitiesDTO.getBankEntities().forEach(System.out::println);
         model.addAttribute("banks", bankEntitiesDTO.getBankEntities());

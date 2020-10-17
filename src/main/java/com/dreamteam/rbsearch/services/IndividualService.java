@@ -98,7 +98,7 @@ public class IndividualService {
         if (individualForm.getInsuranceAmount() != null) {
             bankEntitiesDTO.addBankEntityList(
                     findByInsuranceAmount(
-                            individualForm.getCreditAmount()
+                            individualForm.getInsuranceAmount()
                     ),
                     true
             );
