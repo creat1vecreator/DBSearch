@@ -46,7 +46,7 @@ public class IndividualController {
             @RequestParam(value = "credit_amount", required = false) String creditAmount,
             @RequestParam(value = "insurance_aim", required = false) String insuranceAim,
             @RequestParam(value = "insurance_amount", required = false) String insuranceAmount,
-            @RequestParam(value = "rating", required = false) String sorting,
+            @RequestParam(value = "sorting", required = false) String sorting,
             @RequestParam(value = "unique_services", required = false) String uniqueServices) {
 
         IndividualForm individualForm = new IndividualForm(
@@ -80,7 +80,8 @@ public class IndividualController {
         );
         System.out.println(individualForm);
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO = individualService.find(individualForm);
-        bankEntitiesDTO.getBankEntities().forEach(System.out::println);
+        System.out.println(bankEntitiesDTO.getBankEntities().size());
+//        bankEntitiesDTO.getBankEntities().forEach(System.out::println);
         model.addAttribute("banks", bankEntitiesDTO.getBankEntities());
         return "answer/individual";
     }

@@ -18,13 +18,13 @@ public class IndividualService {
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO = new BankEntitiesDTO<>();
 
         if (!individualForm.getSorting().isBlank()) {
-            if (individualForm.getSorting().contains("rating")) {
+            if (individualForm.getSorting().contains("Rating")) {
                 bankEntitiesDTO.addBankEntityList(
                         sortByRating(),
                         false
                 );
             }
-            if (individualForm.getSorting().contains("popularity")) {
+            if (individualForm.getSorting().contains("Popularity")) {
                 bankEntitiesDTO.addBankEntityList(
                         sortByPopularity(),
                         false
@@ -104,6 +104,10 @@ public class IndividualService {
             );
         }
 
+        for (IndividualEntity bank : bankEntitiesDTO.getBankEntities()) {
+            System.out.println(bank.getName());
+        }
+        System.out.println(bankEntitiesDTO.getBankEntities().size());
 
         if (!individualForm.getTransferTypes().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
@@ -113,6 +117,11 @@ public class IndividualService {
                     true
             );
         }
+
+        for (IndividualEntity bank : bankEntitiesDTO.getBankEntities()) {
+            System.out.println(bank.getName());
+        }
+        System.out.println(bankEntitiesDTO.getBankEntities().size());
 
         if (individualForm.getTransferAuto() != null) {
             bankEntitiesDTO.addBankEntityList(
@@ -159,7 +168,7 @@ public class IndividualService {
             );
         }
 
-        if (individualForm.getDepositAim().isEmpty()) {
+        if (!individualForm.getDepositAim().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
                     findByDepositAim(
                             individualForm.getDepositAim()
@@ -269,8 +278,6 @@ public class IndividualService {
             );
         }
 
-        System.out.println(bankEntitiesDTO.getBankEntities().size());
-
         return bankEntitiesDTO;
     }
 
@@ -325,7 +332,7 @@ public class IndividualService {
     }
 
     private BankEntitiesDTO<IndividualEntity> findByDepositRate(Float depositRate) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByDepositRateGreaterThan(depositRate));
+        return new BankEntitiesDTO<>(individualRepository.findAllByDepositRateGreaterThanEqual(depositRate));
     }
 
     private BankEntitiesDTO<IndividualEntity> findByDepositAim(List<String> depositAim) {
@@ -400,7 +407,7 @@ public class IndividualService {
     }
 
     private BankEntitiesDTO<IndividualEntity> findByCardCashback(Float cardCashback) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByCardCashbackGreaterThan(cardCashback));
+        return new BankEntitiesDTO<>(individualRepository.findAllByCardCashbackGreaterThanEqual(cardCashback));
     }
 
     private BankEntitiesDTO<IndividualEntity> findByCardDesign(Boolean cardDesignToChoose) {
@@ -408,7 +415,7 @@ public class IndividualService {
     }
 
     private BankEntitiesDTO<IndividualEntity> findByCardValidity(Integer cardValidity) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByCardValidityGreaterThan(cardValidity));
+        return new BankEntitiesDTO<>(individualRepository.findAllByCardValidityGreaterThanEqual(cardValidity));
     }
 
     private BankEntitiesDTO<IndividualEntity> findByCreditAim(List<String> creditAim) {
@@ -426,7 +433,7 @@ public class IndividualService {
     }
 
     private BankEntitiesDTO<IndividualEntity> findByCreditTerm(Integer creditTerm) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByCreditTermGreaterThan(creditTerm));
+        return new BankEntitiesDTO<>(individualRepository.findAllByCreditTermGreaterThanEqual(creditTerm));
     }
 
     private BankEntitiesDTO<IndividualEntity> findByCreditEarlyPayment(Boolean creditEarlyPayment) {
@@ -434,7 +441,7 @@ public class IndividualService {
     }
 
     private BankEntitiesDTO<IndividualEntity> findByCreditAmount(Integer creditAmount) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByCreditAmountGreaterThan(creditAmount));
+        return new BankEntitiesDTO<>(individualRepository.findAllByCreditAmountGreaterThanEqual(creditAmount));
     }
 
     private BankEntitiesDTO<IndividualEntity> findByInsuranceAim(List<String> insuranceAim) {
@@ -448,7 +455,7 @@ public class IndividualService {
         return bankEntitiesDTO_temp;     }
 
     private BankEntitiesDTO<IndividualEntity> findByInsuranceAmount(Integer insuranceAmount) {
-        return new BankEntitiesDTO<>(individualRepository.findAllByInsuranceAmountGreaterThan(insuranceAmount));
+        return new BankEntitiesDTO<>(individualRepository.findAllByInsuranceAmountGreaterThanEqual(insuranceAmount));
     }
 
     private BankEntitiesDTO<IndividualEntity> findByUniqueServices(List<String> uniqueServices) {
@@ -459,19 +466,21 @@ public class IndividualService {
                     true
             );
         }
-        return bankEntitiesDTO_temp;     }
+        return bankEntitiesDTO_temp;
+    }
 
     private BankEntitiesDTO<IndividualEntity> sortByRating() {
-        return new BankEntitiesDTO<>(individualRepository.findByOrderByRating());
+        return new BankEntitiesDTO<>(individualRepository.findAllByOrderByRating());
     }
 
     private BankEntitiesDTO<IndividualEntity> sortByPopularity() {
-        return new BankEntitiesDTO<>(individualRepository.findByOrderByPopularity());
-
+        return new BankEntitiesDTO<>(individualRepository.findAllByOrderByPopularity());
     }
+
     public IndividualEntity findByName(String name) {
         return individualRepository.findByNameIgnoreCase(name).orElseThrow(RuntimeException::new);
     }
+
     public BankEntitiesDTO<IndividualEntity> findAll() {
         return new BankEntitiesDTO<>(individualRepository.findAll());
     }

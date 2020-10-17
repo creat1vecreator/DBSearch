@@ -26,7 +26,7 @@ public interface IndividualRepository extends JpaRepository<IndividualEntity, Lo
 
     List<IndividualEntity> findAllByPaymentAutoEquals(Boolean payment_auto);
 
-    List<IndividualEntity> findAllByDepositRateGreaterThan(Float depositRate);
+    List<IndividualEntity> findAllByDepositRateGreaterThanEqual(Float depositRate);
 
     List<IndividualEntity> findAllByDepositAimContainsIgnoreCase(String depositAim);
 
@@ -44,29 +44,29 @@ public interface IndividualRepository extends JpaRepository<IndividualEntity, Lo
 
     List<IndividualEntity> findAllByCardAnnualServicePriceLessThan(Integer cardAnnualServicePrice);
 
-    List<IndividualEntity> findAllByCardCashbackGreaterThan(Float cardCashback);
+    List<IndividualEntity> findAllByCardCashbackGreaterThanEqual(Float cardCashback);
 
     List<IndividualEntity> findAllByCardDesignToChooseEquals(Boolean cardDesignToChoose);
 
-    List<IndividualEntity> findAllByCardValidityGreaterThan(Integer cardValidity);
+    List<IndividualEntity> findAllByCardValidityGreaterThanEqual(Integer cardValidity);
 
     List<IndividualEntity> findAllByCreditAimContainsIgnoreCase(String creditAim);
 
     List<IndividualEntity> findAllByCreditInterestRateLessThan(Float creditInterestRate);
 
-    List<IndividualEntity> findAllByCreditTermGreaterThan(Integer creditTerm);
+    List<IndividualEntity> findAllByCreditTermGreaterThanEqual(Integer creditTerm);
 
     List<IndividualEntity> findAllByCreditEarlyPaymentEquals(Boolean creditEarlyPayment);
 
-    List<IndividualEntity> findAllByCreditAmountGreaterThan(Integer creditAmount);
+    List<IndividualEntity> findAllByCreditAmountGreaterThanEqual(Integer creditAmount);
 
     List<IndividualEntity> findAllByInsuranceAimContainsIgnoreCase(String insuranceAim);
 
-    List<IndividualEntity> findAllByInsuranceAmountGreaterThan(Integer insuranceAmount);
+    List<IndividualEntity> findAllByInsuranceAmountGreaterThanEqual(Integer insuranceAmount);
 
-    List<IndividualEntity> findByOrderByRating();
+    List<IndividualEntity> findAllByOrderByRating();
 
-    List<IndividualEntity> findByOrderByPopularity();
+    List<IndividualEntity> findAllByOrderByPopularity();
 
     List<IndividualEntity> findAllByUniqueServicesContainsIgnoreCase(String uniqueServices);
 

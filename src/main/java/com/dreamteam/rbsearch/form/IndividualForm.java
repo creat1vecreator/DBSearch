@@ -66,27 +66,27 @@ public class IndividualForm {
             String uniqueServices
     ) {
         this.transferTypes = transferTypes == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(transferTypes.split(",")));
-        this.transferAuto = Boolean.parseBoolean(transferAuto);
+        this.transferAuto = transferAuto == null ? null : Boolean.parseBoolean(transferAuto);
         this.transferCurrency = transferCurrency == null ? new ArrayList<>() :new ArrayList<>(Arrays.asList(transferCurrency.split(",")));
         this.paymentMethod = paymentMethod == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(paymentMethod.split(",")));
         this.paymentAimsServices = paymentAimsServices == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(paymentAimsServices.split(",")));
-        this.paymentAuto = Boolean.parseBoolean(paymentAuto);
+        this.paymentAuto = paymentAuto == null ? null : Boolean.parseBoolean(paymentAuto);
         this.depositRate = Float.parseFloat(depositRate);
         this.depositAim = depositAim == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(depositAim.split(",")));
         this.depositCurrency = depositCurrency == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(depositCurrency.split(",")));
         this.depositAdditionalConditions = depositAdditionalConditions == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(depositAdditionalConditions.split(",")));
         this.consultation = consultation == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(consultation.split(",")));
-        this.cardFreeService = Boolean.parseBoolean(cardFreeService);
+        this.cardFreeService = cardFreeService == null ? null : Boolean.parseBoolean(cardFreeService);
         this.cardTypes = cardTypes == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(cardTypes.split(",")));
         this.cardCategories = cardCategories == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(cardCategories.split(",")));
         this.cardAnnualServicePrice = Integer.parseInt(cardAnnualServicePrice);
         this.cardCashback = Float.parseFloat(cardCashback);
-        this.cardDesignToChoose = Boolean.parseBoolean(cardDesignToChoose);
+        this.cardDesignToChoose = cardDesignToChoose == null ? null : Boolean.parseBoolean(cardDesignToChoose);
         this.cardValidity = Integer.parseInt(cardValidity);
         this.creditAim = creditAim == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(creditAim.split(",")));
         this.creditInterestRate = Float.parseFloat(creditInterestRate);
         this.creditTerm = Integer.parseInt(creditTerm);
-        this.creditEarlyPayment = Boolean.parseBoolean(creditEarlyPayment);
+        this.creditEarlyPayment = creditEarlyPayment == null ? null : Boolean.parseBoolean(creditEarlyPayment);
         this.creditAmount = Integer.parseInt(creditAmount);
         this.insuranceAim = insuranceAim == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(insuranceAim.split(",")));
         this.insuranceAmount = Integer.parseInt(insuranceAmount);
