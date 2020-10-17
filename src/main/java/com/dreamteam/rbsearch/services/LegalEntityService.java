@@ -17,11 +17,6 @@ public class LegalEntityService {
     public BankEntitiesDTO<LegalEntityEntity> find(LegalEntityForm legalEntityForm) {
         BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO = new BankEntitiesDTO<>();
 
-        for (LegalEntityEntity bank : bankEntitiesDTO.getBankEntities()) {
-            System.out.println(bank.getName());
-        }
-        System.out.println(bankEntitiesDTO.getBankEntities().size());
-
         if (!legalEntityForm.getSorting().isBlank()) {
             if (legalEntityForm.getSorting().contains("Rating")) {
                 bankEntitiesDTO.addBankEntityList(
@@ -36,11 +31,6 @@ public class LegalEntityService {
                 );
             }
         }
-
-        for (LegalEntityEntity bank : bankEntitiesDTO.getBankEntities()) {
-            System.out.println(bank.getName());
-        }
-        System.out.println(bankEntitiesDTO.getBankEntities().size());
 
         if (!legalEntityForm.getPaymentAimsServices().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
@@ -320,6 +310,8 @@ public class LegalEntityService {
                     true
             );
         }
+
+        System.out.println(bankEntitiesDTO.getBankEntities().size());
 
         return bankEntitiesDTO;
     }

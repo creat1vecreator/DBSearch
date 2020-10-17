@@ -77,13 +77,13 @@ public class LegalEntityForm {
     ) {
         this.paymentAimsServices = paymentAimsServices == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(paymentAimsServices.split(",")));
         this.paymentMethod = paymentMethod == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(paymentMethod.split(",")));
-        this.paymentAuto = Boolean.parseBoolean(paymentAuto);
+        this.paymentAuto = paymentAuto == null ? null : Boolean.parseBoolean(paymentAuto);
         this.servicesFinancial = servicesFinancial == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(servicesFinancial.split(",")));
         this.servicesSales = servicesSales == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(servicesSales.split(",")));
         this.servicesDocumentManagement = servicesDocumentManagement == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(servicesDocumentManagement.split(",")));
         this.servicesAnalytics = servicesAnalytics == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(servicesAnalytics.split(",")));
         this.bankAccountOpeningPrice = Integer.parseInt(bankAccountOpeningPrice);
-        this.bankAccountAvailabilityOfFreePeriod = Boolean.parseBoolean(bankAccountAvailabilityOfFreePeriod);
+        this.bankAccountAvailabilityOfFreePeriod = bankAccountAvailabilityOfFreePeriod == null ? null : Boolean.parseBoolean(bankAccountAvailabilityOfFreePeriod);
         this.bankAccountCurrency = bankAccountCurrency == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(bankAccountCurrency.split(",")));
         this.bankAccountTypes = bankAccountTypes == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(bankAccountTypes.split(",")));
         this.acquiringTypes = acquiringTypes == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(acquiringTypes.split(",")));
@@ -91,7 +91,7 @@ public class LegalEntityForm {
         this.creditAim = creditAim == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(creditAim.split(",")));
         this.creditInterestRate = Float.parseFloat(creditInterestRate);
         this.creditTerm = Integer.parseInt(creditTerm);
-        this.creditEarlyRepayment = Boolean.parseBoolean(creditEarlyRepayment);
+        this.creditEarlyRepayment = creditEarlyRepayment == null ? null : Boolean.parseBoolean(creditEarlyRepayment);
         this.creditAmount = Integer.parseInt(creditAmount);
         this.depositRate = Float.parseFloat(depositRate);
         this.depositCurrency = depositCurrency == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(depositCurrency.split(",")));

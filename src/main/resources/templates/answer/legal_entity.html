@@ -635,7 +635,7 @@
                             </div>
                             <div class="panel-body">
                                 <p><b style="color: #696763;"> Service price per year:</b><br>
-                                    <input type="text" name="card_annual_service_price" value="2000" size="10">
+                                    <input type="text" name="card_annual_service_price" value="2000000" size="10">
                                 </p>
                             </div>
                             <div class="panel-body">
@@ -830,7 +830,6 @@
                 </div>
                 </div>
 
-
                 <a><input type="submit" value="Search" style="background-color: #4B0082;color: white" ></a>
                 </div>
                 </div>
@@ -847,7 +846,7 @@
                                             <div class="option_subtitle">
                                                 <ul>
                                                     <li>
-                                                        <a th:href="@{'legal_entity/bank/'+ ${bank.getName()}}">
+                                                        <a th:href="@{'/legal_entity/bank/'+ ${bank.getName()}}">
                                                             <h1 th:text="${bank.getName()}"></h1>
                                                         </a>
                                                     </li>
