@@ -48,6 +48,9 @@ public class IndividualController {
             @RequestParam(value = "insurance_amount", required = false) String insuranceAmount,
             @RequestParam(value = "rating", required = false) String sorting,
             @RequestParam(value = "unique_services", required = false) String uniqueServices) {
+
+        // check all nulls throw exception
+
         IndividualForm individualForm = new IndividualForm(
                 transferTypes,
                 transferAuto,
@@ -77,6 +80,7 @@ public class IndividualController {
                 sorting,
                 uniqueServices
         );
+        System.out.println(depositRate);
         System.out.println(individualForm);
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO = individualService.find(individualForm);
         model.addAttribute("banks", bankEntitiesDTO.getBankEntities());

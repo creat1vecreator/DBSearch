@@ -30,10 +30,10 @@ public class BaseController {
     public String returnCriteriaPage(@PathVariable String category, Model model) {
         switch (category) {
             case "individual":
-                model.addAttribute("banks", individualService.findAll());
+                model.addAttribute("banks", individualService.findAll().getBankEntities());
                 return "answer/individual";
             case "legal_entity":
-                model.addAttribute("banks", legalEntityService.findAll());
+                model.addAttribute("banks", legalEntityService.findAll().getBankEntities());
                 return "answer/legal_entity";
         }
         return returnErrorPage();
