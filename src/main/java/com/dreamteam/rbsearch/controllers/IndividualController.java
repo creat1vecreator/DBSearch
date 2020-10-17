@@ -79,7 +79,6 @@ public class IndividualController {
                 uniqueServices
         );
         System.out.println(individualForm);
-        System.out.println(individualForm.getCreditAmount());
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO = individualService.find(individualForm);
         bankEntitiesDTO.getBankEntities().forEach(System.out::println);
         model.addAttribute("banks", bankEntitiesDTO.getBankEntities());

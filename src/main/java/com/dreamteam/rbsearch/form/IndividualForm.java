@@ -87,9 +87,7 @@ public class IndividualForm {
         this.creditInterestRate = Float.parseFloat(creditInterestRate);
         this.creditTerm = Integer.parseInt(creditTerm);
         this.creditEarlyPayment = Boolean.parseBoolean(creditEarlyPayment);
-        System.out.println(creditAmount.getClass());
         this.creditAmount = Integer.parseInt(creditAmount);
-        System.out.println(this.creditAmount.getClass());
         this.insuranceAim = insuranceAim == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(insuranceAim.split(",")));
         this.insuranceAmount = Integer.parseInt(insuranceAmount);
         this.sorting = sorting == null ? "" : sorting;
