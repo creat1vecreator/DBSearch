@@ -38,6 +38,7 @@ public class LegalEntityController {
             @RequestParam(name = "credit_interest_rate", required = false) String creditInterestRate,
             @RequestParam(name = "credit_term", required = false) String creditTerm,
             @RequestParam(name = "credit_early_repayment", required = false) String creditEarlyRepayment,
+            @RequestParam(name = "credit_amount", required = false) String creditAmount,
             @RequestParam(name = "deposit_rate", required = false) String depositRate,
             @RequestParam(name = "deposit_currency", required = false) String depositCurrency,
             @RequestParam(name = "deposit_types_of_funds", required = false) String depositTypesOfFunds,
@@ -46,12 +47,16 @@ public class LegalEntityController {
             @RequestParam(name = "card_types", required = false) String cardTypes,
             @RequestParam(name = "card_categories", required = false) String cardCategories,
             @RequestParam(name = "card_annual_service_price", required = false) String cardAnnualServicePrice,
+            @RequestParam(name = "card_term", required = false) String cardTerm,
             @RequestParam(name = "insurance_aim", required = false) String insuranceAim,
             @RequestParam(name = "insurance_amount", required = false) String insuranceAmount,
             @RequestParam(name = "corporation_services", required = false) String corporationServices,
             @RequestParam(name = "corporation_financing", required = false) String corporationFinancing,
             @RequestParam(name = "sorting", required = false) String sorting
     ) {
+        System.out.println("---");
+        System.out.println(minimumCommissionRateOfTurnover);
+        System.out.println("---");
         LegalEntityForm legalEntityForm = new LegalEntityForm(
                 paymentAimsServices,
                 paymentMethod,
@@ -70,6 +75,7 @@ public class LegalEntityController {
                 creditInterestRate,
                 creditTerm,
                 creditEarlyRepayment,
+                creditAmount,
                 depositRate,
                 depositCurrency,
                 depositTypesOfFunds,
@@ -78,6 +84,7 @@ public class LegalEntityController {
                 cardTypes,
                 cardCategories,
                 cardAnnualServicePrice,
+                cardTerm,
                 insuranceAim,
                 insuranceAmount,
                 corporationServices,

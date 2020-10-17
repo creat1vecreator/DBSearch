@@ -72,6 +72,9 @@ public class LegalEntityEntity extends BaseEntity {
     @Column(name = "credit_early_repayment")
     private Boolean creditEarlyRepayment;
 
+    @Column(name = "credit_amount")
+    private Integer creditAmount;
+
     @Column(name = "deposit_rate")
     private Float depositRate;
 
@@ -95,6 +98,9 @@ public class LegalEntityEntity extends BaseEntity {
 
     @Column(name = "card_annual_service_price")
     private Integer cardAnnualServicePrice;
+
+    @Column(name = "card_term")
+    private Integer cardTerm;
 
     @Column(name = "insurance_aim")
     private String insuranceAim;

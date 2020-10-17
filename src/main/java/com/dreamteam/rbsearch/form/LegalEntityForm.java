@@ -25,6 +25,7 @@ public class LegalEntityForm {
     private Float creditInterestRate;
     private Integer creditTerm;
     private Boolean creditEarlyRepayment;
+    private Integer creditAmount;
     private Float depositRate;
     private List<String> depositCurrency;
     private List<String> depositTypesOfFunds;
@@ -33,6 +34,7 @@ public class LegalEntityForm {
     private List<String> cardTypes;
     private List<String> cardCategories;
     private Integer cardAnnualServicePrice;
+    private Integer cardTerm;
     private List<String> insuranceAim;
     private Integer insuranceAmount;
     private List<String> corporationServices;
@@ -57,6 +59,7 @@ public class LegalEntityForm {
             String creditInterestRate,
             String creditTerm,
             String creditEarlyRepayment,
+            String creditAmount,
             String depositRate,
             String depositCurrency,
             String depositTypesOfFunds,
@@ -65,6 +68,7 @@ public class LegalEntityForm {
             String cardTypes,
             String cardCategories,
             String cardAnnualServicePrice,
+            String cardTerm,
             String insuranceAim,
             String insuranceAmount,
             String corporationServices,
@@ -88,6 +92,7 @@ public class LegalEntityForm {
         this.creditInterestRate = Float.parseFloat(creditInterestRate);
         this.creditTerm = Integer.parseInt(creditTerm);
         this.creditEarlyRepayment = Boolean.parseBoolean(creditEarlyRepayment);
+        this.creditAmount = Integer.parseInt(creditAmount);
         this.depositRate = Float.parseFloat(depositRate);
         this.depositCurrency = depositCurrency == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(depositCurrency.split(",")));
         this.depositTypesOfFunds = depositTypesOfFunds == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(depositTypesOfFunds.split(",")));
@@ -96,6 +101,7 @@ public class LegalEntityForm {
         this.cardTypes = cardTypes == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(cardTypes.split(",")));
         this.cardCategories = cardCategories == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(cardCategories.split(",")));
         this.cardAnnualServicePrice = Integer.parseInt(cardAnnualServicePrice);
+        this.cardTerm = Integer.parseInt(cardTerm);
         this.insuranceAim = insuranceAim == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(insuranceAim.split(",")));
         this.insuranceAmount = Integer.parseInt(insuranceAmount);
         this.corporationServices = corporationServices == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(corporationServices.split(",")));

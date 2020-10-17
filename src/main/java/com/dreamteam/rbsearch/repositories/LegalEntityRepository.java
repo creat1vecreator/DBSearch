@@ -48,6 +48,8 @@ public interface LegalEntityRepository extends JpaRepository<LegalEntityEntity, 
 
     List<LegalEntityEntity> findAllByCreditEarlyRepaymentEquals(Boolean creditEarlyRepayment);
 
+    List<LegalEntityEntity> findAllByCreditAmountGreaterThanEqual(Integer creditAmount);
+
     List<LegalEntityEntity> findAllByDepositRateGreaterThanEqual(Float depositRate);
 
     List<LegalEntityEntity> findAllByDepositCurrencyContainsIgnoreCase(String depositCurrency);
@@ -64,6 +66,8 @@ public interface LegalEntityRepository extends JpaRepository<LegalEntityEntity, 
 
     List<LegalEntityEntity> findAllByCardAnnualServicePriceLessThan(Integer cardAnnualServicePrice);
 
+    List<LegalEntityEntity> findAllByCardTermGreaterThanEqual(Integer cardTerm);
+
     List<LegalEntityEntity> findAllByInsuranceAimContainsIgnoreCase(String insurance_aim);
 
     List<LegalEntityEntity> findAllByInsuranceAmountGreaterThanEqual(Integer insuranceAmount);
@@ -75,6 +79,4 @@ public interface LegalEntityRepository extends JpaRepository<LegalEntityEntity, 
     List<LegalEntityEntity> findAllByOrderByRating();
 
     List<LegalEntityEntity> findAllByOrderByPopularity();
-
-    Optional<LegalEntityEntity> findByName(String name);
 }

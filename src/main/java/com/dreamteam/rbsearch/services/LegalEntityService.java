@@ -17,6 +17,11 @@ public class LegalEntityService {
     public BankEntitiesDTO<LegalEntityEntity> find(LegalEntityForm legalEntityForm) {
         BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO = new BankEntitiesDTO<>();
 
+        for (LegalEntityEntity bank : bankEntitiesDTO.getBankEntities()) {
+            System.out.println(bank.getName());
+        }
+        System.out.println(bankEntitiesDTO.getBankEntities().size());
+
         if (!legalEntityForm.getSorting().isBlank()) {
             if (legalEntityForm.getSorting().contains("Rating")) {
                 bankEntitiesDTO.addBankEntityList(
@@ -31,6 +36,11 @@ public class LegalEntityService {
                 );
             }
         }
+
+        for (LegalEntityEntity bank : bankEntitiesDTO.getBankEntities()) {
+            System.out.println(bank.getName());
+        }
+        System.out.println(bankEntitiesDTO.getBankEntities().size());
 
         if (!legalEntityForm.getPaymentAimsServices().isEmpty()) {
             bankEntitiesDTO.addBankEntityList(
@@ -176,6 +186,15 @@ public class LegalEntityService {
             );
         }
 
+        if (legalEntityForm.getCreditAmount() != null) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByCreditAmount(
+                            legalEntityForm.getCreditAmount()
+                    ),
+                    true
+            );
+
+        }
         if (legalEntityForm.getDepositRate() != null) {
             bankEntitiesDTO.addBankEntityList(
                     findByDepositRate(
@@ -243,6 +262,15 @@ public class LegalEntityService {
             bankEntitiesDTO.addBankEntityList(
                     findByCardAnnualServicePrice(
                             legalEntityForm.getCardAnnualServicePrice()
+                    ),
+                    true
+            );
+        }
+
+        if (legalEntityForm.getCardTerm() != null) {
+            bankEntitiesDTO.addBankEntityList(
+                    findByCardTerm(
+                            legalEntityForm.getCardTerm()
                     ),
                     true
             );
@@ -432,6 +460,10 @@ public class LegalEntityService {
         return new BankEntitiesDTO<>(legalEntityRepository.findAllByCreditEarlyRepaymentEquals(creditEarlyRepayment));
     }
 
+    private BankEntitiesDTO<LegalEntityEntity> findByCreditAmount(Integer creditAmount) {
+        return  new BankEntitiesDTO<>(legalEntityRepository.findAllByCreditAmountGreaterThanEqual(creditAmount));
+    }
+
     private BankEntitiesDTO<LegalEntityEntity> findByDepositRate(Float depositRate) {
         return new BankEntitiesDTO<>(legalEntityRepository.findAllByDepositRateGreaterThanEqual(depositRate));
     }
@@ -510,6 +542,10 @@ public class LegalEntityService {
 
     private BankEntitiesDTO<LegalEntityEntity> findByCardAnnualServicePrice(Integer cardAnnualServicePrice) {
         return new BankEntitiesDTO<>(legalEntityRepository.findAllByCardAnnualServicePriceLessThan(cardAnnualServicePrice));
+    }
+
+    private BankEntitiesDTO<LegalEntityEntity> findByCardTerm(Integer cardTerm) {
+        return new BankEntitiesDTO<>(legalEntityRepository.findAllByCardTermGreaterThanEqual(cardTerm));
     }
 
     private BankEntitiesDTO<LegalEntityEntity> findByInsuranceAim(List<String> insuranceAim) {
