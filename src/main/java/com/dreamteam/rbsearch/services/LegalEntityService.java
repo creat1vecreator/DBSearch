@@ -285,7 +285,7 @@ public class LegalEntityService {
         BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
         for (String criterion : paymentService) {
             bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(legalEntityRepository.findAllByPaymentAimsServicesContains(criterion)),
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByPaymentAimsServicesContainsIgnoreCase(criterion)),
                     true
             );
         }
@@ -296,7 +296,7 @@ public class LegalEntityService {
         BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
         for (String criterion : paymentMethod) {
             bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(legalEntityRepository.findAllByPaymentMethodContains(criterion)),
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByPaymentMethodContainsIgnoreCase(criterion)),
                     true
             );
         }
@@ -311,7 +311,7 @@ public class LegalEntityService {
         BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
         for (String criterion : servicesFinancial) {
             bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(legalEntityRepository.findAllByServicesFinancialContains(criterion)),
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByServicesFinancialContainsIgnoreCase(criterion)),
                     true
             );
         }
@@ -322,7 +322,7 @@ public class LegalEntityService {
         BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
         for (String criterion : servicesSales) {
             bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(legalEntityRepository.findAllByServicesSalesContains(criterion)),
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByServicesSalesContainsIgnoreCase(criterion)),
                     true
             );
         }
@@ -333,7 +333,7 @@ public class LegalEntityService {
         BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
         for (String criterion : serviceDocumentManagement) {
             bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(legalEntityRepository.findAllByServicesDocumentManagementContains(criterion)),
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByServicesDocumentManagementContainsIgnoreCase(criterion)),
                     true
             );
         }
@@ -344,7 +344,7 @@ public class LegalEntityService {
         BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
         for (String criterion : servicesAnalytics) {
             bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(legalEntityRepository.findAllByServicesAnalyticsContains(criterion)),
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByServicesAnalyticsContainsIgnoreCase(criterion)),
                     true
             );
         }
@@ -363,7 +363,7 @@ public class LegalEntityService {
         BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
         for (String criterion : bankAccountCurrency) {
             bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(legalEntityRepository.findAllByBankAccountCurrencyContains(criterion)),
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByBankAccountCurrencyContainsIgnoreCase(criterion)),
                     true
             );
         }
@@ -374,7 +374,7 @@ public class LegalEntityService {
         BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
         for (String criterion : bankAccountType) {
             bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(legalEntityRepository.findAllByBankAccountTypesContains(criterion)),
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByBankAccountTypesContainsIgnoreCase(criterion)),
                     true
             );
         }
@@ -389,7 +389,7 @@ public class LegalEntityService {
         BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
         for (String criterion : creditAim) {
             bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(legalEntityRepository.findAllByCreditAimContains(criterion)),
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByCreditAimContainsIgnoreCase(criterion)),
                     true
             );
         }
@@ -416,7 +416,7 @@ public class LegalEntityService {
         BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
         for (String criterion : depositCurrency) {
             bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(legalEntityRepository.findAllByDepositCurrencyContains(criterion)),
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByDepositCurrencyContainsIgnoreCase(criterion)),
                     true
             );
         }
@@ -427,7 +427,7 @@ public class LegalEntityService {
         BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
         for (String criterion : depositTypesOfFunds) {
             bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(legalEntityRepository.findAllByDepositTypesOfFundsContains(criterion)),
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByDepositTypesOfFundsContainsIgnoreCase(criterion)),
                     true
             );
         }
@@ -438,7 +438,7 @@ public class LegalEntityService {
         BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
         for (String criterion : depositAdditionalConditions) {
             bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(legalEntityRepository.findAllByDepositAdditionalConditionsContains(criterion)),
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByDepositAdditionalConditionsContainsIgnoreCase(criterion)),
                     true
             );
         }
@@ -449,7 +449,7 @@ public class LegalEntityService {
         BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
         for (String criterion : consultation) {
             bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(legalEntityRepository.findAllByConsultationContains(criterion)),
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByConsultationContainsIgnoreCase(criterion)),
                     true
             );
         }
@@ -460,7 +460,7 @@ public class LegalEntityService {
         BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
         for (String criterion : cardTypes) {
             bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(legalEntityRepository.findAllByCardTypesContains(criterion)),
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByCardTypesContainsIgnoreCase(criterion)),
                     true
             );
         }
@@ -471,7 +471,7 @@ public class LegalEntityService {
         BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
         for (String criterion : cardCategories) {
             bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(legalEntityRepository.findAllByCardCategoriesContains(criterion)),
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByCardCategoriesContainsIgnoreCase(criterion)),
                     true
             );
         }
@@ -486,7 +486,7 @@ public class LegalEntityService {
         BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
         for (String criterion : insuranceAim) {
             bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(legalEntityRepository.findAllByInsuranceAimContains(criterion)),
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByInsuranceAimContainsIgnoreCase(criterion)),
                     true
             );
         }
@@ -501,7 +501,7 @@ public class LegalEntityService {
         BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
         for (String criterion : corporationServices) {
             bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(legalEntityRepository.findAllByCorporationServicesContains(criterion)),
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByCorporationServicesContainsIgnoreCase(criterion)),
                     true
             );
         }
@@ -512,7 +512,7 @@ public class LegalEntityService {
         BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
         for (String criterion : corporationFinancing) {
             bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(legalEntityRepository.findAllByCorporationFinancingContains(criterion)),
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByCorporationFinancingContainsIgnoreCase(criterion)),
                     true
             );
         }
@@ -523,7 +523,7 @@ public class LegalEntityService {
         BankEntitiesDTO<LegalEntityEntity> bankEntitiesDTO_temp = new BankEntitiesDTO<>();
         for (String criterion : acquiringTypes) {
             bankEntitiesDTO_temp.addBankEntityList(
-                    new BankEntitiesDTO<>(legalEntityRepository.findAllByAcquiringTypesContains(criterion)),
+                    new BankEntitiesDTO<>(legalEntityRepository.findAllByAcquiringTypesContainsIgnoreCase(criterion)),
                     true
             );
         }

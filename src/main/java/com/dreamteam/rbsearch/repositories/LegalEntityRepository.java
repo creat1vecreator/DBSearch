@@ -14,33 +14,33 @@ public interface LegalEntityRepository extends JpaRepository<LegalEntityEntity, 
 
     Optional<LegalEntityEntity> findByNameIgnoreCase(String name);
 
-    List<LegalEntityEntity> findAllByPaymentAimsServicesContains(String paymentAimsServices);
+    List<LegalEntityEntity> findAllByPaymentAimsServicesContainsIgnoreCase(String paymentAimsServices);
 
-    List<LegalEntityEntity> findAllByPaymentMethodContains(String paymentMethod);
+    List<LegalEntityEntity> findAllByPaymentMethodContainsIgnoreCase(String paymentMethod);
 
     List<LegalEntityEntity> findAllByPaymentAutoEquals(Boolean paymentAuto);
 
-    List<LegalEntityEntity> findAllByServicesFinancialContains(String servicesFinancial);
+    List<LegalEntityEntity> findAllByServicesFinancialContainsIgnoreCase(String servicesFinancial);
 
-    List<LegalEntityEntity> findAllByServicesSalesContains(String servicesSales);
+    List<LegalEntityEntity> findAllByServicesSalesContainsIgnoreCase(String servicesSales);
 
-    List<LegalEntityEntity> findAllByServicesDocumentManagementContains(String servicesDocumentManagement);
+    List<LegalEntityEntity> findAllByServicesDocumentManagementContainsIgnoreCase(String servicesDocumentManagement);
 
-    List<LegalEntityEntity> findAllByServicesAnalyticsContains(String servicesAnalytics);
+    List<LegalEntityEntity> findAllByServicesAnalyticsContainsIgnoreCase(String servicesAnalytics);
 
     List<LegalEntityEntity> findAllByBankAccountOpeningPriceLessThan(Integer bankAccountOpeningPrice);
 
     List<LegalEntityEntity> findAllByBankAccountAvailabilityOfFreePeriodEquals(Boolean bankAccountAvailabilityOfFreePeriod);
 
-    List<LegalEntityEntity> findAllByBankAccountCurrencyContains(String bankAccountCurrency);
+    List<LegalEntityEntity> findAllByBankAccountCurrencyContainsIgnoreCase(String bankAccountCurrency);
 
-    List<LegalEntityEntity> findAllByBankAccountTypesContains(String bankAccountType);
+    List<LegalEntityEntity> findAllByBankAccountTypesContainsIgnoreCase(String bankAccountType);
 
-    List<LegalEntityEntity> findAllByAcquiringTypesContains(String acquiringTypes);
+    List<LegalEntityEntity> findAllByAcquiringTypesContainsIgnoreCase(String acquiringTypes);
 
     List<LegalEntityEntity> findAllByMinimumCommissionRateOfTurnoverLessThan(Float minimumCommissionRateOfTurnover);
 
-    List<LegalEntityEntity> findAllByCreditAimContains(String creditAim);
+    List<LegalEntityEntity> findAllByCreditAimContainsIgnoreCase(String creditAim);
 
     List<LegalEntityEntity> findAllByCreditInterestRateLessThan(Float creditInterestRate);
 
@@ -50,27 +50,27 @@ public interface LegalEntityRepository extends JpaRepository<LegalEntityEntity, 
 
     List<LegalEntityEntity> findAllByDepositRateGreaterThan(Float depositRate);
 
-    List<LegalEntityEntity> findAllByDepositCurrencyContains(String depositCurrency);
+    List<LegalEntityEntity> findAllByDepositCurrencyContainsIgnoreCase(String depositCurrency);
 
-    List<LegalEntityEntity> findAllByDepositTypesOfFundsContains(String depositTypesOfFunds);
+    List<LegalEntityEntity> findAllByDepositTypesOfFundsContainsIgnoreCase(String depositTypesOfFunds);
 
-    List<LegalEntityEntity> findAllByDepositAdditionalConditionsContains(String depositAdditionalConditions);
+    List<LegalEntityEntity> findAllByDepositAdditionalConditionsContainsIgnoreCase(String depositAdditionalConditions);
 
-    List<LegalEntityEntity> findAllByConsultationContains(String consultation);
+    List<LegalEntityEntity> findAllByConsultationContainsIgnoreCase(String consultation);
 
-    List<LegalEntityEntity> findAllByCardTypesContains(String cardTypes);
+    List<LegalEntityEntity> findAllByCardTypesContainsIgnoreCase(String cardTypes);
 
-    List<LegalEntityEntity> findAllByCardCategoriesContains(String cardCategories);
+    List<LegalEntityEntity> findAllByCardCategoriesContainsIgnoreCase(String cardCategories);
 
     List<LegalEntityEntity> findAllByCardAnnualServicePriceLessThan(Integer cardAnnualServicePrice);
 
-    List<LegalEntityEntity> findAllByInsuranceAimContains(String insurance_aim);
+    List<LegalEntityEntity> findAllByInsuranceAimContainsIgnoreCase(String insurance_aim);
 
     List<LegalEntityEntity> findAllByInsuranceAmountGreaterThan(Integer insuranceAmount);
 
-    List<LegalEntityEntity> findAllByCorporationServicesContains(String corporationServices);
+    List<LegalEntityEntity> findAllByCorporationServicesContainsIgnoreCase(String corporationServices);
 
-    List<LegalEntityEntity> findAllByCorporationFinancingContains(String corporationFinancing);
+    List<LegalEntityEntity> findAllByCorporationFinancingContainsIgnoreCase(String corporationFinancing);
 
     Optional<LegalEntityEntity> findByName(String name);
 }
