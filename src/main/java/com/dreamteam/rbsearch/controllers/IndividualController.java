@@ -80,9 +80,9 @@ public class IndividualController {
                 sorting,
                 uniqueServices
         );
-        System.out.println(depositRate);
         System.out.println(individualForm);
         BankEntitiesDTO<IndividualEntity> bankEntitiesDTO = individualService.find(individualForm);
+        bankEntitiesDTO.getBankEntities().forEach(System.out::println);
         model.addAttribute("banks", bankEntitiesDTO.getBankEntities());
         return "answer/individual";
     }

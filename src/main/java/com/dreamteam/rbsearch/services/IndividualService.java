@@ -269,6 +269,8 @@ public class IndividualService {
             );
         }
 
+        System.out.println(bankEntitiesDTO.getBankEntities().size());
+
         return bankEntitiesDTO;
     }
 
