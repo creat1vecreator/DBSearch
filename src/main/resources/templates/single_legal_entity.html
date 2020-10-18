@@ -21,111 +21,89 @@
                 <h3 th:text="${bank.getName()}"></h3>
                     <div style="margin-top: 20px">
                         <div>
-                        <ul><h2 style="font-size: 20px">Services</h2>
-                                    <li> <p th:text="'Services financial: ' + ${bank.getServicesFinancial()}"></p></li>
-                                    <li> <p  th:text="'Services sales: ' +${bank.getServicesSales()}"></p></li>
-                                    <li> <p  th:text="'Services document management: ' + ${bank.getServicesDocumentManagement()}"></p></li>
-                                    <li> <p  th:text="'Services analytics: ' + ${bank.getServicesAnalytics()}"></p></li>
-                                </ul>
-                            </div>
+                            <ul><h2 style="font-size: 20px">Services</h2>
+                                <li><p th:text="'Services financial: ' + ${bank.getServicesFinancial()}"></p></li>
+                                <li><p  th:text="'Services sales: ' +${bank.getServicesSales()}"></p></li>
+                                <li><p  th:text="'Services document management: ' + ${bank.getServicesDocumentManagement()}"></p></li>
+                                <li><p  th:text="'Services analytics: ' + ${bank.getServicesAnalytics()}"></p></li>
+                            </ul>
+                        </div>
                         <div>
-                                <ul><h2 style="font-size: 20px">Payments</h2>
-                                    <li> <p  th:text="'Payment methods: ' + ${bank.getPaymentMethod()}"></p></li>
-                                    <li> <p  th:text="'Payment Aims/Services: ' + ${bank.getPaymentAimsServices()}"></p></li>
-                                    <li> <p  th:text="'Payment auto: ' + ${bank.getPaymentAuto()}"></p></li>
-
-                                </ul>
-                            </div>
-                            <div>
-                                        <ul><h2 style="font-size: 20px">Cards</h2>
-                                            <li> <p  th:text="'Card types: ' + ${bank.getCardTypes()}"></p></li>
-                                            <li> <p  th:text="'Card categories: ' + ${bank.getCardCategories()}"></p></li>
-                                            <li> <p  th:text="'Card annual services price: ' + ${bank.getCardAnnualServicePrice()}"></p></li>
-                                        </ul>
-                            </div>
-                               <div>
-                                <ul>
-                                    <h2 style="font-size: 20px">Credits</h2>
-                                    <li> <p  th:text="'Credit aim: ' + ${bank.getCreditAim()}"></p></li>
-                                    <li> <p  th:text="'Credit interest rate: ' + ${bank.getCreditInterestRate()}"></p></li>
-                                    <li> <p  th:text="'Credit term: ' + ${bank.getCreditTerm()}"></p></li>
-                                    <li> <p  th:text="'Credit early repayment: ' + ${bank.getCreditEarlyRepayment()}"></p></li>
-                                </ul>
-                            </div>
-                             <div>
-                                <ul><h2 style="font-size: 20px">Deposits</h2>
-                                    <li> <p  th:text="'Deposit rate: ' + ${bank.getDepositRate()}"></p></li>
-                                    <li> <p  th:text="'Deposit types of funds: '${bank.getDepositTypesOfFunds()}"></p></li>
-                                    <li> <p  th:text="'Deposit currency: ' + ${bank.getDepositCurrency()}"></p></li>
-                                    <li> <p  th:text="'Deposit additional conditions: ' + ${bank.getDepositAdditionalConditions()}"></p></li>
-
-                                </ul>
-                            </div>
-                             <div>
-                                <ul><h2 style="font-size: 20px">Insurance</h2>
-                                    <li> <p  th:text="'Insurance aim: ' + ${bank.getInsuranceAim()}"></p></li>
-                                    <li> <p  th:text="'Incurance amount: '${bank.getInsuranceAmount()}"></p></li>
-
-                                </ul>
-                            </div>
-                               <div>
-                                <ul><h2 style="font-size: 20px">24/7 support</h2>
-                                    <li> <p th:text="'Consultation: ' + ${bank.getConsultation()}"></p></li>
-
-                                </ul>
-                            </div>
-                            <div>
-                                <ul><h2 style="font-size: 20px">Bank Account</h2>
-                                    <li> <p  th:text="'Bank account opening price: ' + ${bank.getBankAccountOpeningPrice()}"></p></li>
-                                    <li> <p  th:text="'Free period: ' + ${bank.getBankAccountAvailabilityOfFreePeriod()}"></p></li>
-                                    <li> <p  th:text="'Bank account currency: ' + ${bank.getBankAccountCurrency()}"></p></li>
-                                    <liv th:text="'Types: ' + ${bank.getBankAccountTypes()}"></p></liv>
-                                </ul>
-                            </div>
-                              <div>
-                                <ul><h2 style="font-size: 20px">Acquiring</h2>
-                                    <li> <p  th:text="'Acquirung types: ' + ${bank.getAcquiringTypes()}"></p></li>
-                                    <li> <p  th:text="'Minimum commission rate of turnover: ' + ${bank.getMinimumCommissionRateOfTurnover()}"></p></li>
-                                </ul>
-                            </div>
-                             <div>
-                                <ul><h2 style="font-size: 20px">Corporation</h2>
-                                    <li> <p  th:text="'Services: ' + ${bank.getCorporationServices()}"></p></li>
-                                    <li> <p  th:text="'Financing: ' + ${bank.getCorporationFinancing()}"></p></li>
-                                </ul>
-                            </div>
-                              <div>
-                                <ul><h2 style="font-size: 20px">Security</h2>
-                                    <li> <p  th:text="${bank.getConsultation()}"></p></li>
-
-                                </ul>
-                            </div>
+                            <ul><h2 style="font-size: 20px">Payments</h2>
+                                <li><p th:text="'Payment methods: ' + ${bank.getPaymentMethod()}"></p></li>
+                                <li><p th:text="'Payment Aims/Services: ' + ${bank.getPaymentAimsServices()}"></p></li>
+                                <li><p th:text="'Payment auto: ' + ${bank.getPaymentAuto()}"></p></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul><h2 style="font-size: 20px">Cards</h2>
+                                <li><p th:text="'Card types: ' + ${bank.getCardTypes()}"></p></li>
+                                <li><p th:text="'Card categories: ' + ${bank.getCardCategories()}"></p></li>
+                                <li><p th:text="'Card annual services price: ' + ${bank.getCardAnnualServicePrice()}"></p></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <h2 style="font-size: 20px">Credits</h2>
+                                <li><p th:text="'Credit aim: ' + ${bank.getCreditAim()}"></p></li>
+                                <li><p th:text="'Credit interest rate: ' + ${bank.getCreditInterestRate()}"></p></li>
+                                <li><p th:text="'Credit term: ' + ${bank.getCreditTerm()}"></p></li>
+                                <li><p th:text="'Credit early repayment: ' + ${bank.getCreditEarlyRepayment()}"></p></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul><h2 style="font-size: 20px">Deposits</h2>
+                                <li><p th:text="'Deposit rate: ' + ${bank.getDepositRate()}"></p></li>
+                                <li><p th:text="'Deposit types of funds: '${bank.getDepositTypesOfFunds()}"></p></li>
+                                <li><p th:text="'Deposit currency: ' + ${bank.getDepositCurrency()}"></p></li>
+                                <li><p th:text="'Deposit additional conditions: ' + ${bank.getDepositAdditionalConditions()}"></p></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul><h2 style="font-size: 20px">Insurance</h2>
+                                <li><p th:text="'Insurance aim: ' + ${bank.getInsuranceAim()}"></p></li>
+                                <li><p th:text="'Incurance amount: '${bank.getInsuranceAmount()}"></p></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul><h2 style="font-size: 20px">24/7 support</h2>
+                                <li><p th:text="'Consultation: ' + ${bank.getConsultation()}"></p></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul><h2 style="font-size: 20px">Bank Account</h2>
+                                <li><p th:text="'Bank account opening price: ' + ${bank.getBankAccountOpeningPrice()}"></p></li>
+                                <li><p th:text="'Free period: ' + ${bank.getBankAccountAvailabilityOfFreePeriod()}"></p></li>
+                                <li><p th:text="'Bank account currency: ' + ${bank.getBankAccountCurrency()}"></p></li>
+                                <li><p th:text="'Types: ' + ${bank.getBankAccountTypes()}"></p></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul><h2 style="font-size: 20px">Acquiring</h2>
+                                <li><p th:text="'Acquirung types: ' + ${bank.getAcquiringTypes()}"></p></li>
+                                <li><p th:text="'Minimum commission rate of turnover: ' + ${bank.getMinimumCommissionRateOfTurnover()}"></p></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul><h2 style="font-size: 20px">Corporation</h2>
+                                <li><p th:text="'Services: ' + ${bank.getCorporationServices()}"></p></li>
+                                <li><p th:text="'Financing: ' + ${bank.getCorporationFinancing()}"></p></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul><h2 style="font-size: 20px">Security</h2>
+                                <li><p th:text="${bank.getConsultation()}"></p></li>
+                            </ul>
+                        </div>
                 </div>
-
             </div>
         <div class="clearfix"></div>
         </div>
     </div>
 </div>
 </div>
-
-
-              
-
-
-
-   
-
     <footer id="footer">
-
-
     </footer>
-
-
-
-
     <script src="../static/js/bootstrap.min.js"></script>
-
-
 </body>
 </html>
